@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+
+body {
+	height: 2000px;
+}
+		
+.topbar {
+	width: 100%;
+	height: 50px;
+	background: black;
+}
+		
+#navbar {
+	width: 100%;
+	height: 30px;
+	background: red;
+}
+
+
+		</style>
+	</head>
+	<body>
+		
+		<div class="topbar"></div>
+		
+		<div id="navbar"></div>
+		
+	</body>
+</html>
+
+<script>
+
+
+var oNavBar = document.getElementById("navbar")
+
+window.onscroll = function() {
+	
+	var iTop = document.body.scrollTop || document.documentElement.scrollTop;
+	
+	if (iTop > 50) {
+		oNavBar.style.position = "fixed"
+		oNavBar.style.top = 0
+		oNavBar.style.left = 0
+	} else {
+		oNavBar.style.position = "static"
+	}
+}
+
+</script>
