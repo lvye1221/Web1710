@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+<div>
+	<input id="username" placeholder="请输入用户名"/>
+	<br />
+	<input id="password" placeholder="请输入密码"/>
+	<br />
+	<input type="button" value="注册"  id="btnReg" />
+</div>		
+		
+		
+		
+	</body>
+</html>
+
+
+<script>
+
+var oBtnReg = document.getElementById("btnReg");
+
+
+var oUsername = document.getElementById("username")
+var oPassword = document.getElementById("password")
+
+
+//console.log("strUsername: "  + strUsername)
+//console.log("strPassword: "  + strPassword)
+	
+	
+
+
+oBtnReg.onclick = function() {
+	
+	// 每次点击时都要取值
+	var strUsername = oUsername.value
+	var strPassword = oPassword.value
+
+	var xhr = new XMLHttpRequest()
+	
+	// 监听网络状态改变，
+	xhr.onreadystatechange = function() {
+		
+		// 请求准备状态值：
+		if (xhr.readyState == 4) {
+			// HTTP协议状态码： 用于保证数据的正确性
+			if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+				// 数据已回来，并且是正确的数据！
+				
+				// JSON 还是 字符串？ 如何确定变量的类型
+				
+				console.log( xhr.responseText );
+				
+				var str = xhr.responseText;
+				
+				// 转换成JSON对象
+				var obj = JSON.parse(str);
+				
+				if (obj.code == 0) {
+					alert("注册成功，恭喜")
+				} else {
+					alert(obj.message)
+				}
+			}
+		}
+	}
+	
+	xhr.open("POST", "http://h6.duchengjiu.top/shop/api_user.php", true)
+
+//	xhr.setRequestHeader("Content-type", "application-x-www-form-urlencoded")
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	
+	console.log("strUsername: "  + strUsername)
+	console.log("strPassword: "  + strPassword)
+	
+	
+	xhr.send("username="+strUsername+
+			"&password="+strPassword+
+			"&status=register");
+}	
+	
+</script>
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<script>
+
+/*
+ajax 四部曲
+
+1. 创建对象
+*/
+
+
+var xhr = new XMLHttpRequest()
+
+// 监听网络状态改变，
+xhr.onreadystatechange = function() {
+	
+	// 请求准备状态值：
+	//   0   还没开始
+	//   1  发过去了，服务器还没有收到
+	//   2  服务器还没有处理
+	//   3 服务器处理完毕，客户端还没收到
+	//   4 客户端已经收到服务器返回的数据
+	if (xhr.readyState == 4) {
+		// HTTP协议状态码： 用于保证数据的正确性
+		//     HTTP协议状态码
+		//        200  正常状态
+		//        404  找不到资源
+		//        500  服务器故障
+		if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+			// 数据已回来，并且是正确的数据！
+		}
+	}
+}
+
+
+// GET 与 POST 的区别
+// 		GET       POST
+//   安全性低	安全性高
+//   小			大
+//   快			慢
+// 具体用哪种，听后台的！
+xhr.open("GET", "http://localhost:3000", true)
+
+xhr.send();
+
+
+</script>

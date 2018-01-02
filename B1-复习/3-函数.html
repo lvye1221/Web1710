@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+/*
+// 1. 定义函数
+function getComputedStyle()
+{
+	console.log("哈哈")
+}
+
+// 2. 调用函数
+getComputedStyle()
+
+// 标识符后面有()的，除开定义函数，说明一定是【函数调用】
+
+
+
+// 可以！ 覆盖了 系统的函数 getComputedStyle
+
+*/
+
+/*
+// 1. 定义函数
+function a()
+{
+	console.log("哈哈")
+	
+	return "嘿嘿";
+}
+
+// 2. 调用函数
+console.log(  a  )
+
+
+// a() 代表调用函数a，那么这个表达式整体的值，是函数中 return 后面的值
+
+
+// 问： 38行输出的是什么？
+// undefined
+*/
+
+
+//function a()
+//{
+//}
+//
+//console.log( a() )  // undefined
+
+
+//var b = 100
+//	
+//function a()
+//{
+//	return 3+b
+//}
+//
+//console.log( a() )  // 103
+
+
+//var b = 100
+//	
+//function a()
+//{
+//	return 3+b
+//}
+//
+//b = 200  
+//
+//console.log( a() )  
+//
+//// 203 程序从上往下运行，
+
+
+
+//function a()
+//{
+//	return 100
+//}
+//
+//var b = a()
+//
+//console.log( b )  // 100
+
+//function a()
+//{
+//	return {}
+//}
+//
+//var b = a()
+//
+//console.log( b )  // {} 对象
+
+
+
+
+//
+//function a()
+//{
+//	return function () {
+//		console.log("我是内部的函数")
+//	}
+//}
+//
+//// 不可以， a()() 是值（undefined）  undefined()
+//a()()()
+//
+//
+//// 这样也是可以的， 因为 a() 返回的结果是一个函数，后面再紧跟一个括号，
+////说明调用的是这个函数，那么没问题
+////a()()
+//
+////var b = a()
+////
+////b()
+//
+//// 报错     因为定义函数名为 b 的函数，所以 b() 是出错的
+
+
+//
+//function a()
+//{
+//	return 100
+//	return 200
+//}
+//
+//console.log( a() )  // 100
+
+
+
+
+
+
+//function a(p1, p2)
+//{
+//	console.log(p1)
+//}
+//
+//
+//console.log(    a(100, 200)   ) 
+//// undefined
+
+
+// 写一个函数，将所有形参都累加起来
+function a() {
+	// 内部存在一个类数组 arguments
+	
+	var sum = 0;
+	for (var i = 0; i < arguments.length; i++) {
+		sum += arguments[i];
+	}
+	
+	return sum;
+}
+
+console.log(   a(1,2,3) ) ;  // 6
+
+
+
+
+
+
+</script>
