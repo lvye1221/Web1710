@@ -1,0 +1,70 @@
+
+.container {
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 20px;
+	text-align: center;
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+.username {
+	margin: 20px 0px 0px 10px;
+	border-bottom: 2px solid gray;
+}
+
+.username span {
+	display: block;
+	float: left;
+	width: 19px;
+	height: 24px;
+	background: url(../img/login/nlphone.png);
+}
+
+.password {
+	margin: 10px 0px 0px 10px;
+	border-bottom: 2px solid gray;
+}
+
+.password span {
+	display: block;
+	float: left;
+	width: 19px;
+	height: 24px;
+	background: url(../img/login/nlcode.png) no-repeat center center;
+}
+
+.autologin {
+	padding: 10px 0;
+	text-align: left;
+	clear: both;
+	font-size: 10px;
+	color: gray;
+	line-height: 20px;
+}
+
+.autologin input {
+	float: left;
+	margin: 5px 5px 0px 15px;
+}
+
+.btnLogin input {
+	border-radius: 5px;
+	width: 100%;
+	height: 30px;
+	background-color: #25292E;
+	color: white;
+}
+
+.moreLogin {
+	padding: 30px 0;
+	font-size: 12px;
+}
+
+.moreLogin a {
+	color: black;
+	text-decoration: none;
+}

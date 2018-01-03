@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+	
+//	username=zhangsan&possword=123456&status=register
+
+
+//  函数封装！
+//     1. 提高代码的使用率
+//     2. 减少犯错的机会
+
+// 怎么做？
+
+// getParams 函数功能： 将JSON对象转换成查询字符串（例如：username=zhangsan&possword=123456&status=register）
+// 参数要求： JSON对象，里面只能存在一层键值对
+function getParams(obj)
+{
+	var str = ""
+
+	// 快速遍历，可以遍历对象中的所有属性
+	for (var k in obj) {
+		// 拼接属性名
+		str += k
+		// 在中间拼接 = 号
+		str += "="
+		// 拼接属性值
+		str += obj[k]
+		// 在后面拼接 & 号
+		str += "&"
+	}
+	
+	// 删掉最后一个
+	str = str.substring(0, str.length-1)
+	
+	// 输出循环拼接之后的值
+	// console.log(str)
+	return str
+}
+
+
+var obj = {
+	username: "zhangsan",
+	password: "123456",
+	status: "register"
+}
+
+// username=123&pasword
+console.log( getParams(obj) )
+
+// 怎么把 JSON 对象变成  查询字符串输出
+
+//1. 定义1个变量 str
+//2. for循环  for (var a in obj)
+//3. str 去拼接对象值
+//	如果非最后1个值,就拼接 &, 否则就不拼
+
+//  因为不是数组，没有length属性
+// obj.length 因为对象中不存在length属性，所以是undefined.
+
+//var str = ""
+//
+//// 快速遍历，可以遍历对象中的所有属性
+//for (var k in obj) {
+//	// 拼接属性名
+//	str += k
+//	// 在中间拼接 = 号
+//	str += "="
+//	// 拼接属性值
+//	str += obj[k]
+//	// 在后面拼接 & 号
+//	str += "&"
+//}
+//
+//// 删掉最后一个
+//str = str.substring(0, str.length-1)
+//
+//// 输出循环拼接之后的值
+//console.log(str)
+
+
+
+
+
+
+
+
+//var str = "";
+//for (var k in obj) {
+//	str += k;
+//	str += "="
+//	str += obj[k];
+//	str += "&"
+//}
+//str = str.slice(0, str.length-1)
+//console.log(str)
+
+
+</script>
+

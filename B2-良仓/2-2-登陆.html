@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" href="css/login.css" />
+		
+	</head>
+	<body>
+		
+		<div class="container">
+			
+			<!--标题-->
+			<img src="img/nlicon.png"  />
+			
+			<!-- 登陆框-->
+			
+			<div class="username">
+				<span></span>
+				<input type="text" placeholder="请输入用户名"/>
+			</div>
+			
+			
+			<div class="password">
+				<span></span>
+				<input type="password" placeholder="请输入密码"/>
+			</div>
+			
+			<!-- 自动登陆 -->
+			<div class="autologin">
+				<input type="checkbox" /> 自动登陆
+			</div>
+			
+			<!-- 登陆按钮-->
+			<div class="btnLogin">
+				<input type="button" value="登陆" />
+			</div>
+			
+			<!-- 更多登陆-->
+			<div class="moreLogin">
+				<a href="#">更多登陆方式 > </a>
+			</div>
+		</div>
+		
+	</body>
+</html>
+
+<script type="text/javascript" src="js/ajax-1.0.js" ></script>
+<script>
+	
+
+var oBtnLogin = document.querySelector(".btnLogin input");
+
+oBtnLogin.onclick = function() {
+	
+	var xhr = new XMLHttpRequest();
+	
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && xhr.status == 200) {
+			// 取出服务器返回的数据
+			var str = xhr.responseText;
+		}
+	}
+	
+	xhr.open("POST", "http://csit.top/api_user.php", true);
+	
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	
+	var obj = {
+		status: "login",
+		username: "zhangsan",
+		password: "123456"
+	}
+	
+	var str = getParams(obj)
+	
+	xhr.send(str)
+}
+	
+</script>
+
+
