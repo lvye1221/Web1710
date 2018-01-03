@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+<div>
+	<input id="username" placeholder="请输入用户名"/>
+	<br />
+	<input id="password" placeholder="请输入密码"/>
+	<br />
+	<input type="button" value="注册"  id="btnReg" />
+</div>		
+		
+		
+		
+	</body>
+</html>
+
+
+<!-- 引入库文件 -->
+<script type="text/javascript" src="js/ajax-1.0.js" ></script>
+
+<script>
+
+var oBtnReg = document.getElementById("btnReg");
+
+
+var oUsername = document.getElementById("username")
+var oPassword = document.getElementById("password")
+
+
+//console.log("strUsername: "  + strUsername)
+//console.log("strPassword: "  + strPassword)
+	
+	
+
+
+oBtnReg.onclick = function() {
+	
+	// 每次点击时都要取值
+	var strUsername = oUsername.value
+	var strPassword = oPassword.value
+
+	
+	var json = {
+		"username": strUsername,
+		password: strPassword,
+		status: "register"
+	}
+
+	loginOrRegister(json, function(obj) {
+		if (obj.code == 0) {
+			alert("注册成功")
+		} else {
+			alert(obj.message)
+		}
+	})
+}	
+	
+</script>
+

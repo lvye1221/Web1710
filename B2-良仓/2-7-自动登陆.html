@@ -66,14 +66,12 @@
 	
 	
 
+var oCheckBox = document.querySelector(".autologin input");
 var oBtnLogin = document.querySelector(".btnLogin input");
 var oUsername = document.querySelector(".username input");
 var oPassword = document.querySelector(".password input");
 
-var aLogin = document.getElementById("aLogin")
-
-
-aLogin.onclick = oBtnLogin.onclick = function() {
+oBtnLogin.onclick = function() {
 	
 	var strUsername = oUsername.value
 	var strPassword = oPassword.value
@@ -90,8 +88,17 @@ aLogin.onclick = oBtnLogin.onclick = function() {
 			alert("登陆成功")
 			
 			// 页面跳转
-			location.href = "http://www.baidu.com"
+			// location.href = "http://www.baidu.com"
 			
+			// 判断自动登陆的多选框是否勾选
+			if (oCheckBox.checked == true) {
+				// 勾选了
+				// localStorage 是用于存储到浏览器中信息，
+				//  不会随着浏览器关闭而消失
+				//  setItem 作用往浏览器中存储信息
+				localStorage.setItem("username", strUsername)
+				localStorage.setItem("password", strPassword)
+			}
 			
 			
 		} else {
@@ -100,6 +107,29 @@ aLogin.onclick = oBtnLogin.onclick = function() {
 	})
 }
 
+// 页面加载完成之后执行的代码
+
+window.onload = function() {
+	
+	// 1. 取出浏览器中保存的信息
+	//      getItem 作用取出值
+	var strUsername = localStorage.getItem("username")
+	var strPassword = localStorage.getItem("password")
+	
+	if (strUsername != null && strPassword != null) {
+		
+		var json = {
+			username: strUsername,
+			password: strPassword,
+			status: "login"
+		}
+		
+		loginOrRegister(json, function(obj) {
+			alert("自动登陆成功")
+		})
+		
+	}
+}
 
 // 自动登陆实现
 // 1. 页面加载完成事件    onload

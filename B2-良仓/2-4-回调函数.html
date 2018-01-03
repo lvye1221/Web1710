@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<script>
+
+// cb 就等于函数，所以 cb() 代表调用函数，没问题
+// cb 称为回调函数
+function m1(cb) { 				// 1. 定义函数
+	cb("哈哈")
+}
+
+m1(function(str) {				// 2. 调用函数 m1
+	console.log(str)			//      将匿名函数传递给 cb
+})								// 3. 执行函数m1中的内容
+								// 4. 执行匿名函数中的内容，输出"哈哈"
+
+
+
+
+
+
+</script>
+
