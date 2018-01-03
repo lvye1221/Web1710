@@ -13,10 +13,24 @@
 				<ul class="nav-left">
 					<li><a href="index.html">首页</a></li>
 					<li class="store">
+					
 						<a href="#">商店</a>
-						<div class="store-content">
+						<div class="store-content">	
+							<div id="tip" style="background: red; width:50px;height: 50px;position: absolute;left: 0; top:0; margin: 0;"></div>
+						
 							<ul>
-								
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
+								<li><a href="#">趣物</a></li>
 							</ul>
 							<div>
 								<img src="img/head/goods0.jpg" />
@@ -74,3 +88,33 @@
 		</div>
 	</body>
 </html>
+
+
+<script>
+
+var oTip = document.getElementById("tip")
+var all = document.querySelectorAll(".store-content ul li");
+
+for (var i = 0; i < all.length; i++) {
+	
+	all[i].onmousemove = function() {
+		var iLeft = this.offsetLeft
+		var iTop = this.offsetTop
+		
+		iTop += 50
+		
+		oTip.style.display = "block";
+		oTip.style.left = iLeft + "px"
+		oTip.style.top = iTop + "px"
+//		console.log(iLeft, iTop)
+	}
+	
+	
+	all[i].onmouseout = function() {
+		
+		oTip.style.display = "none";
+	}
+	
+}
+	
+</script>

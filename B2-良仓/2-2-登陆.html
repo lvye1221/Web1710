@@ -51,15 +51,28 @@
 	
 
 var oBtnLogin = document.querySelector(".btnLogin input");
+var oUsername = document.querySelector(".username input");
+var oPassword = document.querySelector(".password input");
 
 oBtnLogin.onclick = function() {
 	
+	var strUsername = oUsername.value
+	var strPassword = oPassword.value
+
 	var xhr = new XMLHttpRequest();
 	
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState == 4 && xhr.status == 200) {
 			// 取出服务器返回的数据
 			var str = xhr.responseText;
+			
+			// 将数据字符串转换成JSON对象
+			var obj = JSON.parse(str)
+			if (obj.code == 0) {
+				alert("登陆成功")
+			} else {
+				alert(obj.message)
+			}
 		}
 	}
 	
@@ -69,8 +82,8 @@ oBtnLogin.onclick = function() {
 	
 	var obj = {
 		status: "login",
-		username: "zhangsan",
-		password: "123456"
+		username: strUsername,
+		password: strPassword
 	}
 	
 	var str = getParams(obj)

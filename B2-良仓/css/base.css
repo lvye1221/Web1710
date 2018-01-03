@@ -235,7 +235,7 @@
 	background: white;
 	position: absolute;
 	left: -146px;
-	/*display: none;*/
+	display: none;
 }
 .store-content ul{
 	width: 770px;
