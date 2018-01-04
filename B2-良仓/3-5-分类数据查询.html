@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<ul id="nav">
+			
+		</ul>
+		
+		
+		<div id="box"></div>
+		
+	</body>
+</html>
+
+<script type="text/javascript" src="js/ajax-2.0.js" ></script>
+<script>
+	
+	// 请求一级栏目数据
+	ajax( {
+		method: "GET",
+		url: "http://csit.top/api_cat.php",
+		json: {},
+		cb: function(a) {
+			var arr = a.data; // 数组
+			
+			var oUl = document.getElementById("nav"); // 得到ul节点
+			for (var i = 0; i < arr.length; i++) {
+				var oLi = document.createElement("li")
+				oLi.innerHTML = 
+					'<a href="#" onclick="func('  + arr[i].cat_id +   ')">' +
+					arr[i].cat_name  // 商品名字 
+					+ '</a>'
+				oUl.appendChild(oLi) // 添加
+			}
+		}
+	} )
+	
+	
+	
+	
+function func(a) {
+	
+	ajax({
+		method: "GET",
+		url: "http://csit.top/api_goods.php",
+		json: {
+			cat_id: a,  // 分类： 45， 62
+			page: 1,
+			pagesize: 1000
+		},
+		cb: function(a) {
+			
+			var h = ""
+			
+			var arr = a.data  // 数组
+			for (var i = 0; i < arr.length; i++) {
+//				h += arr[i].goods_name
+				h += '<img src="' +  arr[i].goods_thumb+ '" />'
+				h += ", "
+			}
+			
+			document.getElementById("box").innerHTML = h
+		}
+	})
+}
+</script>
+
+

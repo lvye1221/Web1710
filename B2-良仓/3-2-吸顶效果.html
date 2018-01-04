@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	height: 2000px;
+}
+		
+.topbar {
+	width: 100%;
+	height: 50px;
+	background: black;
+}
+		
+#navbar {
+	width: 100%;
+	height: 30px;
+	background: red;
+}
+
+#goback {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="topbar"></div>
+		
+		<div id="navbar"></div>
+		<div id="goback">回到顶部</div>
+	</body>
+</html>
+
+
+<script>
+
+//1. 在滚动条发生改变的时候，获取滚动条的距离 t 
+//2. 判断t与临界值的关系，
+//	小于临界值                    大于临界值
+//	取消固定定位			设导航条为固定定位
+
+var oBtn = document.getElementById("goback")
+oBtn.onclick = function() {
+	var t = document.documentElement.scrollTop || document.body.scrollTop;
+	
+	var timer = setInterval(function() {
+		t-=10
+		// 调整滚动条的距离
+		document.documentElement.scrollTop = document.body.scrollTop = t;
+		if (t <= 0) {
+			clearInterval(timer)
+		}
+	}, 10)
+	// 让滚动条回到顶部
+//	document.documentElement.scrollTop = document.body.scrollTop = 0;
+	
+}
+
+
+
+var oNav = document.getElementById("navbar")
+
+//window.onscroll
+onscroll = function() {
+
+	var t = document.documentElement.scrollTop || document.body.scrollTop;  // 
+	
+	if (t > 70) {
+		oNav.style.position = "fixed" // 设为固定定位
+		oNav.style.left = 0
+		oNav.style.top = 0
+	} else {
+		oNav.style.position = "" // 取消固定定位
+	}
+
+}
+	
+</script>

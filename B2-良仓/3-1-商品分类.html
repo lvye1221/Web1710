@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<style>
+			
+			li:nth-child(5) {
+				color: red;
+			}
+			
+		</style>
+
+
+	</head>
+	<body>
+		
+		<!-- 将数据塞入nav， DOM操作
+			思路：
+				创建li节点    var oLi = document.createElement("li")
+				设置li节点中的内容    oLi.innerHTML = 数据
+				添加li节点 oUl.appendChild(oLi)
+		-->
+		<ul id="nav">
+			
+		</ul>
+		
+	</body>
+</html>
+
+<script type="text/javascript" src="js/ajax-1.0.js" ></script>
+<script>
+
+
+// 因为数据来自后端，所以必须通过 ajax 来获取
+//   ajax 是什么？ 
+//        asychonyce javascript and xml
+//        异步的           JS           和  XML（JSON） 
+// 
+//        1. 异步
+//        2. 不能跨域
+
+// 跨域： 协议、域名、端口 三者之间有1个不一样就是跨域
+//  http://www.baidu.com        http://www.google.cn    跨域
+//  http://www.baidu.com        https://www.baidu.com    跨域
+//  http://127.0.0.1            http://localhost        跨域  
+//  http://localhost/a.html     http://localhost/b/c/d.html    没跨域！
+//          80端口可以省略不写
+
+//  65535 张门    一般web是80门，  FTP协议21，  Java: 8080, nodejs： 3000
+	
+	
+// http://127.0.0.1:8020           http://csit.top/api_user.php	跨域（域名不一样！）
+
+// 跨域的解决办法：
+//   1. 服务器进行配置，允许跨域！
+//   2. JSONP
+
+
+
+// 输出获取到数据中所有分类名
+// http://csit.top/api_cat.php   GET
+
+
+
+
+
+
+
+
+
+
+
+var obj = {
+	method: "GET",
+	url: "http://csit.top/api_cat.php",
+	json: {},
+	cb: function(a) {
+		
+//		console.log(typeof a) // object
+//		console.log(a) // object 中的数据
+		
+		// a 是服务器返回的JSON对象
+		// .data 是对象中的数据属性， 类型是数组
+		var arr = a.data; // Array
+		
+		// arr[0] 下标为0的元素，类型是 对象
+		//       .cat_name  是对象中 .cat_name 属性值
+//		console.log( arr[0].cat_name )
+		
+//		// 输出所有的分类名
+//		for (var i = 0; i < arr.length; i++) {
+//			console.log( arr[i].cat_name )
+//		}
+
+//	将数据塞入nav， DOM操作
+//			思路：
+//				创建li节点    var oLi = document.createElement("li")
+//				设置li节点中的内容    oLi.innerHTML = 数据
+//				添加li节点 oUl.appendChild(oLi)
+
+	
+		var oUl = document.getElementById("nav")   	// 获取ul节点
+
+		for (var i = 0; i < arr.length; i++) {		// 遍历栏目数组
+			var oLi = document.createElement("li")	// 创建li
+			
+			oLi.innerHTML = arr[i].cat_name		// 设置li的内容
+			
+			oUl.appendChild(oLi)	// 将li添加到ul中
+		}	
+
+		
+	}
+}
+
+ajax(obj);
+
+
+
+
+
+
+
+
+
+ajax({
+	method: "GET",
+	url: "http://csit.top/api_goods.php",
+	json: {
+		cat_id: 62,
+		page: 1,
+		pagesize: 1000
+	},
+	cb: function(a) {
+		console.log(a)
+	}
+})
+
+
+
+
+
+
+
+
+	
+</script>

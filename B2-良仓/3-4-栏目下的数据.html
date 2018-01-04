@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- onclick="" DOM0级事件绑定-->
+		<a href="#" onclick="func(45)">45</a>
+		<a href="#" onclick="func(62)">62</a>
+		
+	</body>
+</html>
+
+<script type="text/javascript" src="js/ajax-2.0.js" ></script>
+<script>
+	
+
+function func(a) {
+	
+	ajax({
+		method: "GET",
+		url: "http://csit.top/api_goods.php",
+		json: {
+			cat_id: a,  // 分类： 45， 62
+			page: 1,
+			pagesize: 1000
+		},
+		cb: function(a) {
+			
+			var arr = a.data  // 数组
+			for (var i = 0; i < arr.length; i++) {
+				console.log(arr[i].goods_name)
+			}
+		}
+	})
+}
+
+</script>

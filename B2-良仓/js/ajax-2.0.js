@@ -101,10 +101,16 @@ function ajax(obj)
 		
 	}
 	
+	// api_goods.php?cat_id=45&page=1
+	//              ? 查询字符串
+	if (obj.method == "GET") {  // GET 方式才要拼接数据
+		obj.url += "?"  // 拼接?
+		obj.url += getParams(obj.json)  // 拼接查询字符串
+	}
+	
 	xhr.open(obj.method, obj.url, true)
 
 	if (obj.method == "GET") {
-		
 		xhr.send()
 	} else {
 		// POST
