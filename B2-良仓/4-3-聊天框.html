@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="box" style="position: fixed; right: 0; bottom: 0;">
+			
+			<div id="msgBox" style="display: none;">
+				<h3>良仓</h3>
+				<div id="msg">消息框</div>
+				<div id="bq"></div>
+				<div>
+					<textarea id="txt"></textarea>
+				</div>
+				<button id="send">发送</button>
+			</div>
+			
+			<div id="btn">联系客服</div>
+		</div>
+		
+	</body>
+</html>
+
+
+<script>
+var oBtn = document.getElementById("btn")  //联系客服按钮
+var oMsgBox = document.getElementById("msgBox")  //联系客服按钮
+
+oBtn.onclick = function() {
+	oMsgBox.style.display = "block"
+	oBtn.style.display = "none"
+}
+
+var oMsg = document.getElementById("msg")  //消息框
+var oTxt = document.getElementById("txt")  //发送内容
+var oSend = document.getElementById("send") //发送按钮
+
+oSend.onclick = function() {
+	// 1. 取出发送框中的内容
+	var s = oTxt.value
+	
+	oTxt.value = "" 	// 清空
+	
+	// 2. 内容加到消息框中
+	var oDiv = document.createElement("div")
+	oDiv.innerHTML = s
+	oMsg.appendChild(oDiv)
+	
+}
+	
+</script>

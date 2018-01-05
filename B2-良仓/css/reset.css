@@ -1,0 +1,11 @@
+
+
+/* 清除所有的内外边距 */
+ul, li, p, div, h3, h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.fl {
+	float: left;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script type="text/javascript" src="js/ajax-3.0.js" ></script>
+
+<script>
+
+// 将家居的商品列举出来
+// 1. ajax， 传递家居45，将获取回来的数据显示到页面上
+
+// 后面实现的功能：
+//  点击商品，自动加到 覃峰 的购物车
+//   token: 7fc1a3db5454b7b4dd41998a577a2264
+// 对象 object
+ajax({
+	method: "GET",
+	url: "http://csit.top/api_goods.php",
+	json: {
+		cat_id: 45,
+		page: 1,
+		pagesize: 5
+	},
+	cb: function(a) {
+//		console.log(a)
+		var arr = a.data
+		
+		var str = ""
+		
+		for (var i = 0; i < arr.length; i++) {
+			str += '<a href="#" onclick="func('  + arr[i].goods_id +  ')">'
+			str += arr[i].goods_name
+			str += '</a>'
+			
+			str += ", "
+		}
+		
+		document.body.innerHTML = str
+	}
+})
+
+
+
+function func(a)
+{
+	// 将商品添加到用户的购物车==》 发ajax
+	ajax({
+		method: "POST",   // 请求方式
+		url: "http://csit.top/api_cart.php", // 地址
+		json: {
+			goods_id: a,			// 发送给服务器的数据商品编号
+			number: 100,				// 商品数量
+		},
+		token: "7fc1a3db5454b7b4dd41998a577a2264",
+		cb: function(b) {	// 回调函数
+			console.log(b)
+		}
+	})
+}
+
+
+
+
+
+
+
+
+
+
+// GET, POST, 请求头
+/*
+HTTP 协议
+组成: 
+	请求头 : 地址信息/文本编码/隐藏的数据 ...
+		xhr.setRequestHeader("token", "xxxx")
+		
+	
+	请求体 : 放 GET和POST 等传输的用户自定义的数据
+		get: open   URL ? xxx=1&yy=1
+		post: xhr.send(数据)
+*/
+</script>
