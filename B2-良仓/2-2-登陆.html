@@ -73,7 +73,7 @@ var oPassword = document.querySelector(".password input");
 var aLogin = document.getElementById("aLogin")
 
 
-aLogin.onclick = oBtnLogin.onclick = function() {
+oBtnLogin.onclick = function() {
 	
 	var strUsername = oUsername.value
 	var strPassword = oPassword.value
@@ -87,6 +87,9 @@ aLogin.onclick = oBtnLogin.onclick = function() {
 	// 调用函数
 	loginOrRegister(json, function(obj) {
 		if (obj.code == 0) {
+			
+			localStorage.setItem("token", obj.data.token)
+			
 			alert("登陆成功")
 			
 			// 页面跳转
