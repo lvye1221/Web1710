@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<ul id="nav">
+			
+		</ul>
+		
+		
+		<div id="box"></div>
+		
+	</body>
+</html>
+
+<script type="text/javascript" src="js/ajax-2.0.1.js" ></script>
+<script>
+	
+	var token = localStorage.getItem("token")
+	
+	// 请求一级栏目数据
+	ajax( {
+		method: "GET",
+		url: "http://csit.top/api_cart.php",
+		json: {},
+		header: {
+			"token": token
+		},
+		cb: function(a) {
+			console.log(a)
+		}
+	} )
+	
+	
+	
+</script>
+
+
