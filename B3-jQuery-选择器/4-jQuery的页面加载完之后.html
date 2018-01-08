@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			
+			
+		<!-- 1. 引入 jQuery 文件 -->
+		<script src="js/jquery-1.11.1.js"></script>
+
+
+		<script>
+		
+		
+		
+// $(function() {  		// 在页面DOM加载完成之后执行 函数中的代码
+// $(document).ready(function() {	// 在页面DOM加载完成之后执行 函数中的代码
+// document   准备好  执行函数中的代码
+$(window).ready(function() {  // 在页面DOM元素和图片等资源全部加载完成之后
+	var oDiv = document.getElementById("box");
+	
+	oDiv.innerHTML = "哈哈"
+})
+		
+		
+		
+//		
+//		// $ 是1个函数，是 jQuery 封装的，只要引入了js文件，就可以使用
+//		//   传递1个函数
+//		$(function() {				// 页面加载完成之后，执行函数1
+//			alert("1")
+//		})
+//		
+//		$(function() {				// 页面加载完成之后，执行函数2
+//			alert("2")
+//		})
+		
+		</script>
+	</head>
+	<body>
+		
+		<div id="box"></div>
+		
+	</body>
+</html>
+
+
+

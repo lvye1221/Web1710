@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="js/jquery-1.11.1.js"></script>
+		
+		<script>
+
+/*
+$(function() {
+	// $("#box") 代表找到 id为 box 的元素
+	//   .click  单击事件, 是来自于 【jQuery 对象】中的方法
+	$("#box").click(function() {
+		// alert()
+		// 正确的js代码
+	})
+
+	
+//	// oBox 是1个DOM对象
+//	var oBox = document.getElementById("box")
+//	
+//	// onclick 是 【DOM对象】的
+//	oBox.onclick = function() {
+//		alert()
+//	}
+
+})
+
+*/
+
+
+// $函数调用, 参数是 函数
+$(function() {
+	
+	// $("#box") jQuery的对象
+	// $("#box")[0] 将 jQuery对象 转换成 js对象
+	// $("div").get(2) 将 jQuery对象 转换成 js对象
+	// $("div")[2].onclick = function() {
+//	$("div").get(2).onclick = function() {
+//		alert();
+//	}
+
+
+	var oBox = document.getElementById("box")
+	
+	// oBox 是1个js的DOM对象
+	// $(oBox) 是将 jsDOM对象转换成了 jQuery 对象
+	
+	// $函数调用, 参数是 js对象
+	$(oBox).click(function() {
+		alert()
+	})
+	
+})
+
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		
+		<div id="box">哈哈</div>
+		
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		
+	</body>
+</html>

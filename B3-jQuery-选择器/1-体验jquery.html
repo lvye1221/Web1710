@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            height: 100px;
+            background-color: pink;
+            margin: 10px;
+            display: none;
+        }
+    </style>
+
+	
+	<script src="js/jquery-1.11.1.min.js"></script>
+	
+
+    <script>
+   
+$(function() {
+	$("button").click(function() {
+		$("div").slideDown()
+	})
+})
+    
+
+//// 页面家在完成之后
+//window.onload = function() {
+//	
+//	var oBtn = document.getElementsByTagName("button")[0]
+//	
+//	// 所有div
+//	var allDiv = document.getElementsByTagName("div")
+//	
+//	oBtn.onclick = function() {
+//		
+//		// 显示所有div
+//		for (var i = 0; i < allDiv.length; i++) {
+//			allDiv[i].style.display = "block"
+//		}
+//	}
+//}
+
+
+    </script>
+</head>
+<body>
+
+    <button>显示盒子和设置内容</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+
+</body>
+</html>
