@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/list.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="wrap-hd clearfix">
+				<form id="searchForm">
+					<div class="item clearfix">
+						<div class="key">姓名：</div>
+						<div class="value">
+							<input class="inp-text" type="text" name="userName" />
+						</div>
+					</div>
+					<div class="item clearfix">
+						<div class="key">年龄：</div>
+						<div class="value">
+							<input class="inp-text" type="text" name="userAge" />
+						</div>
+					</div>
+					<div class="item clearfix">
+						<div class="key">性别：</div>
+						<div class="value">
+							<input class="inp-radio" type="radio" name="userSex" value="0"/>男
+							<input class="inp-radio" type="radio" name="userSex" value="1" />女
+						</div>
+					</div>
+				</form>
+				<div class="item clearfix">
+					<button class="btn" type="button">搜索</button>
+					<button class="btn" id="addBtn" type="button">新增</button>
+					<button class="btn" id="delBtn" type="button">删除</button>
+				</div>
+			</div>
+	
+	
+	<table class="wrap-bd" border="1">
+				<tbody><tr>
+					<th><input type="checkbox" id="allChoose"></th>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>性别</th>
+					<th>籍贯</th>
+					<th>身份证号码</th>
+					<th>手机号码</th>
+					<th>职业</th>
+					<th>操作</th>
+				</tr>
+
+	<tr>
+		<td><input type="checkbox" class="choose"></td>
+		<td>张三</td>
+		<td>18</td>
+		<td> 
+			 
+				男
+			
+		
+			
+		
+		</td>
+		<td>汉族</td>
+		<td>430123456789101112</td>
+		<td>12345678910</td>
+		<td>学生</td>
+		<td>
+			<button id="updateBtn" type="button">修改</button>
+			<button id="delBtn" type="button">删除</button>
+		</td>		
+	</tr>
+
+	<tr>
+		<td><input type="checkbox" class="choose"></td>
+		<td>李四</td>
+		<td>22</td>
+		<td> 
+			
+		
+			 
+				女
+			
+		
+		</td>
+		<td>白族</td>
+		<td>430123456789101112</td>
+		<td>12345678910</td>
+		<td>工人</td>
+		<td>
+			<button id="updateBtn" type="button">修改</button>
+			<button id="delBtn" type="button">删除</button>
+		</td>		
+	</tr>
+
+	<tr>
+		<td><input type="checkbox" class="choose"></td>
+		<td>王五</td>
+		<td>28</td>
+		<td> 
+			 
+				男
+			
+		
+			
+		
+		</td>
+		<td>苗族</td>
+		<td>430123456789101112</td>
+		<td>12345678910</td>
+		<td>企业家</td>
+		<td>
+			<button id="updateBtn" type="button">修改</button>
+			<button id="delBtn" type="button">删除</button>
+		</td>		
+	</tr>
+
+	<tr>
+		<td><input type="checkbox" class="choose"></td>
+		<td>赵六</td>
+		<td>24</td>
+		<td> 
+			
+		
+			 
+				女
+			
+		
+		</td>
+		<td>土家族</td>
+		<td>430123456789101112</td>
+		<td>12345678910</td>
+		<td>主持人</td>
+		<td>
+			<button id="updateBtn" type="button">修改</button>
+			<button id="delBtn" type="button">删除</button>
+		</td>		
+	</tr>
+
+			</tbody>
+			</table>	
+			
+				
+		</div>
+		<script type="text/html" id="addHtml">
+			<form>
+				<div class="item clearfix">
+					<div class="key">姓名：</div>
+					<div class="value">
+						<input class="inp-text" type="text" name="userName" />
+					</div>
+				</div>
+				<div class="item clearfix">
+					<div class="key">年龄：</div>
+					<div class="value">
+						<input class="inp-text" type="text" name="userName" />
+					</div>
+				</div>
+				<div class="item clearfix">
+					<div class="key">性别：</div>
+					<div class="value">
+						<input class="inp-radio" type="radio" name="userSex" value="0"/>男
+						<input class="inp-radio" type="radio" name="userSex" value="1" />女
+					</div>
+				</div>
+				<div class="item clearfix">
+					<div class="key">籍贯：</div>
+					<div class="value">
+						<input class="inp-text" type="text" name="userName" />
+					</div>
+				</div>
+				<div class="item clearfix">
+					<div class="key">身份证号码：</div>
+					<div class="value">
+						<input class="inp-text" type="text" name="userName" />
+					</div>
+				</div>
+				<div class="item clearfix">
+					<div class="key">手机号码：</div>
+					<div class="value">
+						<input class="inp-text" type="text" name="userName" />
+					</div>
+				</div>
+				<div class="item clearfix">
+					<div class="key">职业：</div>
+					<div class="value">
+						<input class="inp-text" type="text" name="userName" />
+					</div>
+				</div>
+				<div class="item clearfix">
+					<button class="btn submitBtn" id="submitBtn" type="button">提交</button>
+				</div>
+			</form>
+		</script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/template.js" ></script>
+		<script type="text/javascript" src="js/box.js" ></script>
+		<script type="text/javascript" src="js/utils.js" ></script>
+		<script type="text/javascript" src="js/list.js" ></script>
+	</body>
+</html>

@@ -8,10 +8,18 @@
             height: 100px;
             background-color: pink;
             margin: 10px;
-            display: none;
+            /*display: none;*/
         }
     </style>
 
+		<style>
+			#wi\:te{
+				font-weight:bold;
+			}
+			.i\:7{
+				font-weight:bolder;
+			}
+		</style>
 	
 	<script src="js/jquery-1.11.1.min.js"></script>
 	
@@ -22,6 +30,8 @@ $(function() {
 	$("button").click(function() {
 		$("div").slideDown()
 	})
+	
+	
 })
     
 
@@ -43,6 +53,9 @@ $(function() {
 //}
 
 
+$(function(){
+	$("#wi\\:te").css("color","yellow")
+})
     </script>
 </head>
 <body>
@@ -55,6 +68,11 @@ $(function() {
     <div></div>
 
 
+		<div class="i:7">优才</div>
+		<div id="wite">优才</div>
+		<div id="wi:te">优才</div>
+		<div id="wi[te]">优才</div>
+		<div id="wi.te">优才</div>
 
 </body>
 </html>

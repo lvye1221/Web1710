@@ -1,0 +1,147 @@
+*{
+	font-family: "microsoft yahei";
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+.item{
+	float: left;
+}
+.item .key{
+	height: 50px;
+	line-height: 50px;
+	padding-left: 20px;
+	float: left;
+}
+.item .value{
+	padding: 12px 10px;
+	line-height: 26px;
+	float: left;
+}
+.item .value .inp-text{
+	width: 150px;
+	height: 26px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+	padding-left:10px;
+	font-size: 14px;
+	outline: none;
+}
+.item .value .inp-radio{
+	vertical-align: middle;
+	outline: none;
+}
+.item .btn{
+	width: 70px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	margin: 12px 0 12px 20px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	background: transparent;
+	cursor: pointer;
+	outline: none;
+}
+.item .btn:hover{
+	background: #f0f0f0;
+}
+.wrap .wrap-bd{
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #CCCCCC;
+}
+.wrap .wrap-bd th,.wrap .wrap-bd td{
+	padding: 7px 0;
+	text-align: center;
+}
+.wrap .wrap-bd th input,.wrap .wrap-bd td input{
+	outline: none;
+}
+.wrap .wrap-bd td button{
+	width: 60px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 14px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	background: transparent;
+	cursor: pointer;
+	outline: none;
+}
+.wrap .wrap-bd td button:hover{
+	background: #f0f0f0;
+}
+.cover{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.5);
+	z-index: 1;
+}
+.box{
+	position: fixed;
+	left:50%;
+	top: 50%;
+	z-index: 2;
+	border: 1px solid #CCCCCC;
+	background-color: #FFFFFF;
+}
+.box .box-hd{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	padding:0 10px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.box .box-hd .close{
+	float: right;
+	cursor: pointer;
+}
+.box .box-bd{
+	padding: 12px 20px;
+}
+.box .box-bd .content{
+	margin-bottom: 12px;
+}
+.box .box-bd .item{
+	float: none;
+}
+.box .box-bd .item .key{
+	padding: 0;
+	width: 100px;
+	text-align: right;
+}
+.box .box-bd .item .value .inp-text{
+	width: 170px;
+}
+.box .box-bd .item .btn{
+	display: block;
+	margin: 0 auto;
+}
+.box .box-bd .item-btn{
+	width: 170px;
+	margin: 0 auto;
+}
+.box .box-bd .item-btn .okBtn{
+	float: left;
+}
+.box .box-bd .item-btn .canelBtn{
+	float: right;
+}
