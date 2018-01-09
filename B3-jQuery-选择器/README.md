@@ -24,10 +24,28 @@
 必须要掌握 jQuery 的使用，jQuery 设计的想法
 
 
-### 作业
+### 第一天作业
 
 1. github 建1个 jQuery练习的仓库（名字自己取）
 
 2. 将今天的例子，全部敲1遍以上（ 9点之前提交，将地址发给厚锦）
 
 3. 良仓没有写完的，继续写！
+
+### 基本方法
+
+css
+
+eq
+next
+find
+children
+siblings
+
+事件：
+mouseover
+mouseout
+
+mouseenter
+mouseleave
+

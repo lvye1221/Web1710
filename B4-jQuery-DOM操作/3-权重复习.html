@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+		
+div {
+	width: 100px;
+	height: 100px;
+	background: red;
+}			
+
+body div.b {
+	background: blue;
+}
+
+body div.a {
+	background: green;
+}
+
+/* 权重
+ 				id          class           标签（伪类）
+body #box.a		1				1				1
+body #box 		1               0               1
+ */
+
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box" class="a b"></div>
+		
+	</body>
+</html>

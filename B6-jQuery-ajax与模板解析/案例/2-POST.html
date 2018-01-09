@@ -13,30 +13,17 @@
 
 <script>
 
-//var url = "http://csit.top/api_cat.php"
-//
-//// 不带参数
-//$.get(url, function(str) {
-//	console.log(typeof str)
-//	
-//	var obj = JSON.parse(str)
-//	
-//	console.log(obj)
-//})
-//	
-
 
 // 带参数的
 var url = "http://csit.top/api_goods.php"
-$.get(url, {
+$.post(url, {
 	cat_id: 45,  // 分类： 45， 62
 	page: 1,
 	pagesize: 1000
 }, function(str) {
-	console.log(typeof str)
+	console.log( str)
 	
 })
-
 	
 </script>
 

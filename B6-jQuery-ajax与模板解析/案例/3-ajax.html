@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<script src="jquery-1.11.1.min.js"></script>
+
+<script>
+
+
+var url = "http://csit.top/api_cart.php"
+$.ajax({
+    type: "POST",
+    url: url,
+    data: {
+		goods_id: 34233,			// 发送给服务器的数据商品编号
+		number: 100,				// 商品数量
+    },
+    headers: {
+    	token: "2d622a9209535b9fbe212d69b8d5bc62"
+    },
+//	beforeSend: function(xhr) {
+//		xhr.setRequestHeader("token", "2d622a9209535b9fbe212d69b8d5bc62")
+//	},
+    success: function(msg){
+    	console.log( "Data Saved: " + msg );
+    }
+});
+	
+</script>
+

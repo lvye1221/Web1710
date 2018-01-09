@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    
+    <!--
+相对路径：     js/jquery-1.11.1.js     相对于当前html文件来说	
+绝对路径：    	/js/jquery-1.11.1.js
+		特点是以 / 开始， 代表 服务器的根目录
+    -->
+    
+    <script src="js/jquery-1.11.1.js"></script>
+    
+    <script>
+
+$(function() {
+
+	
+	// find 查找，所有的后代
+	// $("ul").find("li").css("background", "red")
+	
+	//  children 孩子们, 所有后代
+	// $("ul").children().css("background", "red")
+	
+	//  children li 下面一层的 li 元素
+	// $("ul").children("li").css("background", "red")
+	
+	// 链式调用
+	$("ul").children("ol").children("li").css("background", "red")
+})
+
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你，海淀....</li>
+        <li class="box">北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你，海淀....</li>
+        <span>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你，海淀....</span>
+        <li class="box">北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你，海淀....</li>
+        <i>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你，海淀....</i>
+        <li>北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你，海淀....</li>
+        <a  id="box" href="#">北京的天是晴朗的天，通州人民好喜欢，眼望丰台高声喊，我爱你，海淀....</a>
+        <ol>
+            <li>我是ol中的li</li>
+            <li>我是ol中的li</li>
+            <li>我是ol中的li</li>
+            <li>我是ol中的li</li>
+        </ol>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .current {
+            background-color: red;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+
+$(function() {
+	
+	// addClass 添加样式
+	$("div:eq(0)").addClass("current")
+	
+	// removeClass 移除样式
+	$("div:eq(3)").removeClass("current")
+	
+	// 判断是否含有 class
+	var r = $("div:eq(1)").hasClass("current")
+	// alert(r)
+	
+	
+	$("button:first").click(function() {
+		// toggle 切换
+		// toggleClass 切换class
+		$("div:eq(0)").toggleClass("current")
+	})
+	
+	
+	// 添加样式：        1个样式名
+	// css			样式比较少的时候，
+	
+	$("div:eq(2)").toggleClass("current")
+})
+    
+    </script>
+</head>
+<body>
+<button>添加</button>
+<button>删除</button>
+<div></div>
+<div></div>
+<div class="current"></div>
+<div class="current"></div>
+</body>
+</html>
