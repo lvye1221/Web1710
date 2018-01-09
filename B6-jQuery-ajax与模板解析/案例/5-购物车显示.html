@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<script type="text/template" id="tp1">
+
+<ul>
+<% for(var i = 0; i < data.length; i++) { %>  
+	<% var item = data[i] %>  
+	<li>  
+		<span><%=item.goods_name%></span>  
+		<span><%=item.goods_price%></span>  
+	</li>  
+<% } %>  
+</ul>
+
+</script>
+
+<!-- 引入库文件 -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+<script type="text/javascript" src="js/underscore-min.js" ></script>
+
+<script>
+
+
+var url = "http://csit.top/api_cart.php"
+$.ajax({
+    type: "GET",
+    url: url,
+    headers: {
+    	token: "2d622a9209535b9fbe212d69b8d5bc62"
+    },
+    success: function(str) {
+    	
+    	// 转化成 JS对象
+    	var obj = JSON.parse(str)
+    	
+    	// 获取模板字符串
+    	var t = $("#tp1").html()
+    	
+    	// 根据模板字符串，用 ajax 获取到的数据转换成 对应的字符串
+		var h = _.template(t, {variable: 'data'})(obj.data)
+    	
+    	// 更新到页面中
+    	$("body").html(h)
+    }
+});
+	
+</script>
