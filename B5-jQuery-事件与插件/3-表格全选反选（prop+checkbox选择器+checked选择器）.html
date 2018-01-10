@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //需求1：点击上面的多选按钮，下面的所有多选按钮都和上面的一致
+            //需求2：点击下面的多选按钮，判断下面的所有多选按钮都是否全部被选定只有全部被选定上面的才被选定
+
+//需求1：点击上面的多选按钮，下面的所有多选按钮都和上面的一致
+// 思路：
+//    1. 点击函数中，获取当前多选框的 勾选状态  prop("checked")
+//    2. 将下面所有的多选框， 设置成  获取的勾选状态
+
+$("#j_cbAll").click(function() {
+	// 获取当前多选框的状态
+	var c = $(this).prop("checked");
+	
+	// 将下面所有的多选框， 设置成  【获取的】勾选状态
+	$("#j_tb input:checkbox").prop("checked", c)
+})
+
+
+
+//需求2：点击下面的多选按钮，判断下面的所有多选按钮
+//    都是否全部被选定只有全部被选定上面的才被选定
+//  思路：
+//    1. 点击函数中，获取 所有下面的多选框的状态   $("input:checked")
+//    2.  检测 选中的多选框的数量 与 本身多选框数量 是否 一致
+//                 一致         勾选上面的多选框
+//                 不一致     取消上面的多选框状态
+$("#j_tb input:checkbox").click(function() {
+	
+	var arr = $("#j_tb input:checkbox")
+	
+	
+	var flag = true  // 旗子，默认为true
+	//   计数器
+	
+	for (var i = 0; i < arr.length; i++) {
+		var c = $(arr[i]).prop("checked")
+		
+		if (c == false) {
+			// 至少有1个没选中
+			flag = false;
+		}
+	}
+	
+	if (flag == true) {
+		// 说明全部选中
+		$("#j_cbAll").prop("checked", true)
+	} else  {
+		// 至少有1个没选中
+		$("#j_cbAll").prop("checked", false)
+	}
+	
+	
+	
+	
+	
+	
+//	// 【选中】的多选框   的数量
+//	var a = $("#j_tb input:checked").length
+//	
+//	// input:checkbox  所有多选框（包括选中和没选中）
+//	var b = $("#j_tb input:checkbox").length
+//	
+//	if (a == b) {
+//		$("#j_cbAll").prop("checked", true)
+//	} else {
+//		$("#j_cbAll").prop("checked", false)
+//	}
+})
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="j_cbAll"/>
+                    </th>
+                    <th>课程名称</th>
+                    <th>所属学院</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox"/>
+                    </td>
+                    <td>JavaScript</td>
+                    <td>前端与移动开发学院</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"/>
+                    </td>
+                    <td>css</td>
+                    <td>前端与移动开发学院</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"/>
+                    </td>
+                    <td>html</td>
+                    <td>前端与移动开发学院</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox"/>
+                    </td>
+                    <td>jQuery</td>
+                    <td>前端与移动开发学院</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

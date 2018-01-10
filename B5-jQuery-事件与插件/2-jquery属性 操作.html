@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .aaa {
+            border: 1px solid red;
+        }
+    </style>
+    
+    <link type="text/css" rel="stylesheet" href="css/1.css" id="link1" />
+    
+    
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+$(function () {
+   
+   // 添加属性值
+   // $("input:eq(0)").attr("aaa", "哈哈")
+   
+   // 获取input中属性aaa的值
+   var a = $("input:eq(0)").attr("aaa")
+
+   // 点击按钮
+   $("button").click(function() {
+   		// 获取当前点击按钮中 css 属性值
+   		var s = $(this).attr("css")
+   		
+   		// 找到link标签，并且设置 href属性值为 s
+   		$("#link1").attr("href", s)
+   })
+   
+   // 找到 checkbox
+   // $("input:checkbox").css("border", "10px solid red")
+
+
+	var count = 0;
+		
+	$("button:eq(0)").click(function() {
+		// 思路1
+		// 1. 定义变量
+		// 2. 在点击时加1
+		// 3. 判断除余
+		
+		count++
+		
+		if (count % 2 == 0) {
+//			$("input:checkbox").removeAttr("checked")
+
+	
+			$("input:checkbox").prop("checked", false)
+		} else {
+			// prop 设置【多选框】为选中状态
+			$("input:checkbox").prop("checked", true)
+			
+		}
+		
+		
+		
+//		$("input:checkbox").attr("checked", "true")
+//		
+		
+		// 找到勾选中的 checkbox 
+//		var a = $("input:checked")
+//		console.log(a)
+		
+	})
+
+
+})
+    </script>
+</head>
+<body>
+<button>绑定</button>
+
+
+<input type="text" aaa="嘿嘿"/>
+<input type="checkbox"/>
+
+
+
+<!--<button css="css/1.css">中国风</button>
+<button css="css/2.css">欧洲风</button>
+-->
+
+</body>
+</html>

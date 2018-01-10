@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			.bbb {
+				width: 10px;
+				height: 30px;
+				background: red;
+				
+				position: absolute;
+				bottom: 5px;
+				left: 300px;
+			}
+		</style>
+		
+	</head>
+	<body>
+	</body>
+</html>
+
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+// 发射子弹
+//   思路：
+//     1. 定时器，不断创建子弹
+//     2. 发射子弹：   animate 动画移动到页面顶部
+
+setInterval(function() {
+	
+	// 创建子弹
+	var oBbb = $("<div></div>")
+	
+	// 设置样式
+	oBbb.addClass("bbb")
+	
+	// 添加到页面
+	$("body").append(oBbb)
+	
+	oBbb.animate({"bottom": 500}, 1000, function() {
+		// 动画执行完后的回调函数
+		
+		// 删除节点
+		oBbb.remove()
+	})
+	
+}, 1000)
+	
+</script>
+

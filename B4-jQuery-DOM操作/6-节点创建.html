@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+
+// 用 jQuery 创建1DOM节点，返回的结果是 jQuery 对象
+var li = $("<li>今天天气不错</li>")
+
+// jQuery对象中 append, 添加节点
+$("body").append(li)
+
+// 删除自己， 自毁
+li.remove()
+
+
+
+// 1. 
+//var oLi = document.createElement("li")
+//
+//oLi.innerHTML = "今天天气不错"
+//	
+//document.body.appendChild(oLi)	
+
+
+//// 2. str
+//var str = "<li>今天天气不错</li>"
+//
+//document.body.innerHTML = str;
+
+
+</script>
+

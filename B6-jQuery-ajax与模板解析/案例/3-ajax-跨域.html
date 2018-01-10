@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<script>
+
+// 服务器代码
+var url = "http://localhost:8080/ajax/getJSONP"
+$.ajax({
+    type: "GET",
+    url: url,
+    data: {
+    },
+//    dataType: "jsonp",
+    success: function(obj){
+    	console.log(obj)
+    	console.log(obj.name)
+    }
+});
+	
+</script>
+

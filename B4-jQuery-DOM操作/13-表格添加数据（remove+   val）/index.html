@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="checkDemo.css"/>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        jQuery(function () {
+            //需求1：点击按钮显示遮罩层和添加数据表格
+            //需求2：点击里面的关闭按钮隐藏遮罩层和添加数据表格
+            //需求3：点击get所在的标签，删除所在的tr
+            //需求4：点击里面的添加内容，全部能容这个成tr嵌套td的形式添加到tbody中
+
+
+			//需求3：点击get所在的标签，删除所在的tr
+			//  思路： 1. 获取get按钮，绑定点击事件处理函数
+			$(".get").click( del )
+			
+			
+			$("#j_btnAddData").click(function() {
+				$("#j_mask").show()	 	// 显示遮罩层
+				$("#j_formAdd").show()  // 显示对话框
+			})
+			
+			$("#j_hideFormAdd").click(hide)
+			
+			function hide() {
+				$("#j_mask").hide()	 	// 隐藏遮罩层
+				$("#j_formAdd").hide()  // 隐藏对话框
+			}
+			
+			// 添加
+			$("#j_btnAdd").click(function() {
+				
+				hide()
+				
+				
+				// 取出课程名  val 是用于取出 input 中的值
+				var name = $("#j_txtLesson").val()			// 课程名
+				var content = $("#j_txtBelSch").val()		// 技能
+				
+				var str = "<tr>"
+				
+				str += "<td>"
+				str += name
+				str += "</td>"
+				
+				
+				str += "<td>"
+				str += content
+				str += "</td>"
+				
+				
+				str += "<td>"
+				str += "<a href='javascript:void(0)' class='get'>GET</a>"
+				str += "</td>"
+				
+				
+				str += "</tr>"
+				
+				// 添加到表格体中
+				$("#j_tb").append(str)
+				
+				// click 要求传入1个函数
+				$(".get").click(del)
+				
+			})
+        });
+        
+        // 定义函数 del
+        function del() {
+			$(this).parent().parent().remove()
+		}
+        
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div>
+            <input type="button" value="添加数据" id="j_btnAddData" class="btnAdd"/>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <!-- <th><input type="checkbox" id="j_cbAll" /></th> -->
+                    <th>课程名称</th>
+                    <th>所属学院</th>
+                    <th>已学会</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <!-- <td><input type="checkbox"/></td> -->
+                    <td>JavaScript</td>
+                    <td>前端开发技能</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <!-- <td><input type="checkbox"/></td> -->
+                    <td>css</td>
+                    <td>前端开发技能</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <!-- <td><input type="checkbox"/></td> -->
+                    <td>html</td>
+                    <td>前端开发技能</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+                <tr>
+                    <!-- <td><input type="checkbox"/></td> -->
+                    <td>jQuery</td>
+                    <td>前端开发技能</td>
+                    <td><a href="javascrip:;" class="get">GET</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="j_mask" class="mask"></div>
+    <div id="j_formAdd" class="form-add">
+        <div class="form-add-title">
+            <span>添加数据</span>
+            <div id="j_hideFormAdd">x</div>
+        </div>
+        <div class="form-item">
+            <label class="lb" for="j_txtLesson">课程名称：</label>
+            <input class="txt" type="text" id="j_txtLesson" placeholder="请输入课程名称">
+        </div>
+        <div class="form-item">
+            <label class="lb" for="j_txtBelSch">项目技能：</label>
+            <input class="txt" type="text" id="j_txtBelSch" value="前端开发技能">
+        </div>
+        <div class="form-submit">
+            <input type="button" value="添加" id="j_btnAdd">
+        </div>
+    </div>
+
+</body>
+</html>

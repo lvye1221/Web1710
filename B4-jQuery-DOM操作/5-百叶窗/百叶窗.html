@@ -81,24 +81,29 @@ $(window).ready(function() {
 	
 	// 移出的图片效果
 	$("ul li").mouseleave(function() {
-		$("ul li:eq(0)").animate({left: 0}, 3000)
-		$("ul li:eq(1)").animate({left: 160}, 3000)
-		$("ul li:eq(2)").animate({left: 320}, 3000)
-		$("ul li:eq(3)").animate({left: 480}, 3000)
-		$("ul li:eq(4)").animate({left: 640}, 3000)
+		
+		// 第2个 false 代表动画停止，就停在当前位置 
+		$("ul li:eq(0)").stop(true, false).animate({left: 0}, 3000)
+		$("ul li:eq(1)").stop(true, false).animate({left: 160}, 3000)
+		$("ul li:eq(2)").stop(true, false).animate({left: 320}, 3000)
+		$("ul li:eq(3)").stop(true, false).animate({left: 480}, 3000)
+		$("ul li:eq(4)").stop(true, false).animate({left: 640}, 3000)
 	})
 	
 	
 	$("ul li:eq(1)").mouseenter(function() {
 		
+		// 鼠标移入到图片时，停止之前所有动画
+		
+		
 		// 下标为1的图片，向左边移动【动画】到 left:80 的位置
-		$("ul li:eq(1)").animate({left: 80}, 3000)
+		$("ul li:eq(1)").stop(true).animate({left: 80}, 3000)
 		
 		// 800-240=560
-		$("ul li:eq(2)").animate({left: 560}, 3000)
+		$("ul li:eq(2)").stop(true).animate({left: 560}, 3000)
 		// 800-160=640
-		$("ul li:eq(3)").animate({left: 640}, 3000)
-		$("ul li:eq(4)").animate({left: 720}, 3000)
+		$("ul li:eq(3)").stop(true).animate({left: 640}, 3000)
+		$("ul li:eq(4)").stop(true).animate({left: 720}, 3000)
 	})
 	
 	

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<button>添加li</button>
+		
+		<ul>
+			<li>我是土著li</li>
+		</ul>
+		
+	</body>
+</html>
+
+<script src="jquery-1.11.1.js"></script>
+<script>
+	
+	// 给按钮添加点击事件处理函数
+	$("button").click(function() {
+		// 思路：   创建 li， 添加到 ul 中
+		
+		$("ul").append("<li> 我是直接用字符串的方式创建出来的 </li>")
+		
+		
+		
+		
+//		var li = $("<li>我是用jQuery方式添加进来的</li>")
+//		
+//		li.prependTo($("ul"))
+		
+		// appendTo 【被添加】进去
+		// li.appendTo($("ul"))
+		
+		// 在内部元素之前添加 li
+		// $("ul").prepend(li)
+		
+		// 添加到 ul 中
+		// $("ul").append(li)
+		
+		// 在 ul 之前添加
+		// $("ul").before(li)
+		
+	})
+	
+</script>

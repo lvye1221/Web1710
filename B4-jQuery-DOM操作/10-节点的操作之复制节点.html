@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            $("button").eq(0).click(function () {
+                
+                // 获取, clone 复制一份: 相当于创建了1个新节点
+                var oUl = $(".box ul").clone()
+                
+                // 添加ul
+                $(".box").append(oUl)
+                
+            })
+        });
+    </script>
+</head>
+<body>
+    <button>复制节点</button>
+
+    <div class="box">
+        <ul>
+            <li>我是土著li1</li>
+            <li>我是土著li2</li>
+            <li>我是土著li3</li>
+            <li>我是土著li4</li>
+        </ul>
+    </div>
+</body>
+</html>

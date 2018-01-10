@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+
+$(function() {
+
+	
+	
+	$("button:eq(0)").click(function() {
+		// 清除 元素中全部内容
+		// $("ul").empty()
+		
+		$("ul").html("")
+	})
+	
+	// 删除第一个li
+	$("button:eq(1)").click(function() {
+		$("li:eq(0)").remove(); // 删除自己
+	})
+})
+    
+    </script>
+</head>
+<body>
+    <button>清空li</button>
+    <button>删除第一个li</button>
+
+    <ul>
+        <li>我是土著li1</li>
+        <li>我是土著li2</li>
+        <li>我是土著li3</li>
+        <li>我是土著li4</li>
+    </ul>
+
+</body>
+</html>
