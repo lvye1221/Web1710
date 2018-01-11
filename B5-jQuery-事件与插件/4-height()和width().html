@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            padding-left: 10px;
+            border: 10px solid #000;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+    
+    
+        $(function () {
+        	
+        	$("button:eq(0)").click(function() {
+        		// var w = $(".box").css("width")
+        		
+        		// width 获取元素宽度值
+        		var w = $(".box").width()
+        		
+        		//  alert(w)
+        		// $(".box")选择多个class为box的元素，
+        		//  width返回的结果是第一个元素的宽度值
+
+        	})
+        	
+        	$("button:eq(1)").click(function() {
+        		$(".box").width(500)
+        	})
+        	
+        	
+        	$("button:eq(2)").click(function() {
+        		var h = $(".box").height()
+        	})
+        	
+        	$("button:eq(3)").click(function() {
+        		$(".box").height(500)
+        	})
+        })
+    </script>
+</head>
+<body>
+<button>获取宽度</button>
+<button>设置宽度</button>
+<button>获取高度</button>
+<button>设置高度</button>
+
+<div class="box"></div>
+<div class="box" style="width: 50px; height: 50px;"></div>
+<div class="box" style="width: 20px;"></div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<h3></h3>
+		<div></div>
+		
+	</body>
+</html>
+
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+	
+	// 当函数是事件处理函数的时候； 这个函数是系统调用的！
+	//    函数(事件对象)
+	// e 函数形参== 接收事件对象( 包含了事件发生的所有信息 )
+	
+//	$(document).click(function(e) {
+//		
+//	
+//		
+//		// pageX 相对于文档 左边
+//		// offsetX 相对于参考元素的 左边
+//		// screenX 相对于屏幕的 左边
+//		// console.log( e.pageX, e.pageY )
+//		
+//	})
+
+
+// Ctrl + /    注释 / 取消注释
+
+$(document).keydown(function(e) {
+	// 【注意】 C 是大写的
+	//    keyCode  每个键都有1个数字与之对应， 键盘编码
+	console.log( e.keyCode )
+})
+
+
+// r      红色
+// g      绿色
+// b      蓝色
+// 否则的话，提示没有设置
+	
+</script>

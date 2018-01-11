@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+
+// 购物车
+//  要发请求头的话，要借助另外一个函数      ajax
+
+$.ajax({
+	method: "GET",		
+	url: "http://csit.top/api_cart.php",
+	headers: {				// 请求头
+		token: "2d622a9209535b9fbe212d69b8d5bc62"
+	},
+	success: function(str) {
+		console.log(str)
+	}
+});
+
+
+
+// 加入购物车
+
+//$.ajax({
+//	method: "POST",				// 请求方法		
+//	url: "http://csit.top/api_cart.php",	// 地址
+//	data: {						// 发送给服务器的数据
+//		goods_id: 34233,
+//		number: 1000
+//	},
+//	headers: {				// 请求头
+//		token: "2d622a9209535b9fbe212d69b8d5bc62"
+//	},
+//	success: function(str) {
+//		console.log(str)
+//	}
+//});
+
+
+</script>
+

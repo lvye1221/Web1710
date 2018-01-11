@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script src="underscore-min.js"></script>
+
+<script>
+// <%=a%>  显示 变量a的值
+var s = "好<%=a%>啊"
+
+// s 模板字符串, f 是1个函数
+var f = _.template(s)
+
+document.body.innerHTML =  f({a:100}) 
+
+</script>
+

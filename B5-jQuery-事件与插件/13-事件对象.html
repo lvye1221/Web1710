@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+			
+			
+			#box2 {
+				width: 100px;
+				height: 100px;
+				background: green;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		
+		<div id="box1">
+			<div id="box2"></div>
+		</div>
+		
+		
+		
+		<a href="http://www.baidu.com">百度</a>
+		
+		
+		<img src="../1.jpg" />
+		
+		
+	</body>
+</html>
+
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+$("img").mousedown(function(e) {
+	// 阻止浏览器默认行为
+	e.preventDefault()
+})
+
+$("a").click(function(e) {
+	// 阻止浏览器默认行为
+	e.preventDefault()
+})
+
+
+
+
+//
+//$("#box1").click(function() {
+//	alert("1")
+//})
+//	
+//$("#box2").click(function(e) {
+//	
+//	alert(2)
+//	
+//	// 阻止事件冒泡
+//	e.stopPropagation()
+//})
+	
+</script>

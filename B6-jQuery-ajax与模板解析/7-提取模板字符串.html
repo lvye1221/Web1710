@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<!-- 定义1个模板字符串，不会显示到页面中-->
+<script type="text/template" id="tp">
+	<a href="http://www.baidu.com"> 我好喜欢 </a>
+	
+		<%=a%> 
+	<span style="font-size: 30px;">
+		啊！！！！！
+	</span>
+</script>
+
+<script src="jquery-1.11.1.js"></script>
+<script src="underscore-min.js"></script>
+
+<script>
+// 1. 取出模板字符串
+var s = $("#tp").html()
+
+// 2. 编译转换函数
+var f = _.template(s)
+
+// 3. 生成结果字符串
+var r = f({a: 200})
+
+// 显示到页面
+$("body").html(r)
+</script>

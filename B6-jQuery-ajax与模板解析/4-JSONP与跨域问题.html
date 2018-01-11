@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+
+//var url = "http://localhost:8080/ajax/getJSONP"
+////var url = "http://csit.top/api_cat.php"
+//
+//$.get(url, function(str) {
+//	
+//	console.log( str )
+//})
+
+// 跨域！！！！！
+//  ajax 跨域问题解决办法
+//  1. 服务器端设置了允许跨域
+//  2. JSONP(原理：
+//		创建script标签，
+//		利用标签中 src 是可以跨域的特点来请求数据)
+
+	
+var url = "http://localhost:8080/ajax/getJSONP"
+
+$.ajax({
+	type:"get",
+	url: url,
+	dataType: "JSONP",  // 代表用JSONP的方式请求数据
+	success: function(str) {
+		console.log(str)
+	}
+});
+
+
+</script>
+

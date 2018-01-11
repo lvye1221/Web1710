@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				background: pink;
+				float: left;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+	</body>
+</html>
+
+<script src="jquery-1.11.1.js"></script>
+
+
+<script>
+
+
+// i 当前元素的序号，是自动增加的  
+// ele  当前元素的 DOM对象
+//    each 遍历的函数
+$("div").each(function(i, ele) {
+	$(ele).css("opacity", i*0.1)
+})
+
+
+	
+//	opacity
+
+// 1. 遍历所有div
+	
+//var all = $("div")
+//
+//for (var i = 0; i < all.length; i++) {
+//	// 设置透明度
+//	$(all[i]).css("opacity", (i+1)*0.1)
+//}
+	
+</script>

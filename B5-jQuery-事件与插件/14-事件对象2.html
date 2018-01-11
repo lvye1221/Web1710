@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+			#box2 {
+				width: 100px;
+				height: 100px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+		<div id="box1">
+			<div id="box2"></div>
+		</div>
+		
+		
+	</body>
+</html>
+
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+
+$(document).click(function(e) {
+	// 点 box1  弹 box1
+	// 点 box2 弹 box2     要求： 不能分别加点击事件
+	
+	// e.target 代表事件源
+	
+	console.log(e.target.id)
+})
+
+</script>

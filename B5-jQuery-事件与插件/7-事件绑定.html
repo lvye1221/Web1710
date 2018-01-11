@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- DOM0 事件绑定-->
+		<!--<button onclick="func()">按钮</button>-->
+		<button >按钮</button>
+		
+	</body>
+</html>
+
+<script>
+
+// DOM1 事件绑定
+// JS 绑定
+var oBtn = document.getElementsByTagName("button")[0]
+
+//oBtn.onclick = function() {
+//	alert("1")
+//}
+//
+//oBtn.onclick = function() {
+//	alert("2")
+//}
+
+
+
+	
+// DOM2 事件绑定
+oBtn.addEventListener("click", function() {
+	alert("1")
+	
+}, true);
+
+oBtn.addEventListener("click", function() {
+	alert("2")
+}, true);
+
+</script>
+

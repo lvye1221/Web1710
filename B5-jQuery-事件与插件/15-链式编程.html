@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+function $() {
+	// 链式调用原理： return 后面是对象
+	return {
+		a: function() {
+			return {
+				b: function() {
+					return {
+						c: 100
+					}
+				}
+			}
+		}
+	}
+}
+
+// $() 函数调用，值是 JSON对象
+$().a().b().c
+
+</script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<h3>请按键改变div的颜色</h3>
+		<div></div>
+		
+	</body>
+</html>
+
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+	
+
+// Ctrl + /    注释 / 取消注释
+
+// 整个页面中点击： document /  window
+$(document).keydown(function(e) {
+	// 【注意】 C 是大写的
+	//    keyCode  每个键都有1个数字与之对应， 键盘编码
+	console.log( e.keyCode )
+	
+	var c = e.keyCode;
+	
+	// 设置div的内容 
+	$("div").text("您按键的编码：" + c)
+	
+	
+	
+	switch (c) {		// 【多路】分支判断
+		case 82:
+			$("div").css("background", "red")
+			break
+		case 71:
+			$("div").css("background", "green")
+			break;
+		case 66:
+			$("div").css("background", "blue")
+			break;
+		default:
+			alert("系统没有设置此键")
+			break;
+	}
+})
+
+
+// r      红色
+// g      绿色
+// b      蓝色
+// 否则的话，提示没有设置
+	
+</script>
