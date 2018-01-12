@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<!-- 引入库 -->
+<script src="js/underscore-min.js"></script>
+
+
+<script>
+
+//// 1. 定义模板字符串   <%= %>模板
+//var str = "我是<%=data%>  "
+//
+//// 2. 转换成模板函数
+//var f = _.template(str)
+//
+//// 3. 数据（定义/ajax请求回来的）
+//var obj = {data: 100}
+//
+//// 4. 模板函数 + 数据 ==> 生成填充数据后的 字符串
+//var h = f(obj)
+//
+//// 5. 数据更新到页面
+//document.body.innerHTML = h
+
+
+// 练习：
+//    生成： 我是 中国 人。 
+//    要求：  中国 是用 JSON 数据传递进来的
+
+
+// 1. 定义模板
+var str = "我是<%=ren%>人 身高：<%=g%>cm"
+
+// 2. 转换成模板函数
+var f = _.template(str)
+
+// 3. 定义数据
+var json = {
+	ren: "火星",
+	g: "180"
+}
+
+// 4. 数据 + 模板函数 ==> 最终字符串
+var h = f(json)
+
+// 5. 显示
+document.body.innerHTML = h
+
+</script>

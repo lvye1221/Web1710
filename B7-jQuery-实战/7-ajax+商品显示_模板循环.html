@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.red {
+				color: red;
+			}
+			
+			.pic {
+				width: 100px;
+				height: 100px;
+			}
+			
+			.good {
+				width: 150px;
+				padding: 10px;
+				float: left;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+<!--		
+		<div class="good">
+			<h3 class="red">商品名字</h3>
+			<img src="../1.jpg" class="pic"/>
+			<div>￥18</div>
+			<div>组烛台以巴洛克式的浪漫</div>
+		</div>
+		-->
+	</body>
+</html>
+
+
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/underscore-min.js"></script>
+
+<script type="text/template" id="good">
+
+	<%  for (var i = 0; i < data.length; i++)  {  %>
+		<div class="good">
+			<h3 class="red"> <%=data[i].goods_name%> </h3>
+			<img src="<%=data[i].goods_thumb%>" class="pic"/>
+			<div>￥<%=data[i].price%></div>
+			<div><%=data[i].goods_desc%></div>
+		</div>
+	<% } %>	
+</script>
+
+
+<script>
+
+//1. 模板字符串
+var str = $("#good").html()
+
+//2. 模板函数
+var f = _.template(str)
+
+//3. 定义数据
+//var obj = {
+//	"goods_id": "33710",
+//	"cat_id": "45",
+//	"cat_name": " ",
+//	"brand_id": "8",
+//	"goods_name": "镍银香氛蜡烛",
+//	"goods_desc": "清新、自然、高品质是MODERNIQUE一贯坚持的品牌精神，此款香氛蜡烛是该...",
+//	"goods_thumb": "http:\/\/imgs-qn.iliangcang.com\/ware\/goods\/big\/2\/33\/33710.jpg?t=1392521199",
+//	"goods_number": "0",
+//	"star_number": "517",
+//	"sort_order": "50",
+//	"price": "650.00",
+//	"is_new": "0",
+//	"is_best": "0",
+//	"is_hot": "1",
+//	"site_id": "0"
+//}
+
+// 用 ajax 去获取数据
+var url = "http://csit.top/api_goods.php" 	// 后端api地址
+$.get(url, {
+	cat_id: 45,			// 栏目数据
+	page: 1,			// 页面编号
+	pagesize: 10		// 1页的数据
+}, function(str) {		// 回调函数
+	console.log(str)
+	
+	// 转换成JSON对象
+	var o = JSON.parse(str)	
+	
+	// 3. 定义商品数据
+	// var obj = o.data[1]
+	// o 是对象：  code, data, message
+	//              data 是一个数组，模板中用了data，
+	//                                没用 code,message 没关系
+	//   o.data[1] 是1个对象：  good_name, good_id ，唯独没有data
+	var obj = o
+	
+	//4. 组合
+	var h = f(obj)
+	
+	//5.显示
+	$("body").html(h)
+
+
+})
+
+
+</script>
+

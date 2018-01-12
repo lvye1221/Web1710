@@ -6,7 +6,7 @@
 //console.log('<%#>:', template(tpl1, {name: '不一致也可以哦，更改tag<%#>'}));
 
 
-template('tpl-list', data)
+//template('tpl-list', data)
 
 
 var utils={
