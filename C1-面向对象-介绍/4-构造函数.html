@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+//// 构造函数：   约定， 函数名首字母大写
+//function Dog() {
+//	// 【注意】 增加属性和方法是通过 this来实现的
+//	this.name = "小黄"		// 属性
+//	this.eat = function() {	// 方法
+//		console.log("正在吃...")
+//	}
+//}
+//
+//var dog1 = new Dog()  // 创建狗1
+//
+////dog1.eat()
+
+//Cat: 猫
+//属性：color
+//方法：eat; miaow
+//
+//function Cat() {
+//	this.color = "黄色"		// 属性
+//	this.eat = function() {	// 方法
+//		console.log("正在吃...")
+//	}
+//	this.miaow = function() {	// 方法
+//		console.log("喵呜喵呜...")
+//	}
+//}
+//
+//var cat1 = new Cat()  // 创建猫
+//var cat2 = new Cat()  // 创建猫
+//
+//console.log( cat1.color )
+//console.log( cat2.color )
+
+//function Cat(c) {
+//	this.color = c		// 属性
+//	
+//}
+//
+//// 构造函数 传参：  其实与函数传参的规则是一致的
+////      只不过调用方式使用 new
+//var cat1 = new Cat("黄色")  // 创建猫
+//var cat2 = new Cat("黑色")  // 创建猫
+//var cat3 = new Cat()  
+//
+//console.log( cat1.color )
+//console.log( cat2.color )
+//console.log( cat3.color )	// undefined
+
+
+
+//function Cat() {
+//}
+//
+//var cat = new Cat()
+//
+//
+//function Dog() {
+//}
+//
+//var dog = new Dog()
+//
+//// 实例（对象）
+//console.log(  dog instanceof Dog ) 	// true
+//console.log(  dog instanceof Cat ) 	// false
+
+
+function Cat() {
+	
+	this.color = "黄色"		// 属性
+	this.eat = function() {	// 方法
+		console.log("正在吃...")
+	}
+}
+//
+//var cat1 = new Cat()
+//var cat2 = new Cat()
+//
+////            "黄色"	        "黄色"	
+//// console.log(cat1.color == cat2.color)  
+//// true		2个都是值，并且都是黄色， 字符串 是相等的 所以 true
+//
+////           函数			函数  
+//console.log(cat1.eat == cat2.eat)  // false
+////  因为函数地址   不一样，所以是 false
+
+
+//
+//var a = 100
+//var b = 100
+//
+//a == b    // true
+
+
+//var a = "100"
+//var b = 100
+//
+//console.log( a == b )   // true
+
+//var a = []
+//var b = []
+//
+//console.log( a == b )   // false
+
+
+//var a = {}
+//var b = {}
+//
+//console.log( a == b )   // false
+
+//// 定义函数 m, 只定义了1遍， 
+//function m() {
+//	
+//}
+//
+//var a = m
+//var b = m
+//
+//// 比较的是地址，a，b的地址都一致，所以是相等的
+//console.log( a == b )   
+// true
+
+
+//(function() {
+//	console.log("自运行")
+//})()
+
+//!function() {
+//	console.log("自运行")
+//}()
+//
+
+//+function() {
+//	console.log("自运行")
+//}()
+
+-function() {
+	console.log("自运行")
+}()
+
+
+
+</script>

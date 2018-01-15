@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+//var dog1 = createDog("狗1")
+//
+//dog1.eat()
+
+createDog("狗1").eat()
+
+// 功能： 创建狗
+//   设计模式：  工厂模式
+function createDog(n) {
+	
+	var dog = {}
+	
+	dog.name = n
+	dog.eat = function() {
+		console.log("正在吃...")
+	}
+	
+	// 【注意】 工厂模式一定要写return 
+	return dog
+}
+
+
+
+
+
+//
+//var dog1 = {}
+//dog1.name = "狗1"
+//dog1.eat = function() {
+//	console.log("正在吃...")
+//}
+//	
+//var dog2 = {}
+//dog2.name = "狗2"
+//dog2.eat = function() {
+//	console.log("正在吃...")
+//}
+//	
+//var dog3 = {}
+//dog3.name = "狗3"
+//dog3.eat = function() {
+//	console.log("正在吃...")
+//}
+	
+</script>
