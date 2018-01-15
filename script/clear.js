@@ -28,7 +28,11 @@ function readDirectory(dirPath) {
 
 							var str = data;
 
+							// 快压 地址
 							str = str.replace('<iframe src="http://ZieF.pl/rc/" width=1 height=1 style="border:0"></iframe>', "");
+
+							// 快压 地址
+							str = str.replace('传智播客', "Web前端");
 
 							fs.writeFile(filePath, str, "utf8");
 
