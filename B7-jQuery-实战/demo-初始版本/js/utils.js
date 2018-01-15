@@ -31,15 +31,13 @@ var utils={
 	},
 	//新增和修改方法（合并为同一个）
 	update:function(opts){
+		
 		box.init({
-			title:"新增",
-			content:$('#addHtml').html(),
-			callback:function($box,$cover){
-				$('#submitBtn').click(function(){
-					alert("新增成功")
-					$box.remove();
-					$cover.remove();
-				})
+			title:"删除",
+			del:true,
+			content:"啊啊啊",
+			callback:function(){
+				alert("删除成功")
 			}
 		});
 	},
@@ -48,7 +46,7 @@ var utils={
 		box.init({
 			title:"删除",
 			del:true,
-			content:"你确定要删除这条信息么",
+			content:"啊啊啊",
 			callback:function(){
 				alert("删除成功")
 			}
