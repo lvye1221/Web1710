@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				height: 100vh;
+				background: url(images/bg.jpg) no-repeat;
+				background-size: 100% 100%;
+			}
+		
+			.fireworm {
+				width: 45px;
+				height: 40px;
+				background: url(images/1.jpg);
+				background-size: 100% 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		
+			.snow {
+				width: 45px;
+				height: 40px;
+				background: url(images/snow.gif);
+				background-size: 100% 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+		
+	</head>
+	<body>
+	</body>
+</html>
+
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+
+// 面向对象编程思路
+
+// 1. 找对象
+//							属性                                  方法
+//       萤火虫	       位置、大小、图片路径（节点）       移动位置
+//       雪花		位置、大小、图片路径（节点）      移动位置
+
+// 2. 实现对象（字面量的形式， 工厂模式、构造函数）
+//              {}  字面量的形式
+
+
+//     1. 定义构造函数
+function FireWorm() {
+	
+	// 属性
+	this.ele = $("<div></div>")	// 创建节点
+	this.ele.addClass("fireworm")  // 添加样式： 设置了位置、大小等
+	
+	this.ele.appendTo("body")      // 添加到body节点中
+	
+	
+	// 方法： 让萤火虫飞
+	this.move = function() {
+		// 移动萤火虫：
+		//    1. 创建1个随机位置
+		//    2. 调用jQuery 动画函数 animate
+		//    3. 移动完成之后继续飞
+		
+		var x = Math.random() * ($("body").width() - 100)
+		var y = Math.random() * ($("body").height() - 100)
+		
+		// 备份当前对象。在这里就是萤火虫对象
+		var self = this
+		
+		// 对象的方法中可以任意使用 自己对象的属性
+		this.ele.animate({
+			left: x,
+			top: y
+		}, 1000, function() {
+			// 回调函数，动画完成, 让萤火虫飞
+			self.move()
+		})
+	}
+	
+}
+
+
+
+//     雪花
+function Snow() {
+	
+	// 属性
+	this.ele = $("<div></div>")	// 创建节点
+	this.ele.addClass("snow")  // 添加样式： 设置了位置、大小等
+	
+	this.ele.appendTo("body")      // 添加到body节点中
+	
+	
+	// 方法： 让萤火虫飞
+	this.move = function() {
+		// 移动萤火虫：
+		//    1. 创建1个随机位置
+		//    2. 调用jQuery 动画函数 animate
+		//    3. 移动完成之后继续飞
+		
+		var x = Math.random() * ($("body").width() - 100)
+		var y = Math.random() * ($("body").height() - 100)
+		
+		// 备份当前对象。在这里就是萤火虫对象
+		var self = this
+		
+		// 对象的方法中可以任意使用 自己对象的属性
+		this.ele.animate({
+			left: x,
+			top: y
+		}, 1000, function() {
+			// 回调函数，动画完成, 让萤火虫飞
+			self.move()
+		})
+	}
+	
+}
+
+//// 创建萤火虫
+//var obj = new FireWorm()
+//
+//// 让萤火虫飞
+//obj.move()
+
+//setInterval(function() {
+//	// 创建萤火虫，让他飞
+//	new FireWorm().move()
+//}, 1500)
+
+
+// new FireWorm().move()
+
+</script>
+
