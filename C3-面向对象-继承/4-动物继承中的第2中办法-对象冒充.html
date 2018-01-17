@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+// 再比如有一个Animal动物类, Monkey是猴子类, Dog是狗类,
+// 那么Monkey和Dog都是动物,都可以继承Animal动物类的属性和方法,
+
+
+
+// 动物类
+function Animal(age) {
+	this.age = age  // 年龄
+	
+	this.run = function() {} // 会跑
+}
+
+// 狗类
+function Dog(age) {
+	//  call 调用函数。 
+	//       第1个参数：对象  ==> 指定函数中的 this 为 传入的对象
+	//       第2个参数：传入给函数中的第1个值
+	//     这里的 this 代表是当前这条狗
+	Animal.call(this, age)
+	
+	this.bark = function() {
+		console.log("汪汪汪~")
+	}
+}
+
+var dog1 = new Dog(2)    // 年龄：2
+var dog2 = new Dog(5)    // 年龄：5
+
+console.log( "dog1.age: " + dog1.age  )  // 2 
+console.log( "dog2.age: " + dog2.age  )  // 5
+</script>
+

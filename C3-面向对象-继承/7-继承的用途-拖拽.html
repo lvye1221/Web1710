@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+			
+			#box1 {
+				background: pink;
+				left: 0;
+			}
+			
+			#box2 {
+				background: red;
+				left: 200px;
+			}
+			
+			#box3 {
+				background: blue;
+				left: 400px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<div id="box3"></div>
+		
+	</body>
+</html>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/DragBox.js"></script>
+<script src="js/DragBoxLimit.js"></script>
+<script src="js/DragBoxText-2.0.js"></script>
+
+<script>
+	
+	new DragBox("#box1")
+	new DragBoxLimit("#box2")
+	new DragBoxText("#box3")
+	
+</script>

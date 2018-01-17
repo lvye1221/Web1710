@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+// 再比如有一个Animal动物类, Monkey是猴子类, Dog是狗类,
+// 那么Monkey和Dog都是动物,都可以继承Animal动物类的属性和方法,
+
+
+//// 动物类
+//function Animal(age) {
+//	this.age = age  // 年龄
+//}
+//
+//// 跑
+//Animal.prototype.run = function() {
+//	console.log("会跑~")
+//}
+//
+//// 狗类
+//function Dog(age) {
+//	Animal.call(this, age)
+//}
+//
+//var dog1 = new Dog(2)    // 年龄：2
+//
+//// 会不会跑？
+////  不会 ：   dog1.run   Animal 函数中没有 run 方法（只是原型中），
+////           你用对象冒充执行的话， dog1 自己不会增加run方法，原型也没有run。找不到 所以出错
+//dog1.run()
+
+
+
+
+//// 动物类
+//function Animal(age) {
+//	this.age = age  // 年龄
+//}
+
+
+//// 跑
+//Animal.prototype.run = function() {
+//	console.log("会跑~")
+//}
+//
+//// 狗类
+//function Dog(age) {
+//	Animal.call(this, age)
+//}
+//// Dog.prototype  是狗的原型， 是1个对象   ==> 修改成  动物的原型
+//Dog.prototype = Animal.prototype
+//
+//var dog1 = new Dog(2)    // 年龄：2
+//
+//// 会跑~
+////  因为  1. 自己对象中没有 run     2. dog原型对象（其实变成 了 Animal 的原型对象） 存在run方法的，所以会跑
+////dog1.run()
+//
+//console.log(  dog1.__proto__.constructor == Dog )   // false
+//console.log(  dog1.__proto__.constructor == Animal )   // true
+//console.log(  dog1 instanceof Dog )   // true
+//console.log(  dog1 instanceof Animal )   // true
+
+// 动物类
+function Animal(age) {
+	this.age = age  // 年龄
+}
+
+// 跑
+Animal.prototype.run = function() {
+	console.log("会跑~")
+}
+
+// 狗类
+function Dog(age) {
+	Animal.call(this, age)
+}
+// Dog.prototype  是狗的原型， 是1个对象   ==> 修改成  动物的对象  ==> 动物的原型（存在run）
+//      原型链
+//Dog.prototype = Animal.prototype
+Dog.prototype = new Animal()
+
+var dog1 = new Dog(2)    // 年龄：2
+
+// 会跑~
+dog1.run()
+
+
+
+</script>
+

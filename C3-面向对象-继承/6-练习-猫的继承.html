@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+//练习：实现以下类的原型链继承
+// 父类：Cat
+//方法：	eat; miaow
+//属性：	color
+//说明： eat吃各种东西
+//
+//子类1： GarfieldCat
+//方法：eat; miaow; talk
+//属性：color; glasses
+//说明：eat只吃肉
+//
+//子类2： TomCat
+//方法：eat; miaow; catchMouse
+//属性：color; friend
+//说明：eat只吃面包
+//
+// 普通猫
+function Cat(color) {		// 构造函数
+	this.color = color		// 属性
+}
+Cat.prototype.eat = function() {	// 方法1
+	console.log("普通猫： 吃各种东西")
+}
+Cat.prototype.miaow = function() {	// 方法2
+	console.log("喵呜喵呜~")
+}
+
+// 加菲猫
+function GarfieldCat(color, glasses) { // 构造函数
+	Cat.call(this, color)			   // 继承父类的属性
+	Cat.call(this)			   			// 继承父类的属性
+	this.glasses = glasses			   // 添加自己的属性	
+
+}
+GarfieldCat.prototype = new Cat()      // 继承父类原型中所有的方法
+GarfieldCat.prototype.eat = function() {  // 重写父类的方法
+	console.log("加菲猫： 只吃肉")
+}
+
+GarfieldCat.prototype.talk = function() { // 增加自己的方法
+	console.log("加菲猫： 会说人话")
+}
+
+
+// Tom猫
+function TomCat(color, friend) { // 构造函数
+	Cat.call(this, color) // 继承父类的属性
+	this.friend = friend  // 添加自己的属性	
+}
+TomCat.prototype = new Cat()  // 继承父类原型中所有的方法
+TomCat.prototype.eat = function() {    // 重写父类的方法
+	console.log("Tom猫： 只吃面包")
+}
+TomCat.prototype.catchMouse = function() { // 增加自己的方法
+	console.log("Tom猫： 抓老鼠，抓老鼠~")
+}
+
+
+
+var cat = new Cat()	// 创建猫
+var garfieldCat = new GarfieldCat() // 创建加菲猫
+var tomCat = new TomCat()  // 创建Tom猫
+
+
+// 吃东西
+cat.eat()
+garfieldCat.eat()
+tomCat.eat()
+
+// 猫叫
+cat.miaow()
+garfieldCat.miaow()
+tomCat.miaow()
+
+garfieldCat.talk() // 加菲猫 说话
+tomCat.catchMouse() // Tom猫 会 抓老鼠
+
+
+</script>
+

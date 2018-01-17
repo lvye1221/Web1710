@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				height: 100vh;
+				background: url(images/bg.jpg) no-repeat;
+				background-size: 100% 100%;
+			}
+		
+			.fireworm {
+				width: 45px;
+				height: 40px;
+				background: url(images/1.jpg);
+				background-size: 100% 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		
+			.snow {
+				width: 45px;
+				height: 40px;
+				background: url(images/snow.gif);
+				background-size: 100% 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/FireWorm.js"></script>
+<script src="js/Snow.js"></script>
+
+<script>
+	
+//	$("div").remove()
+	
+//	new FireWorm().fly()
+//	new Snow().fly()
+
+setInterval(function() {
+	new FireWorm().fly()
+}, 2000)
+	
+setInterval(function() {
+	new Snow().fly()
+}, 3000)
+	
+</script>
+

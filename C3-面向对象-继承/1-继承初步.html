@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+// 有一个Person类, Employee是员工类，Manager是管理者类，
+// Employee员工类可以继承Person类,因为员工也是人, 
+// Manager管理者类可以继承Employee员工类, 因为管理者也是员工。
+
+
+// 人
+function Person() {
+	this.age = 18;   // 年龄
+}
+
+// 员工
+function Employee() {
+	this.age = 18;  // 员工也是人，所以有年龄
+	this.no = "007" // 工牌
+}
+
+// 管理者
+function Manager() {
+	this.age = 18;  // 年龄
+	this.no = "007" // 工牌
+	this.bgs = "大办公室，有皮座椅的那种" // 办公室
+}
+	
+	
+</script>
+

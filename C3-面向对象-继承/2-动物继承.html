@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+// 再比如有一个Animal动物类, Monkey是猴子类, Dog是狗类,
+// 那么Monkey和Dog都是动物,都可以继承Animal动物类的属性和方法,
+//
+//function Animal() {
+//	this.age = 18  // 年龄
+//	
+//	this.run = function() {} // 会跑
+//}
+//
+//function Monkey() {
+//	this.age = 18  // 年龄
+//	
+//	this.run = function() {} // 会跑
+//	this.tiao = function() {} // 会跳
+//}
+//
+//function Dog() {
+//	this.age = 18  // 年龄
+//	
+//	this.run = function() {} // 会跑
+//	this.bark = function() {} // 会叫
+//}
+//
+//function base(self) {
+//	
+//	console.log( self )
+//	
+//	// this 是 Window ，而不是 dog, 也不是 base
+//	//   因为 是 Window 调用base
+//	self.age = 18  // 年龄
+//	
+//	self.run = function() {} // 会跑
+//}
+//
+//function Dog() {
+//	// this 是当前 dog 的对象 ==> 对象
+//	base(this)
+//	
+//	// base()
+//	// window.base()
+//	// Dog.base()
+//}
+//
+//var dog = new Dog()
+//
+//// 因为 dog 对象中没有 age 属性    
+//console.log( dog.age )  // undefined
+
+
+
+
+// 将共同代码提取出来成1个函数， base，名字可以改
+function base(self) {
+	
+	self.age = 18  // 年龄
+	
+	self.run = function() {} // 会跑
+}
+
+// 动物类
+function Animal() {
+	base(this)
+}
+
+function Dog() {
+	base(this)
+	this.bark = function() {
+		console.log("汪汪汪~")
+	}
+}
+
+function Monkey() {
+	base(this)
+	this.tiao = function() {
+		console.log("跳跳跳~")
+	}
+}
+
+var animal = new Animal()
+var dog = new Dog()
+var monkey = new Monkey()
+
+console.log("animal.age: " + animal.age)
+console.log("dog.age: " + dog.age)
+dog.bark()
+console.log("monkey.age: " + monkey.age)
+monkey.tiao()
+
+</script>
+

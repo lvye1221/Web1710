@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+// 再比如有一个Animal动物类, Monkey是猴子类, Dog是狗类,
+// 那么Monkey和Dog都是动物,都可以继承Animal动物类的属性和方法,
+
+
+// 将共同代码提取出来成1个函数， base，名字可以改
+function base(self, age) {
+	
+	self.age = age  // 年龄
+	
+	self.run = function() {} // 会跑
+}
+
+// 动物类
+function Animal(age) {
+	base(this, age)
+}
+
+// 狗类
+function Dog(age) {
+	base(this, age)
+	
+	this.bark = function() {
+		console.log("汪汪汪~")
+	}
+}
+
+var dog1 = new Dog(2)    // 年龄：2
+var dog2 = new Dog(5)    // 年龄：5
+
+console.log( dog1.age  )  // 2 
+</script>
+
