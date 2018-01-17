@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				height: 100vh;
+				background: url(img/bg.jpg) no-repeat;
+				background-size: 100% 100%;
+			}
+		
+			.hua {
+				width: 45px;
+				height: 40px;
+				background: url(img/1.jpg);
+				background-size: 100% 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+	</body>
+<ml>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+	function Hua(){
+		
+		this.ele=$("<div></div>");
+		this.ele.addClass("hua");
+		this.ele.appendTo("body");
+		
+//		this.move=function(){
+//			
+//		}
+	}
+	
+	new Hua()
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>萤火虫+雪花</title>
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+	</body>
+</html>
+
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/fireworm.js"></script>
+<script src="js/snow-0.0.1.js"></script>
+
+<script>
+new FireWorm().move()
+	
+setInterval(function() {
+	new Snow().fall()
+}, 500)
+
+</script>

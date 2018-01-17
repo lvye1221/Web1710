@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+function Dog() {
+	this.name = "小黄"
+}
+Dog.prototype.bark = function() {}
+
+var dog = new Dog()
+
+// hasOwnProperty 自己的对象中是否存在此属性或方法
+//                      有 	true, 否则就是 false
+console.log(  dog.hasOwnProperty("name")  ) //true
+console.log(  dog.hasOwnProperty("age")  ) //false
+
+// 因为 bark 是在狗的原型对象中，自己对象中是不存在这个属性的，所以是false
+console.log(  dog.hasOwnProperty("bark")  ) //false
+
+// in   自己对象 或者 原型对象 中 是否存在此属性或方法
+//                      有 	true, 否则就是 false
+console.log( "bark" in dog  ) // true
+console.log( "name" in dog  ) // true
+
+/// 【问题】 判断1个属性 只是存在于 原型对象 中？
+("bark" in dog && !dog.hasOwnProperty("bark"))
+
+
+
+// 练习：   鸟的拖拽，采用面向对象编程思路来实现！
+</script>
+

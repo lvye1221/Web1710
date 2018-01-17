@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			.bird {
+				width: 150px;
+				height: 120px;
+				background: url(img/bird.jpg);
+				background-size: cover;
+				
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+		
+	</head>
+	<body>
+	</body>
+</html>
+
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+
+// 				属性							方法
+// 鸟		颜色、大小、位置（节点）		被拖拽
+
+
+// 因为 原型对象中 还没增加 drag 方法
+// new Bird().drag()
+// new Bird().__proto__.drag()
+
+
+
+function Bird() {
+	this.ele = $("<div></div>")
+	this.ele.addClass("bird")
+	this.ele.appendTo("body")
+}
+
+// 拖拽方法
+Bird.prototype.drag = function() {
+	
+	var self = this
+	
+	this.ele.mousedown(function(e) {
+		
+		var detaX = e.offsetX
+		var detaY = e.offsetY
+		
+		$("body").mousemove(function(e) {
+			self.ele.css({
+				left: e.clientX - detaX,
+				top: e.clientY - detaY
+			})
+		})
+		
+		
+		$("body").mouseup(function() {
+			// 关闭事件绑定
+			$("body").off("mousemove mouseup")
+		})
+	})
+}
+
+
+new Bird().drag()
+
+
+</script>
+

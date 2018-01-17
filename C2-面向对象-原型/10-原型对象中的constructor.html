@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+//
+//function Dog() {
+//}
+
+//var dog = new Dog()
+//
+////console.log( Dog.prototype.constructor == Dog ) // true
+//console.log( dog.constructor == Dog ) 
+// true :   实例对象中没有 constructor, 
+//              所以去原型对象找 dog.constructor == Dog
+
+
+
+//Dog.prototype = {}
+
+// 原因： Dog.prototype 是 {}, {} 的constructor 是 Object
+//console.log( Dog.prototype.constructor == Dog ) // false
+	
+	
+	
+	
+//
+//function Dog() {
+//}
+//
+//Dog.prototype.name = "小黄"
+//
+//var dog = new Dog()
+//
+//console.log( dog.constructor == Dog )
+//// false  直觉， 
+//// true   虽然没有写 constructor, 但自带了，默认的是 Dog
+
+
+//
+//function Dog() {
+//}
+//
+//Dog.prototype = {}
+//
+//var dog = new Dog()
+//
+//console.log( dog.constructor == Dog )
+//// false  {} 改变了原型对象中 constructor
+
+
+
+function Dog() {
+}
+
+Dog.prototype = {}
+Dog.prototype.constructor = Dog			// 改回Dog了
+
+var dog = new Dog()
+
+console.log( dog.constructor == Dog )
+// true  
+
+
+	
+</script>
+

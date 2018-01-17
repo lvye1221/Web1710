@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+//var obj = {a: 100}
+//
+//delete obj.a 
+//
+//// undefined   因为删除对象obj中的a属性
+//console.log( obj.a )  
+
+//a = 100				// 默认省略了 window
+//
+//delete window.a   // 删除 变量a
+//
+//// 报错    a is not defined   因为找不到a呀
+////console.log( a )  
+//// undefined    a是删除了，可window还在
+//console.log( window.a )  
+
+
+var a = 100
+// delete 不能删除 var 定义的变量
+delete window.a
+// 100
+console.log(a)
+
+</script>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+//Array.prototype.xxxxx = function() {}
+//
+//var arr = new Array()
+//
+//arr.xxxxx()		// 内部Array对象中不存在 xxxxx方法，不能调用
+
+
+
+
+
+
+//arr.push(1) 	// 内部Array对象中存在 push 方法，能调用！
+
+
+//
+//Array.prototype.sum = function() {
+//	
+//	var s = 0
+//	
+//	// this 调用的对象，这里就是 数组
+//	for (var i = 0; i < this.length; i++) {
+//		s += this[i]
+//	}
+//	
+//	console.log( s )
+//}
+//
+//var a = [1,2,3]
+//
+//a.sum()
+
+String.prototype.print = function() {
+	
+	var s = ""
+	for (var i = 0; i < this.length; i++) {
+		s += this[i]
+	}
+	
+	console.log(s)
+}
+
+var s = "abc"
+//var s = new String("123")
+
+// print  打印出字符串的内容
+s.print()
+
+</script>
+

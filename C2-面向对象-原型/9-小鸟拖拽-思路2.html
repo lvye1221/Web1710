@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			.bird {
+				width: 150px;
+				height: 120px;
+				background: url(img/bird.jpg);
+				background-size: cover;
+				
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+		
+	</head>
+	<body>
+	</body>
+</html>
+
+<script src="js/jquery-1.11.1.js"></script>
+<script>
+
+// 				属性							方法
+// 鸟		颜色、大小、位置（节点）		开始，移动，停止
+
+
+
+
+function Bird() {
+	this.ele = $("<div></div>")
+	this.ele.addClass("bird")
+	this.ele.appendTo("body")
+	
+	// 构造函数中、方法中，都是可以自己调用自己的方法、属性
+	this.start()
+}
+
+// 开始
+Bird.prototype.start = function() {
+	
+	// 备份对象
+	var self = this
+	
+	// 当鼠标在 元素中 按下左键的时候
+	this.ele.mousedown(function(e) {
+		
+		// 获取鼠标按下在 小鸟中的 x和y的距离
+		var detaX = e.offsetX
+		var detaY = e.offsetY
+		
+		// 给页面添加鼠标移动事件
+		$("body").mousemove(function(e) {
+			// 得到鼠标移动时，鸟跟随鼠标的左上点
+			var x = e.clientX - detaX
+			var y = e.clientY - detaY
+			
+			// 让鸟移动到 x 和 y 的位置
+			self.move(x, y)
+		})
+			
+		// 鼠标抬起事件	
+		$("body").mouseup(function() {
+			// 让鸟停止移动
+			self.stop()
+		})
+	})
+}
+
+
+// 移动
+Bird.prototype.move = function(x, y) {
+	this.ele.css({
+		left: x,
+		top: y
+	})
+}
+
+// 停止
+Bird.prototype.stop = function() {
+	$("body").off("mousemove mouseup")
+}
+
+//new Bird().start()
+
+new Bird()
+
+
+</script>
+

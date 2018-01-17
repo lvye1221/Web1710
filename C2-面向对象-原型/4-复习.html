@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+<script>
+
+function Dog() {
+	this.name = "小黄"
+	this.bark = function() {
+		console.log("汪汪")
+	}
+}
+
+var dog1 = new Dog()
+var dog2 = new Dog()
+
+console.log( dog1.name == dog2.name ) // true
+console.log( dog1.bark == dog2.bark ) // false
+
+// 【问题】 dog1.bark 与 dog2.bark 里面的内容是一样的，
+
+	
+</script>
