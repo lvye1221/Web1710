@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				border: 1px solid black;
+			}
+			
+			.box1 {
+				background: blue;
+				top: 100px;
+				left: 0px;
+			}
+			.box2 {
+				background: pink;
+				left: 200px;
+				top: 100px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		
+		
+		<button> 是否碰撞 </button>
+		
+	</body>
+</html>
+
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/common.js"></script>
+
+
+<script>
+
+
+
+
+
+$("button").click(function() {
+	
+	var $box1 = $(".box1")
+	var $box2 = $(".box2")
+	
+	// 调用函数 isTouch 判断是否碰撞了
+	if ( isTouch($box1, $box2) ) {
+		alert("碰撞了")
+	} else {
+		alert("没有碰撞")
+	}
+})
+	
+	
+</script>

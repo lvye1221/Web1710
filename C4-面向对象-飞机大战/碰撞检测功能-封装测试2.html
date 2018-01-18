@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				border: 1px solid black;
+			}
+			
+			.box1 {
+				background: red;
+				height: 150px;
+				top: 0px;
+				left: 200px;
+			}
+			.box2 {
+				background: pink;
+				left: 200px;
+				top: 600px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		
+		
+		<button> 发射 </button>
+		
+	</body>
+</html>
+
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/common.js"></script>
+
+
+<script>
+
+
+
+
+
+$("button").click(function() {
+	var $box2 = $(".box2")
+	
+	$box2.animate({top: 0}, 5000)
+	
+	console.log("会不会值会打印一条")
+})
+	
+// 思路： 创建1个间隔时间很快的定时器，定时检测 是否碰撞
+
+setInterval(function() {
+	// if ($(".box2").position().top <= 100) {
+		
+	var a = $(".box1")
+	var b = $(".box2")
+	
+	if ( isTouch(a, b) ) {	
+		$(".box2").stop()
+	}
+}, 10)
+
+	
+</script>

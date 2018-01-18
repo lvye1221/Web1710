@@ -1,7 +1,5 @@
 
-
 // 游戏引擎        游戏背景						开始， 结束
-
 
 //  仅此1份的对象，我们一般采用 字面量的形式  会更好
 
@@ -15,10 +13,19 @@ var gameEngine = {
 	start: function() {   // 方法: 启动游戏
 		
 		// 1. 游戏背景动起来
-		this.moveBg()
+		// this.moveBg()
 		
 		// 2. 创建自己的飞机
 		this.myPlane = new MyPlane()
+		
+		// 3. 飞机开火
+		this.myPlane.fire()
+		
+		// 4. 创建敌机
+		setInterval(function() {
+			new Enemy()
+		}, 1000)
+		
 	}, 
 	
 	
