@@ -14,4 +14,5 @@ function BigEnemy() {
 BigEnemy.prototype = {}   // 创建新的空对象
 for (var k in Enemy.prototype) {  // 复制 敌机的所有方法
 	BigEnemy.prototype[k] = Enemy.prototype[k]
+	//BigEnemy.prototype.k = Enemy.prototype[k]
 }

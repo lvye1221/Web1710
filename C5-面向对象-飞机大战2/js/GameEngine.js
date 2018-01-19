@@ -6,6 +6,12 @@
 // 游戏引擎
 var gameEngine = {
 	
+	enemys:  {len:0}, 		// 属性： 用于保存所有敌机的对象
+	
+	bullets: {len: 0},      // 属性： 存储所有子弹
+	
+	
+	
 	ele: $("#box"),		// 属性： 找到背景
 	
 	start: function() {   // 方法: 启动游戏
