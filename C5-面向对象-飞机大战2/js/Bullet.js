@@ -40,3 +40,38 @@ Bullet.prototype.move = function() {
 		delete gameEngine.bullets[self.id]
 	})
 }
+
+
+
+// 子弹爆炸
+Bullet.prototype.boom = function() {
+	
+	var self = this			// 备份子弹对象
+	
+	var arr = [				// 子弹死亡变化的图片
+		"url(img/die1.png)",
+		"url(img/die2.png)"
+	]
+	var i = 0				// 图片变化编号
+	
+	self.ele.stop()			// 停止动画移动
+	// 创建定时器
+	var timer = setInterval(function() {
+		self.ele.css({"background": arr[i++]})  // 改变背景图片
+		self.ele.css({			// 改变宽高
+			width: 40,
+			height: 43
+		})
+		if (i >= arr.length) {		// 已经变到最后一张图片
+			clearInterval(timer)	// 清除定时器
+			
+			self.ele.remove()		// 删除子弹
+		}
+	}, 100)
+	
+	
+	
+	
+	// 删除全局对象中保存的子弹对象
+	delete gameEngine.bullets[this.id]
+}

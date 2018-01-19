@@ -26,6 +26,28 @@ var gameEngine = {
 		this.myPlane.fire()
 		
 		// 4. 创建敌机
+		this.createEnemy()
+
+		// 5. 创建碰撞检测
+		// this.touchListen()
+		
+	}, 
+	
+	touchListen: function() {  // 碰撞检测
+		
+		setInterval(function() {		// 定时检测
+			
+//			console.log("所有敌机：")
+//			for (var k in gameEngine.enemys) {		// 遍历所有敌机
+//				console.log( gameEngine.enemys[k] )
+//			}
+			
+		}, 30)	// 碰撞检测时间要设很快
+		
+	},
+	
+	createEnemy: function() {  	// 创建敌机函数
+		
 		setInterval(function() {
 			
 			if (Math.random() < 0.2) {  // 20%的概率产生大飞机
@@ -44,9 +66,8 @@ var gameEngine = {
 			}
 			
 		}, 1000)
-
-		
-	}, 
+	},
+	
 	
 	
 	moveBg: function() {	// 方法1： 滚动背景

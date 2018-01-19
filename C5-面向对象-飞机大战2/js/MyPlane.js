@@ -40,5 +40,5 @@ MyPlane.prototype.fire = function() {
 		var y = self.ele.position().top - 18
 		
 		new Bullet(x, y)
-	}, 1000);
+	}, 200);
 }
