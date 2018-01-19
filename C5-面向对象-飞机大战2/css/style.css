@@ -1,0 +1,87 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+}
+
+#box {
+	width: 100%;
+	height: 100vh;
+	background: url(../img/bg.jpg);
+	background-size: 100%;
+	background-position-y: 0%;  /* 先将图片挪动到顶部，以便于能够往下落 */
+	overflow: hidden;
+}
+
+#myPlane {
+	width: 98px;
+	height: 122px;
+	position: absolute;
+	left: 44%;
+	bottom: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/me.png);
+}
+
+.bullet {
+	width: 7px;
+	height: 18px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/bullet.png);
+}
+
+.enemy {
+	width: 70px;
+	height: 92px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/plain2.png);
+}
+
+
+/* 大飞机 样式 */
+.big-enemy {
+	width: 165px;
+	height: 256px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/plain3.png);
+}
+
+
+
+/* 中飞机 样式 */
+.mid-enemy {
+	width: 70px;
+	height: 92px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/plain2.png);
+}
+
+
+/* 小飞机 样式 */
+.small-enemy {
+	width: 59px;
+	height: 36px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/plain1.png);
+}
+

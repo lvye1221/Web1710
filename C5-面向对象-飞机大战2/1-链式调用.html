@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+	
+//function Fly() {
+//	
+//}
+//
+//Fly.prototype.start = function() {
+//	
+//}
+//
+//Fly.prototype.fire = function() {
+//	
+////}
+//
+////// 创建1个飞机，开始拖拽
+////new Fly().start()
+////// 创建了1个飞机，然后开火
+////new Fly().fire()
+////	
+//
+//// 创建自己的飞机
+//var me = new Fly()
+//
+////me.start()	// 启动
+////me.fire()  // 开火
+//
+////    Cannot read property 'fire' of undefined
+//me.start().fire()
+
+
+function Fly() {
+}
+
+Fly.prototype.start = function() {	
+	return this
+}
+
+Fly.prototype.fire = function() {	
+	return this
+}
+
+
+new Fly().start().fire()
+
+
+
+//var me = new Fly()
+//
+//me.start().fire().start().fire().start().fire().start().fire().start().fire().start().fire()
+
+
+
+//    Cannot read property 'fire' of undefined
+//    me.start(...).fire is not a function
+//      me.start()  说明调用了 start 函数， 整体的值 等于 函数中 return 后面的值
+
+</script>
+
