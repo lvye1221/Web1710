@@ -1,75 +1,75 @@
 
 ```
 
-    div>p: �Ӵ�
-    div+p�� div�������ڵĵ�һ��p
-    div~p: div�������е��ֵ�p
+    div>p: 子代
+    div+p： div后面相邻的第一个p
+    div~p: div后面所有的兄弟p
 
-1������ѡ������
-    idѡ����    #     ͨ��id ��ѡ��
-    ����ѡ����  .     ͨ��������ѡ��
-    ����ѡ����  []    ͨ����ǩ������ѡ����
+1、属性选择器：
+    id选择器    #     通过id 来选择
+    类名选择器  .     通过类名来选择
+    属性选择器  []    通过标签属性来选择器
 
-    �﷨��
-    ��־�Է��ţ�[]
-    ^: ��ͷ  $:��β  *������
-    E[title]  : ѡ��ҳ���EԪ�أ�����E��Ҫ����title����
-    E[title="abc"] :ѡ��ҳ���EԪ�أ�����E��Ҫ����title����,����ֵΪabc
-    E[title^="abc"] :ѡ��ҳ���EԪ�أ�����E��Ҫ����title����,����ֵ��abc��ͷ
-    E[title$="abc"] :ѡ��ҳ���EԪ�أ�����E��Ҫ����title����,����ֵ��abc��β
-    E[title*="abc"] :ѡ��ҳ���EԪ�أ�����E��Ҫ����title����,����ֵ����abc
+    语法：
+    标志性符号：[]
+    ^: 开头  $:结尾  *：包含
+    E[title]  : 选中页面的E元素，并且E需要带有title属性
+    E[title="abc"] :选中页面的E元素，并且E需要带有title属性,属性值为abc
+    E[title^="abc"] :选中页面的E元素，并且E需要带有title属性,属性值以abc开头
+    E[title$="abc"] :选中页面的E元素，并且E需要带有title属性,属性值以abc结尾
+    E[title*="abc"] :选中页面的E元素，并且E需要带有title属性,属性值包含abc
 
-    �ṹα��ѡ������
-       E��first-child��ѡ�и�Ԫ���еĵ�һ����Ԫ��
-       E��last-child��ѡ�и�Ԫ���е����һ����Ԫ��
-       E��nth-child(1)��ѡ�и�Ԫ���еĵ�5����Ԫ��
-        n: 0,1,2,3,4������
-        ż���� 2n  even
-        ������2n-1 odd
-        ǰ5���� -n+5
-      E��nth-last-child(3): �Ӻ���ǰѡ�� ѡ�е�����3��
+    结构伪类选择器：
+       E：first-child　选中父元素中的第一个子元素
+       E：last-child　选中父元素中的最后一个子元素
+       E：nth-child(1)　选中父元素中的第5个子元素
+        n: 0,1,2,3,4。。。
+        偶数： 2n  even
+        奇数：2n-1 odd
+        前5个： -n+5
+      E：nth-last-child(3): 从后向前选择， 选中倒数第3个
 
       div:nth-child(9)
 
-      ע�⣺��ѡ����Ԫ�ص����� ������ָ��������E,����ѡ����Ч��
+      注意：所选到的元素的类型 必须是指定的类型E,否则选择无效；
 
-     E��empty ��ʾԪ��Ϊ�յ�״̬
-     E:target: ��ʾԪ�ر������״̬  Ҫ���ê��ʹ��
+     E：empty 表示元素为空的状态
+     E:target: 表示元素被激活的状态  要配合锚点使用
 
-     αԪ�أ�
-        ͨ��cssģ���htmlЧ��
+     伪元素：
+        通过css模拟出html效果
         E::before
-        E::after  ������content ����
+        E::after  必须有content 属性
 
-    αԪ��ѡ������
-            E::first-letter��ѡ�е�һ����ĸ
-            E::first-lineѡ�е�һ��
-            E::selection: ��ʾѡ������� ͨ������ color  background
+    伪元素选择器：
+            E::first-letter　选中第一个字母
+            E::first-line选中第一行
+            E::selection: 表示选择的区域 通过设置 color  background
 
 
-  CSS3��������������ɫģʽ��
+  CSS3中新增了两种颜色模式：
 
-    RGBA:     red  green blue (0-255)   alpha: ͸���� ��0-1��
+    RGBA:     red  green blue (0-255)   alpha: 透明度 （0-1）
 
     HSLA:
-        H:ɫ��  0-360
-        S:���Ͷ� 0%-100%
-        L:����    0%-100%
-        A��alpha ͸���� 0-1
+        H:色调  0-360
+        S:饱和度 0%-100%
+        L:亮度    0%-100%
+        A：alpha 透明度 0-1
 
 
-    ����ģ�ͣ�
-        �������ӣ� content-box   padding-box  border-box
-        box-sizing: border-box(�ڼ�ģʽ)border-box(�ڼ�ģʽ) /content-box�����ģʽ��(Ĭ��ֵ)
+    盒子模型：
+        三个盒子： content-box   padding-box  border-box
+        box-sizing: border-box(内减模式)border-box(内减模式) /content-box（外加模式）(默认值)
 
-       box-sizing: border-box   ��ģ��
+       box-sizing: border-box   盒模型
 
-     ˽�л�ǰ׺��
-         �����˽�л�ǰ׺��
-            -webkit-: �ȸ� ƻ��
-            -moz-:���
-            -ms-��ie
-            -o-��ŷ��
+     私有化前缀：
+         浏览器私有化前缀：
+            -webkit-: 谷歌 苹果
+            -moz-:火狐
+            -ms-：ie
+            -o-：欧朋
 
 ```
 
