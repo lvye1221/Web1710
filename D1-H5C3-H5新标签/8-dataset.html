@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<button data-xiaoming="棒棒棒！" data-dog-xh="旺旺旺"> 按钮1 </button>
+		
+	</body>
+</html>
+
+<script>
+	
+	// 找到按钮
+	var oBtn = document.querySelector("button")
+	
+	// 点击处理函数
+	oBtn.onclick = function() {
+		
+
+		alert(  oBtn.dataset["dog-xh"] )		// 不可以，必须采用驼峰形式来获取数据
+
+
+//		alert(  oBtn.dataset["dogXh"] )		// 可以，驼峰形式获取数据
+//		alert(  oBtn.dataset.dogXh )		// 可以，驼峰形式获取数据
+		
+		// dataset 用于获取标签中 data-***的属性值
+		// alert(  oBtn.dataset["xiaoming"]  )
+		// alert(  oBtn.dataset.xiaoming  )
+	}
+	
+</script>
+

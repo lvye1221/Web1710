@@ -1,35 +1,54 @@
+
+
+
+### è§†é¢‘éŸ³é¢‘
+
+flash çš„æŠ€æœ¯
+
+1. å®¢æˆ·ç«¯ç”µè„‘å¿…é¡»å®‰è£… flash æ’ä»¶
+
+
+
+
+
+
+
+
+
+
+
 ```
 
-1¡¢HTML5:
+1ã€HTML5:
     HTML4.1
-    ÍøÒ³¿ª·¢£º
-        ½á¹¹: html4.0
-        ÑùÊ½£ºcss css2
-        ÐÐÎª£ºjs
-    HTML5:¡¡ÊÇHTML4µÄÉý¼¶°æ±¾(ÏÁÒå)
-        ½á¹¹£ºhtml5
-        ÑùÊ½£ºcss3
-        ÐÐÎª£ºjs API ÓÐËùÔöÇ¿  µØÀí¶¨Î» web´æ´¢ ÍÏ×§
+    ç½‘é¡µå¼€å‘ï¼š
+        ç»“æž„: html4.0
+        æ ·å¼ï¼šcss css2
+        è¡Œä¸ºï¼šjs
+    HTML5:ã€€æ˜¯HTML4çš„å‡çº§ç‰ˆæœ¬(ç‹­ä¹‰)
+        ç»“æž„ï¼šhtml5
+        æ ·å¼ï¼šcss3
+        è¡Œä¸ºï¼šjs API æœ‰æ‰€å¢žå¼º  åœ°ç†å®šä½ webå­˜å‚¨ æ‹–æ‹½
 
 
-    HTML5¹ãÒåµÄ¸ÅÄî: ´ú±í×Åä¯ÀÀÆ÷¼¼Êõ·¢Õ¹µÄÒ»½×¶Î£¬HTML5+CSS3+js API Ò»Ì×Ç°¶Ë¼¼ÊõµÄ×éºÏ£»
+    HTML5å¹¿ä¹‰çš„æ¦‚å¿µ: ä»£è¡¨ç€æµè§ˆå™¨æŠ€æœ¯å‘å±•çš„ä¸€é˜¶æ®µï¼ŒHTML5+CSS3+js API ä¸€å¥—å‰ç«¯æŠ€æœ¯çš„ç»„åˆï¼›
 
-2¡¢ÐÂÔöÓïÒå»¯±êÇ©
-    header Í·²¿
-    nav  µ¼º½
-    section  ÇøÓò
-    aside  ²à±ßÀ¸
-    article ÎÄÕÂ
-    footer µ×²¿
-    progress  ½ø¶ÈÌõ
+2ã€æ–°å¢žè¯­ä¹‰åŒ–æ ‡ç­¾
+    header å¤´éƒ¨
+    nav  å¯¼èˆª
+    section  åŒºåŸŸ
+    aside  ä¾§è¾¹æ 
+    article æ–‡ç« 
+    footer åº•éƒ¨
+    progress  è¿›åº¦æ¡
 
-3¡¢±íµ¥
-   ±íµ¥ÀàÐÍ£º type="text"
+3ã€è¡¨å•
+   è¡¨å•ç±»åž‹ï¼š type="text"
    email
    tel
    url
    search
-   number  step:²½³¤
+   number  step:æ­¥é•¿
    color
    range  value   max min
    time
@@ -37,56 +56,56 @@
    month
    week
 
-   ÓÐ¼æÈÝÐÔÎÊÌâ
+   æœ‰å…¼å®¹æ€§é—®é¢˜
 
-   ±íµ¥ÔªËØ£º
+   è¡¨å•å…ƒç´ ï¼š
     <input type="search" list="sex"/>
-    Êý¾ÝÁÐ±í
+    æ•°æ®åˆ—è¡¨
     <datalist id="sex">
-        <option>ÄÐ</option>
-        <option>ÄÐ</option>
-        <option>ÄÐ</option>
+        <option>ç”·</option>
+        <option>ç”·</option>
+        <option>ç”·</option>
     </datalist>
 
-    <output></output>  Êä³öÐÅÏ¢
-    <keygen/>   Éú³ÉÃÜÔ¿µÄ ÓÃÓÚ±íµ¥°²È«´«Êä
-    <meter></meter> ¶ÈÁ¿Æ÷  max   min  value  low  high
-    <progress></progress> ½ø¶ÈÌõ  max   min  value
+    <output></output>  è¾“å‡ºä¿¡æ¯
+    <keygen/>   ç”Ÿæˆå¯†é’¥çš„ ç”¨äºŽè¡¨å•å®‰å…¨ä¼ è¾“
+    <meter></meter> åº¦é‡å™¨  max   min  value  low  high
+    <progress></progress> è¿›åº¦æ¡  max   min  value
 
-    ±íµ¥ÊôÐÔ£º
-    placeholder:ÌáÊ¾ÎÄ×Ö
-    autofocus:×Ô¶¯¾Û½¹
-    autocomplete£º×Ô¶¯Íê³É£¨Ìî³ä£©  on ¿ªÆô£¨Ä¬ÈÏ£©   off È¡ÏûÌáÊ¾
-    required:±ØÌî
-    multiple: ¶àÑ¡
-    novalidate: ¹Ø±Õ±íµ¥µÄÄ¬ÈÏÑéÖ¤¹¦ÄÜ ÓÃÓÚform
-    pattern:  ×Ô¶¨ÒåÕýÔòÑéÖ¤ pattern="\D+";
+    è¡¨å•å±žæ€§ï¼š
+    placeholder:æç¤ºæ–‡å­—
+    autofocus:è‡ªåŠ¨èšç„¦
+    autocompleteï¼šè‡ªåŠ¨å®Œæˆï¼ˆå¡«å……ï¼‰  on å¼€å¯ï¼ˆé»˜è®¤ï¼‰   off å–æ¶ˆæç¤º
+    required:å¿…å¡«
+    multiple: å¤šé€‰
+    novalidate: å…³é—­è¡¨å•çš„é»˜è®¤éªŒè¯åŠŸèƒ½ ç”¨äºŽform
+    pattern:  è‡ªå®šä¹‰æ­£åˆ™éªŒè¯ pattern="\D+";
 
-    ±íµ¥ÊÂ¼þ£º
-    oninput:µ±ÓÃ»§ÊäÈëÊ± ´¥·¢
-    oninvalid:µ±ÑéÖ¤²»Í¨¹ýÊÇ´¥·¢-->ÉèÖÃÑéÖ¤²»Í¨¹ýÊ±µÄÌáÊ¾ÎÄ×Ö
+    è¡¨å•äº‹ä»¶ï¼š
+    oninput:å½“ç”¨æˆ·è¾“å…¥æ—¶ è§¦å‘
+    oninvalid:å½“éªŒè¯ä¸é€šè¿‡æ˜¯è§¦å‘-->è®¾ç½®éªŒè¯ä¸é€šè¿‡æ—¶çš„æç¤ºæ–‡å­—
 
 
-4¡¢¶àÃ½Ìå
-    Ö®Ç°£º
-        ÔÚÍøÒ³ÉÏ²¥·Å ¶àÃ½Ìå ±ØÐëÒÀÀµÓÚµÚÈý·½ ²å¼þ
+4ã€å¤šåª’ä½“
+    ä¹‹å‰ï¼š
+        åœ¨ç½‘é¡µä¸Šæ’­æ”¾ å¤šåª’ä½“ å¿…é¡»ä¾èµ–äºŽç¬¬ä¸‰æ–¹ æ’ä»¶
         mediaplay:
-        ¿ì²¥£º
-        falsh²å¼þ£º
+        å¿«æ’­ï¼š
+        falshæ’ä»¶ï¼š
 
-        H5ÀïÃæÌá¹©ÁË ÊÓÆµ ºÍ ÒôÆµµÄ±êÇ©
+        H5é‡Œé¢æä¾›äº† è§†é¢‘ å’Œ éŸ³é¢‘çš„æ ‡ç­¾
         audio  video
 
 
 
 
-5¡¢DOMÍØÕ¹
-    document ¶ÔÏó    ÎÄµµ¶ÔÏó
+5ã€DOMæ‹“å±•
+    document å¯¹è±¡    æ–‡æ¡£å¯¹è±¡
 
-    µ±ÔÚä¯ÀÀÆ÷ÖÐ ´ò¿ªÒ»¸öÒ³Ãæºó£¬ ä¯ÀÀÆ÷Ê×ÏÈ»áÀ´½âÎöÎÒÃÇµÄ ÍøÒ³£¬°Ñ½âÎö³öÀ´µÄÊý¾Ý£¬´æ·Åµ½Ò»¸öDOM¶ÔÏóÖÐ£»
+    å½“åœ¨æµè§ˆå™¨ä¸­ æ‰“å¼€ä¸€ä¸ªé¡µé¢åŽï¼Œ æµè§ˆå™¨é¦–å…ˆä¼šæ¥è§£æžæˆ‘ä»¬çš„ ç½‘é¡µï¼ŒæŠŠè§£æžå‡ºæ¥çš„æ•°æ®ï¼Œå­˜æ”¾åˆ°ä¸€ä¸ªDOMå¯¹è±¡ä¸­ï¼›
     document.getElmentById();
 
-    ÔÚH5ÖÐ DOMÐÂÔöµÄ¹¦ÄÜ£º
+    åœ¨H5ä¸­ DOMæ–°å¢žçš„åŠŸèƒ½ï¼š
 
     jquery---
     $('.box');
@@ -94,17 +113,17 @@
     $('div.box);
     $('div p');
 
-   »ñÈ¡µ¥¸öÔªËØ£º
-    document.querySelector('.box¡®);
+   èŽ·å–å•ä¸ªå…ƒç´ ï¼š
+    document.querySelector('.boxâ€˜);
 
-    »ñÈ¡ËùÓÐ·ûºÏÌõ¼þµÄÔªËØ£º  ·µ»ØµÄÊý×é
+    èŽ·å–æ‰€æœ‰ç¬¦åˆæ¡ä»¶çš„å…ƒç´ ï¼š  è¿”å›žçš„æ•°ç»„
     document.querySeletorAll('.box');
 
-    ¿ØÖÆÀàÃûµÄAPI£º
-    node.classList.add();Ìí¼ÓÀàÃû
-    node.classList.remove()£»É¾³ýÀàÃû
-    node.classlist.contains();ÅÐ¶ÏÊÇ·ñ°üº¬Ö¸¶¨µÄÀàÃû
-    node.classList.toggle()£»ÇÐ»»Ö¸¶¨µÄÀàÃû
+    æŽ§åˆ¶ç±»åçš„APIï¼š
+    node.classList.add();æ·»åŠ ç±»å
+    node.classList.remove()ï¼›åˆ é™¤ç±»å
+    node.classlist.contains();åˆ¤æ–­æ˜¯å¦åŒ…å«æŒ‡å®šçš„ç±»å
+    node.classList.toggle()ï¼›åˆ‡æ¢æŒ‡å®šçš„ç±»å
 
 
 
