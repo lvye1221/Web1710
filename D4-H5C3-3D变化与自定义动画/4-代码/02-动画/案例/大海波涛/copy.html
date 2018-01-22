@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0EA9B1;
+        }
+
+        .sun{
+             position: absolute;
+             width: 100px;
+             height: 100px;
+             border-radius: 50px;
+             background: #fff;
+             left: 200px;
+             top: 100px;
+        }
+
+        .sun::before{
+            position: absolute;
+              display: block;
+              content: '';
+              width: 100px;
+              height: 100px;
+              border-radius: 50px;
+              background: #fff;
+              animation: mysun 1s linear infinite ;
+          }
+
+        .sun::after{
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background: #fff;
+            animation: mysun 2s linear 1s infinite ;
+        }
+        @keyframes mysun {
+                0%{
+
+                }
+                100%{
+                     opacity: 0.5;
+                     transform: scale(2);
+                }
+
+
+        }
+
+
+
+
+        section {
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg1,.bg2{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .bg1{
+            height: 211px;
+            background-image: url("1.png");
+            animation: move 1s linear infinite;
+        }
+
+        .bg2{
+            height: 235px;
+            background-image: url("2.png");
+            animation: move 1s linear 0.5s infinite ;
+        }
+
+
+        
+        @keyframes move {
+                0%{
+
+                }
+                50%{
+                        bottom: -34px;
+                }
+                100%{
+
+                }
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<section>
+    <div class="sun">
+    </div>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+</section>
+
+</body>
+</html>

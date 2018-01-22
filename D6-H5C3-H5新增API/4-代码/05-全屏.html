@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        var box=document.querySelector('.box');
+//
+//        if(box.requestFullscreen){
+//            box.requestFullscreen();
+//        }else if(box.webkitRequestFullScreen){
+//            box.webkitRequestFullScreen();
+//        }else if(box.mozRequestFullScreen){
+//            box.mozRequestFullScreen();
+//        }
+        box.onclick=function(){
+//            var docElm = document.documentElement;
+//        var docElm = document.querySelector('.box');
+//            if (box.requestFullscreen) {
+//                box.requestFullscreen();
+//            }
+//            else if (box.mozRequestFullScreen) {
+//                box.mozRequestFullScreen();
+//            }
+//            else if (box.webkitRequestFullScreen) {
+//                box.webkitRequestFullScreen();
+//            }
+
+            if(box.requestFullscreen){
+                box.requestFullscreen();
+            }else if(box.webkitRequestFullScreen){
+                box.webkitRequestFullScreen();
+            }else if(box.mozRequestFullScreen){
+                box.mozRequestFullScreen();
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

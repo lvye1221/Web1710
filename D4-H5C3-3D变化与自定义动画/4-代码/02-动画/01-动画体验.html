@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin:100px ;
+            background-color: green;
+            /* 调用*/
+            /* infinite:无限次*/
+            /* animation: 动画名称 持续时间  执行次数  是否反向  运动曲线 延迟执行*/
+            /*animation: move 1s  alternate linear 3 ;*/
+
+            animation: gun 4s;
+        }
+
+        /*css3中的动画使用：
+           类似js中的函数：
+            ---先定义 ---再调用
+
+            js 定义函数：
+                function gun(){ 函数体}
+
+             调用： gun();
+
+
+           CSS3中的动画：
+            定义动画：
+                @keyframes 动画名{
+                    from{ 初始状态}
+                    to{结束状态}
+                }
+
+             调用：基本语法格式
+              animation: 动画名称 持续时间；
+
+        */
+        /* 定义动画*/
+        @keyframes move {
+            from{
+                transform: translateX(0px) rotate(0deg) ;
+            }
+            to{
+                transform: translateX(500px) rotate(555deg) ;
+            }
+        }
+
+        /* 定义多组动画*/
+           @keyframes gun {
+                0%{
+                    transform:translateX(0px) translateY(0px);
+                    background-color: green;
+                    border-radius: 0px;
+                }
+
+               25%{
+                   transform:translateX(500px) translateY(0px);
+               }
+
+               50%{
+                   transform:translateX(500px) translateY(300px);
+                   border-radius: 50%;
+               }
+
+
+               75%{
+                   transform:translateX(0px) translateY(300px);
+               }
+
+               100%{
+                   transform:translateX(0px) translateY(0px);
+                   background-color: red;
+                   border-radius: 0;
+               }
+           }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+</html>
