@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <!-- 给标签添加自定义属性 必须以data-开头 -->
+    <div class="box" title="盒子" data-my-name="zs"  data-content="我是一个div">div</div>
+    <!-- made-in-china-->
+    <script>
+        var box=document.querySelector('.box');
+        //        js里面的自定义属性
+        //        box.index=100;
+
+//        console.log(box.className);
+//        console.log(box.title);
+
+//        如何获取标签的自定义属性
+//        console.log(box.dataname);
+//    自定义的属性 需要通过 dateset[]方式来获取
+
+//        console.log(box.dataset['content']);
+
+//        设置自定义属性的值
+
+        var num=100;
+        num.index=10;
+        box.index=100;
+        box.dataset['content']='aaaa';
+//        data-my-name="zs" 如何获取
+        console.log(box.dataset['myName']);
+
+
+    </script>
+
+</body>
+</html>

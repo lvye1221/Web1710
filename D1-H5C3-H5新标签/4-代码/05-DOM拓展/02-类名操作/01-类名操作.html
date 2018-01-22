@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 300px;
+            height: 100px;
+            margin:10px auto;
+            border: 1px solid #000;
+        }
+        .active{
+            border-radius: 50%;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1 "></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+
+
+    <button>切换</button>
+
+    <script>
+        var box1=document.querySelector('.box1');
+
+//        box1.className="";
+//        juqery
+//        addClass()  removeClass()  hasClass()  toggleClass();
+
+//        h5新增的操作类名的方式 和jq一样好用
+
+      var box1=  document.querySelector('.box1');
+//       添加类名
+        box1.classList.add('active');
+//        alert('ok');
+//        删除类名
+//        box1.classList.remove('active');
+//         contains:包含
+//        判断是否包含某个类名  返回结果 true/false
+        var f=box1.classList.contains('active');
+
+        console.log(f);
+
+
+//        切换类名
+        document.querySelector('button').onclick=function(){
+            document.querySelector('.box3').classList.toggle('active');
+        }
+
+
+
+//
+    </script>
+
+</body>
+</html>
