@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<input type="color" id="btn"/>
+		
+	</body>
+</html>
+
+<script>
+	
+	var oBtn = document.getElementById("btn")
+	
+	oBtn.onchange = function() {
+		// oBtn.value  按钮中的颜色值
+		
+		document.body.style.background = oBtn.value
+	}
+	
+</script>
+

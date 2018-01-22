@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 滑动条 
+			min="0"  调整它的最大值
+			max="255"  调整它的最大值
+			step 调整它每步的间隔
+		-->
+		<input  type="range" max="255" id="btn" >
+		
+	</body>
+</html>
+
+<script>
+
+	// 获取元素
+	var oBtn = document.getElementById("btn")
+	
+	// 改变函数
+	oBtn.onchange = function() {
+		// 输入框中的值
+		var b = oBtn.value
+		
+		document.body.style.background = "rgb(255, 0, "+b+")"
+	}
+	
+</script>
+

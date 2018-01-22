@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--  novalidate 关闭验证
+			required  必填
+		-->
+		<form>
+			
+			<!-- 正则表达式：
+				开始  中间  结束
+				 ^   1    $
+			
+			手机号码
+				开始   开头    10个数字    结尾
+				 ^   1        [0-9]{10}  $
+			
+				^1[0-9]{10}$
+			<input type="text" pattern="^1$" />
+			-->
+			
+			
+			<input type="text" pattern="^1[0-9]{10}$" />
+			
+			<input type="submit"  />
+		</form>
+		
+	</body>
+</html>
