@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*
+            之前学过的选择器：
+             div{}
+             .box 类名选择器
+             #box　id选择器
+             div p 后代选择器
+             div.box 交集选择器
+             div,p,span 并集选择器
+             div>p 子代
+             * : 通配符
+             div+p: 选中div后面相邻的第一个p
+             div~p: 选中的div后面所有的p
+        */
+        /* div后面的第一个p*/
+        div+p{
+            background-color: red;
+        }
+        /* div 后面所有的p*/
+        div~p{
+            background-color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>divvvvvvvvvvvvv</div>
+    <span>span</span>
+    <p>ppppppppp</p>
+    <p>ppppppppp</p>
+    <p>ppppppppp</p>
+    <span>span</span>
+    <p>ppppppppp</p>
+    <p>ppppppppp</p>
+
+</body>
+</html>

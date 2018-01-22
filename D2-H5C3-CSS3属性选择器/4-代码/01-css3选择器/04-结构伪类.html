@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*
+            符号： 冒号
+            结构伪类： 通过结构来进行筛选
+
+        */
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul{
+            width: 520px;
+            height:auto;
+            margin:100px auto;
+        }
+
+        li{
+            float: left;
+            width: 70px;
+            height: 70px;
+            border: 1px solid #CCC;
+            text-align: center;
+            line-height: 70px;
+
+            margin-left:-1px;
+            margin-top:-1px;
+        }
+        /* 先找父元素 在里面指定的 那个标签*/
+        /* 选中第一个*/
+        /*li:first-child{*/
+            /*background-color: pink;*/
+        /*}*/
+        /*/!* 选中最后一个*!/*/
+        /*li:last-child{*/
+            /*background-color: pink;*/
+        /*}*/
+        /*/!* 注意 编号从1开始 *!/*/
+        /*li:nth-child(11){*/
+            /*background-color: pink;*/
+        /*}*/
+        /*/!* 奇数*!/*/
+        /*li:nth-child(odd){*/
+            /*background-color: pink;*/
+        /*}*/
+        /*/!*偶数*!/*/
+        /*li:nth-child(even){*/
+            /*background-color: #eee;*/
+        /*}*/
+        /* n表示 0,1,2,3,4,5,6,7,8.....
+            当n小于1是无效
+        */
+        /*/!*偶数*!/*/
+        /*li:nth-child(2n){*/
+            /*background-color: red;*/
+        /*}*/
+        /*/!*奇数*!/*/
+        /*li:nth-child(2n+1){*/
+            /*background-color: red;*/
+        /*}*/
+
+        /*选中前5个*/
+        /*li:nth-child(-n+5){*/
+            /*background-color: pink;*/
+        /*}*/
+
+        /* 选中后5个*/
+        /*li:nth-last-child(-n+5){*/
+            /*background-color: pink;*/
+        /*}*/
+
+
+        /* 选中7的倍数*/
+
+        li:nth-child(7n){
+              background-color: green;
+          }
+
+        li:nth-child(6n){
+            background-color: blue;
+        }
+
+
+
+
+
+		li:nth-child(3n) {
+			background: red;
+		}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        <li>32</li>
+        <li>33</li>
+        <li>34</li>
+        <li>35</li>
+    </ul>
+
+</body>
+</html>

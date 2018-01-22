@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* 伪 元素：  伪：假的  元素：标签*  （:after :before  css2 不推荐 ）
+           标志性符号： 双冒号(::)
+
+           ::before ,::after 通过 css 模拟出来html标签的效果
+           注意：必须有content属性才行，
+        */
+        span::before{
+            content:"今天";
+            color:red;
+            background-color: pink;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+        }
+
+        span::after{
+            content:"真好";
+            color:green;
+        }
+
+        span{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 元素 标签 节点 -->
+    <!--<span>今天</span><span>天气</span><span>真好</span>-->
+
+<span>天气</span>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			ul {
+				list-style: none;
+			}
+			
+			li {
+				float: left;
+				width: 100px;
+				height: 130px;
+				color: white;
+				background: gray;
+				margin: 5px;
+			}
+			
+			.nav1 li {
+				background: gray;
+			}
+			
+			.nav2 li {
+				
+				background: purple;
+			}
+			
+			
+			
+			/* float: left,   其实是开辟了一个浮动的空间，称为 BFC 
+			 两个nav下面的li都是在同一个空间中，所以，会并排在一起
+			 * */
+			
+			/* 清除浮动的办法：
+			        第1种： 设置 height
+			          	存在问题： 调整li的高度，就必须调整 ul的高度
+			        第2种： 设置 overflow:hidden   激活 BFC
+			          	优点： 调整li，不需要调整ul
+			          	
+			       第3种： 给后面的元素设置：	clear:both     重新开辟BFC
+			       
+			    第4种，【外墙法】 在2个元素中间，添加 div，设置 clear:both
+			    
+			    第5种，【内墙法】 父级元素内部的后面，添加 div，设置 clear:both 
+			*/
+			
+			
+			/* 外墙法 */
+			/*.clearfix {
+				clear: both;
+			}*/
+			
+			
+			.nav1::after {
+				content: "";    /*内容为空*/
+				clear: both;    /*清除浮动*/
+			}
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<ul class="nav1">
+			<li>导航1-1的借口借口就是贷款飞机开始就反馈的借口附近</li>
+			<li>导航1-2</li>
+			<li>导航1-3</li>
+			<li>导航1-4</li>
+			<li>导航1-5</li>
+		</ul>
+		
+		
+		
+		<ul class="nav2">
+			<li>导航2-1</li>
+			<li>导航2-2</li>
+			<li>导航2-3</li>
+			<li>导航2-4</li>
+			<li>导航2-5</li>
+		</ul>
+	</body>
+</html>
