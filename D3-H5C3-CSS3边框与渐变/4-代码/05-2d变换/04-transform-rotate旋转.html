@@ -10,7 +10,7 @@
             background-color: red;
             margin:100px auto;
 
-            transition:all 1s;
+            transition:all 2s ease-out;
             color:#fff;
             font-size:50px;
 
@@ -22,37 +22,46 @@
             赋值：逆时针
         */
         .box:hover{
-            transform:rotate(-945deg);
+            transform: rotate(360deg);
         }
+        
 
         .out{
             width: 300px;
             height: 150px;
             background-color: pink;
             margin-top:200px;
-            position: relative;
+            text-align: center;
+            line-height: 150px;      /* 垂直居中 */
+            position: relative;		 /* 定位参考点 */
         }
 
         .out::before{
             content:"";
-            position: absolute;
             width: 50px;
             height: 50px;
             background-color: pink;
-
-            transform:rotate(45deg);
-            left:40%;
-            top:-15px;
-
+			
+			
+            position: absolute;
+            left: 40%;
+            top: -15px;
+			transform: rotate(45deg);
         }
     </style>
 </head>
 <body>
+	
+    
+    <h3 class="out">障眼法</h3>
+    
     <div class="box">1</div>
 
     <div class="out">
 
     </div>
+    
+    
 
 </body>
 </html>

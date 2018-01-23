@@ -5,28 +5,31 @@
     <title></title>
     <style>
         div{
-            width: 300px;
+            width: 100px;
             height: 100px;
             background-color: red;
             position: absolute;
             left:50%;
             top:100px;
         }
-        div:nth-child(1){
-            margin-left:-150px;
+        
+        div:nth-child(1) {
+        	
+        	/* % 默认是相对于父元素来说的*/
+        	/*margin-left: -50%;*/
+        	
+        	/* translate % 默认是相对于自身来说的
+        	 		推荐！
+        	 * */
+        	/*transform: translate(-50%,0);*/
+        	
         }
-
-        div:nth-child(2){
-            top:300px;
-            /* 水平方向上向左走自己宽度的一半*/
-            /*推荐的写法*/
-            transform:translate(-50%);
-        }
+        
     </style>
 </head>
 <body>
     <div></div>
-    <div></div>
+   
 
 </body>
 </html>
