@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 1000px;
+            margin:100px auto;
+        }
+
+        .box>div{
+            width: 300px;
+            height:150px;
+            border: 1px solid #000;
+            background-color: red;
+            float: left;
+            margin-right: 30px;
+        }
+
+        div:nth-child(2){
+            background-color: pink;
+            transition:all 1s;
+        }
+
+        div:nth-child(2):hover{
+            /*width: 600px;*/
+            /* 变形*/
+            /*
+                scale: 缩放
+                scale(水平放缩比例，垂直放缩比例)；
+                大于1：放大
+                小于1：缩小
+                如果只写一个值等比例缩放
+            */
+            transform: scale(2,0.5);
+        }
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</div>
+
+
+</body>
+</html>

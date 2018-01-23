@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: mediumseagreen;
+        }
+
+        .box{
+            width: 440px;
+            height: 491px;
+            margin:100px auto;
+            /*background-color: pink;*/
+        }
+        img{
+            transition:all 1s;
+        }
+
+        /* 通过transform 打乱图片*/
+        img:nth-child(1){
+            transform:translate(-100px ,-100px) rotate(123deg);
+        }
+
+        img:nth-child(2){
+            transform:translate(-300px ,200px) rotate(23deg);
+        }
+
+        img:nth-child(3){
+            transform:translate(300px ,-100px) rotate(23deg);
+        }
+
+        img:nth-child(4){
+            transform:translate(200px ,-200px) rotate(353deg);
+        }
+
+        .box:hover img{
+            /*transform:none;*/
+            transform:translate(0 ,0) rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="images/shield_1_01.png" alt=""/>
+        <img src="images/shield_1_02.png" alt=""/>
+        <img src="images/shield_1_03.png" alt=""/>
+        <img src="images/shield_1_04.png" alt=""/>
+        <img src="images/shield_1_05.png" alt=""/>
+        <img src="images/shield_1_06.png" alt=""/>
+        <img src="images/shield_1_07.png" alt=""/>
+        <img src="images/shield_1_08.png" alt=""/>
+        <img src="images/shield_1_09.png" alt=""/>
+    </div>
+
+</body>
+</html>

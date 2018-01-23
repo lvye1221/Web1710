@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 1000px;
+            height: 100px;
+            margin:30px auto;
+            border: 1px solid #000;
+        }
+        /* 语法：
+            linear-gradient(方向，起始颜色，终止颜色);
+            方向：to left   to right  to top   to bottom 　角度　30deg
+            起始颜色
+            终止颜色
+        */
+       
+       div:nth-child(1) {
+       		/*background: linear-gradient(to left,yellow,green);
+       		background: -webkit-linear-gradient( to left, yellow, green);
+       		background: -moz-linear-gradient( to left, yellow, green);
+       		background: -ms-linear-gradient( to left, yellow, green);
+       		background: -o-linear-gradient( to left, yellow, green);
+       		*/
+       		
+       	background:linear-gradient(
+	          to right,
+	          red 0%,
+	          blue 25%,blue 50%,
+	          green 50%,green 75%,
+	          pink 75% ,pink 100%
+	      )
+
+       }
+       
+       
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</body>
+</html>

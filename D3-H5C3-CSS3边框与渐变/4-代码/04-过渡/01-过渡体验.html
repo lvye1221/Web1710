@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--  过渡 -->
+    <style>
+        .box{
+        	/* 起始状态值 */
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin:100px auto;
+            background-color: red;
+            
+            /* 过渡属性   all 所有属性*/
+           /*transition: all 5s; */
+          
+          transition: width 3s, background-color 10s;
+        }
+
+        	/* 终止状态值 */
+        .box:hover{
+            width: 600px;
+            background-color: blue;
+            /*height:400px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 30px solid rgba(0,0,255,0.3);
+            padding:30px;
+
+            background:url(images/baby0.jpg) no-repeat;
+            /* 设置背景原点*/
+            background-origin: border-box;
+
+            /* 背景裁剪*/
+            /* border-box :从 border-box开始裁剪
+               padding-box :从 padding-box开始裁剪
+               content-box :从 content-box开始裁剪
+            */
+            background-clip:content-box;
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+
+</div>
+
+</body>
+</html>

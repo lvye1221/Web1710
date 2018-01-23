@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            background-color: pink;
+            margin:100px auto;
+
+            /*border-radius: 60px;*/
+
+            /*单个属性 : 水平半径 垂直半径*/
+            /*border-top-left-radius: 60px 120px;
+            */
+            
+            /*border-top-right-radius: 60px 120px;*/
+            /*border-bottom-left-radius: 60px 120px;*/
+            /*border-bottom-right-radius: 60px 120px;*/
+
+            /* 复合写法
+                border-raduis:水平半径/垂直半径
+            */
+
+            border-radius: 60px 60px 60px 60px/ 120px 120px 120px 120px ;
+
+            /*简化*/
+
+            /*border-radius: 60px/120px;*/
+
+            /**/
+
+            /*border-radius: 60px/60px;*/
+
+            /* 四个角的说半径都相同是简写*/
+            /*border-radius: 60px;*/
+
+            /* 赋值顺序 从左上开始，顺时针赋值,如果当前角没有值，取对角的值  */
+            /*border-radius: 20px 60px 100px 140px;*/
+
+            /*border-radius: 20px 60px;*/
+/*
+            border-radius: 20px 60px 100px ;*/
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>

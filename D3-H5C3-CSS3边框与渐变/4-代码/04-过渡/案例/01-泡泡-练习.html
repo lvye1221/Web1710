@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 300px;
+            height: 100px;
+            margin:100px auto;
+            border-radius: 10px;
+            background:url(images/paopao.png) no-repeat left top,
+            url(images/paopao.png) no-repeat right bottom;
+            background-color: blue;
+
+            /*添加过渡*/
+            transition:all 2s;
+        }
+
+        .box:hover{
+            background-position: left bottom,right top;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>

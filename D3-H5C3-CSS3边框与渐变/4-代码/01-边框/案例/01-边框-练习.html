@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: #eee;
+        }
+        .items{
+            width: 800px;
+            margin:100px auto;
+
+        }
+
+        .item{
+            width: 225px;
+            height: 250px;
+            float: left;
+            background-color: #fff;
+            margin-right: 20px;
+            position: relative;
+            box-shadow: 15px 21px 48px -2px #666;
+        }
+
+        .item>img{
+            width: 100%;
+            height:113px;
+        }
+
+        .item a{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border:4px solid #fff;
+            overflow: hidden;
+            top:73px;
+            left:50%;
+            margin-left:-44px;
+        }
+
+        .imgTest{
+            border-radius: 50%;
+            margin-top:50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="items">
+        <div class="item">
+            <img src="images/item_1.jpg" alt=""/>
+            <a href="#">
+                <img src="images/logo_1.jpg" alt=""/>
+            </a>
+        </div>
+        <div class="item">
+            <img src="images/item_2.jpg" alt=""/>
+            <a href="#">
+                <img src="images/logo_2.jpg" alt=""/>
+            </a>
+        </div>
+
+        <div class="item">
+            <img src="images/item_5.jpg" alt=""/>
+            <a href="#">
+                <img src="images/logo_3.jpg" alt=""/>
+            </a>
+        </div>
+
+
+    </div>
+
+    <img  class="imgTest" src="images/item_1.jpg" alt=""/>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 500px;
+            height: 400px;
+
+            margin:40px auto;
+
+            /* 边框图片属性*/
+            /* 边框图片的路径*/
+            border-image-source: url("images/border_image_4.png");
+
+            /* 图片边框的裁剪*/
+            border-image-slice: 27;
+            /*图片边框的宽度*/
+            border-image-width: 27px;
+            /*边框图片的平铺*/
+            /* repeat :正常平铺 但是可能会显示不完整*/
+            /*round: 平铺 但是保证 图片完整*/
+            /*stretch: 拉伸显示*/
+            border-image-repeat: stretch;
+        }
+    </style>
+</head>
+<body>
+<img src="images/border.png" alt=""/>
+<div class="box">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 背景</title>
+    <style>
+            html{
+                height: 100%;
+            }
+            body{
+                    height: 100%;
+                    margin: 0px;
+                    padding: 0px;
+            }
+            /*高度继承的是body，body 是0*/
+            .pic{
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("../images/1.jpg");
+                    /*
+                                1:我们可以调节背景图片的尺寸.
+                                2:我的背景图片的尺寸可以随着父盒子的高宽的改变而改变.
+                            随着父盒子的高宽的改变，背景图片等比缩放。
+                            做屏幕适配.
+                    */
+                    background-size: cover;
+                    background-repeat: no-repeat;
+            }
+    </style>
+</head>
+<body>
+    <div class="pic"></div>
+
+</body>
+</html>

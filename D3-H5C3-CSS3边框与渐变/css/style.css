@@ -1,0 +1,93 @@
+
+.box {
+	width: 280px;
+	margin: 0 auto;
+}
+
+
+header {
+	position: relative; /* 定位参考点*/
+	width: 280px;
+	height: 130px;
+	background: rgba(164,202,57,1);
+	border-radius: 130px 130px 0 0;
+}
+
+/* 伪元素 */
+header::before,
+header::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: white;
+	border-radius: 50%;
+	
+	position: absolute;
+	top: 55px;
+	left: 50%;
+	margin-left: -15px;
+}
+
+header::before {
+	margin-left: -75px;
+}
+header::after{
+	margin-left: 45px;
+}
+
+
+/* 身体部分 */
+section {
+	margin-top: 15px;
+	width: 280px;
+	height: 230px;	
+	background: rgba(164,202,57,1);
+	border-radius: 0 0 20px 20px;
+
+	position: relative;  /*设为子元素的定位参考点*/
+}
+
+/* 身体下面的脚 */
+section::before,
+section::after {
+	content: "";
+	display: block;
+	width: 66px;
+	height: 100px;
+	background: rgba(164,202,57,1);
+	
+	/*background: red;*/
+	border-radius: 0 0 30px 30px;
+	position: absolute;
+	bottom: -100px;
+	left: 50%;
+	margin-left: -33px;
+}
+
+section::before {
+	margin-left: -90px;
+}
+
+section::after {
+	margin-left: 24px;
+}
+
+/* 手 */
+.hand-left,
+.hand-right {
+	width: 66px;
+	height: 190px;
+	background: rgba(164,202,57,1);
+	border-radius: 30px;
+	position: absolute;
+}
+
+.hand-left {
+	left: -80px;
+}
+
+.hand-right {
+	/*left: 295px;*/
+	right: -80px;
+}
