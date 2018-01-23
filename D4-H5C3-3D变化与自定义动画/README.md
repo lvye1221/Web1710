@@ -1,33 +1,33 @@
 ```
 
 
-1¡¢ 3d±ä»»
-    rotateX(30deg) ÈÆ×ÅxĞı×ª30deg
-    rotateY(30deg) ÈÆ×ÅyĞı×ª30deg
-    rotateZ(30deg) ÈÆ×ÅzĞı×ª30deg
-    translateX(30px) ÑØ×ÅxÖáÒÆ¶¯30px
-    translatey(30px) ÑØ×ÅyÖáÒÆ¶¯30px
-    translatez(30px) ÑØ×ÅZÖáÒÆ¶¯30px( ±ØĞë¸ø¸¸ºĞ×Ó¼ÓÍ¸ÊÓ)
+1ã€ 3då˜æ¢
+    rotateX(30deg) ç»•ç€xæ—‹è½¬30deg
+    rotateY(30deg) ç»•ç€yæ—‹è½¬30deg
+    rotateZ(30deg) ç»•ç€zæ—‹è½¬30deg
+    translateX(30px) æ²¿ç€xè½´ç§»åŠ¨30px
+    translatey(30px) æ²¿ç€yè½´ç§»åŠ¨30px
+    translatez(30px) æ²¿ç€Zè½´ç§»åŠ¨30px( å¿…é¡»ç»™çˆ¶ç›’å­åŠ é€è§†)
 
- 2¡¢Í¸ÊÓ£º
-        ¼Ó¸ø±ä»»ÔªËØµÄ¸¸ºĞ×Ó£¬ ÉèÖÃµÄÊÇÓÃ»§ÑÛ¾¦ºÍÆÁÄ»µÄ¾àÀë£»
-        Ö»ÊÇÊÓ¾õÉÏµÄ³ÊÏÖ£¬²»ÊÇÕıÕæµÄ3d
+ 2ã€é€è§†ï¼š
+        åŠ ç»™å˜æ¢å…ƒç´ çš„çˆ¶ç›’å­ï¼Œ è®¾ç½®çš„æ˜¯ç”¨æˆ·çœ¼ç›å’Œå±å¹•çš„è·ç¦»ï¼›
+        åªæ˜¯è§†è§‰ä¸Šçš„å‘ˆç°ï¼Œä¸æ˜¯æ­£çœŸçš„3d
         perspective:1000px;
 
-  3¡¢transform-style:preserve-3d;
-        ¼Ó¸ø±ä»»ÔªËØµÄ¸¸ºĞ×Ó£¬ÈÃ×ÓºĞ×Ó´æÔÚÈıÎ¬¿Õ¼äÖĞ£¬±£³Ö3dĞ§¹û
-       flat:Ä¬ÈÏÖµ £¨ÈÃ×ÓºĞ×Ó±»±âÆ½»¯£©
+  3ã€transform-style:preserve-3d;
+        åŠ ç»™å˜æ¢å…ƒç´ çš„çˆ¶ç›’å­ï¼Œè®©å­ç›’å­å­˜åœ¨ä¸‰ç»´ç©ºé—´ä¸­ï¼Œä¿æŒ3dæ•ˆæœ
+       flat:é»˜è®¤å€¼ ï¼ˆè®©å­ç›’å­è¢«æ‰å¹³åŒ–ï¼‰
 
-   4¡¢ backface-visibility:hidden; ±³Ãæ²»¿É¼û
+   4ã€ backface-visibility:hidden; èƒŒé¢ä¸å¯è§
 
 
-    skew(30deg,30deg);  2d±ä»» -ÇãĞ±
+    skew(30deg,30deg);  2då˜æ¢ -å€¾æ–œ
 
-    css3ÖĞ»ñÈ¡×Ô¶¨ÒåÊôĞÔµÄÖµ£ºcontent:attr(data-text);
+    css3ä¸­è·å–è‡ªå®šä¹‰å±æ€§çš„å€¼ï¼šcontent:attr(data-text);
 
-  5¡¢¶¯»­£º
-      ¶¨Òå£º
-        @keyframes ¶¯»­Ãû{
+  5ã€åŠ¨ç”»ï¼š
+      å®šä¹‰ï¼š
+        @keyframes åŠ¨ç”»å{
             0%{
 
             }
@@ -36,35 +36,35 @@
 
             }
 
-            »òÕß
+            æˆ–è€…
             from{}
             to{}
         }
 
-        ¶¯»­µ÷ÓÃ£º
-            animation: ¶¯»­Ãû³Æ ¶¯»­Ê±¼ä  Ö´ĞĞ´ÎÊı  ÔË¶¯ÇúÏß ÑÓ³ÙÖ´ĞĞ ½áÊøºó×´Ì¬ ÊÇ·ñ·´Ïò£»
-                inifnite: ÎŞÏŞ´Î
-                alternate: ·´ÏòÖ´ĞĞ
-                forwards: ±£³Ö½áÊøºóµÄ×´Ì¬
-                backwards: ±£³Ö¶¯Æğ¿ªÊ¼Ç°µÄ×´Ì¬
-                steps(5): ÈÃ¶¯»­·Ö²½Ö´ĞĞ£»
+        åŠ¨ç”»è°ƒç”¨ï¼š
+            animation: åŠ¨ç”»åç§° åŠ¨ç”»æ—¶é—´  æ‰§è¡Œæ¬¡æ•°  è¿åŠ¨æ›²çº¿ å»¶è¿Ÿæ‰§è¡Œ ç»“æŸåçŠ¶æ€ æ˜¯å¦åå‘ï¼›
+                inifnite: æ— é™æ¬¡
+                alternate: åå‘æ‰§è¡Œ
+                forwards: ä¿æŒç»“æŸåçš„çŠ¶æ€
+                backwards: ä¿æŒåŠ¨èµ·å¼€å§‹å‰çš„çŠ¶æ€
+                steps(5): è®©åŠ¨ç”»åˆ†æ­¥æ‰§è¡Œï¼›
 
-                ¶¯»­ÏêÏ¸ÊôĞÔ£º
-                    animation-name:¶¯»­Ãû³Æ
-                    animation-duration:³ÖĞøÊ±¼ä
-                    animation-iteration-count:Ö´ĞĞ´ÎÊı
-                    animation-timing-function:ÔË¶¯ÇúÏß
-                    animation-fill-mode:½áÊø×´Ì¬
-                    animation-direction: ¶¯»­·½Ïò
-                    animation-delay: ÑÓ³ÙÊ±¼ä
+                åŠ¨ç”»è¯¦ç»†å±æ€§ï¼š
+                    animation-name:åŠ¨ç”»åç§°
+                    animation-duration:æŒç»­æ—¶é—´
+                    animation-iteration-count:æ‰§è¡Œæ¬¡æ•°
+                    animation-timing-function:è¿åŠ¨æ›²çº¿
+                    animation-fill-mode:ç»“æŸçŠ¶æ€
+                    animation-direction: åŠ¨ç”»æ–¹å‘
+                    animation-delay: å»¶è¿Ÿæ—¶é—´
 
 
-                ¶àÁĞ£º£¨ÁË½â£©
-                    -webkit-column-count:ÁĞÊı
-                    -webkit-column-rule:·Ö¸îÏßÑùÊ½
-                    -webkit-column-width:ÁĞ¿í
-                    -webkit-column-gap:ÁĞ¼ä¾à
-                    -webkit-column-span:¿çÁĞ all ¿çËùÓĞÁĞ
+                å¤šåˆ—ï¼šï¼ˆäº†è§£ï¼‰
+                    -webkit-column-count:åˆ—æ•°
+                    -webkit-column-rule:åˆ†å‰²çº¿æ ·å¼
+                    -webkit-column-width:åˆ—å®½
+                    -webkit-column-gap:åˆ—é—´è·
+                    -webkit-column-span:è·¨åˆ— all è·¨æ‰€æœ‰åˆ—
 
 
 ```
