@@ -10,15 +10,17 @@
             background-color: blue;
             margin:100px auto;
             border: 1px solid #000;
+            /* 它会影响到内部元素的透明度
+             【解决办法】： 采用 rgba 或者 hsla 
+             * */
             opacity: 0.3;
         }
 
         .in{
             width: 200px;
             height: 200px;
-            background-color: red;
+            background-color: hsla(0,50%,50%, 1);
             margin:100px auto;
-            opacity: 1;
         }
     </style>
 </head>

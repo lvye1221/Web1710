@@ -28,8 +28,8 @@
 			}
 			
 			
-			
-			/* float: left,   其实是开辟了一个浮动的空间，称为 BFC 
+			/* float: left,   其实是开辟了一个浮动的空间，称为 BFC
+			 * 			Block Format Context    块状格式化空间 
 			 两个nav下面的li都是在同一个空间中，所以，会并排在一起
 			 * */
 			
@@ -53,28 +53,36 @@
 			}*/
 			
 			
-			.nav1::after {
-				content: "";    /*内容为空*/
-				clear: both;    /*清除浮动*/
+			/* ::after 伪元素，代表在元素的内部的最后增加1个元素 */
+			.xxxx::after {
+				content: "";    /* 内容为空 */
+				clear: both;    /* 清除浮动， 因为我们当前元素是行内元素 */
+				display: block;  /* 使清除浮动产生作用 */		
+				visibility: hidden;  /* 隐藏 */
 			}
 			
 			
 		</style>
 		
+		
+		<!-- 引入样式文件 -->
+		<link href="../../css/reset.css" rel="stylesheet"/>
+		
+		
 	</head>
 	<body>
 		
-		<ul class="nav1">
+		<ul class="nav1 clearfix">
 			<li>导航1-1的借口借口就是贷款飞机开始就反馈的借口附近</li>
 			<li>导航1-2</li>
 			<li>导航1-3</li>
 			<li>导航1-4</li>
 			<li>导航1-5</li>
+			
 		</ul>
 		
 		
-		
-		<ul class="nav2">
+		<ul class="nav2 clearfix">
 			<li>导航2-1</li>
 			<li>导航2-2</li>
 			<li>导航2-3</li>
