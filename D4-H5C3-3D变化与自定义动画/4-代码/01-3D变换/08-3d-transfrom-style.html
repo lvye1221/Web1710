@@ -11,12 +11,14 @@
             background-color: pink;
             margin:100px auto;
 
-            transform:rotateY(66deg);
+            transform:rotateX(66deg);
 
             /*可以让里面的子盒子保持3d 效果，加给父盒子 */
-            /* preseve-3d: 让子盒子 位于3d空间里面*/
+            /* preserve-3d: 让子盒子 位于3d空间里面*/
             /*flat： 子盒子被扁平化*/
             transform-style:preserve-3d;
+            
+            perspective: 600px;
         }
 
         .in{
@@ -24,8 +26,12 @@
             height: 400px;
             background-color: red;
             margin:50px auto;
-            transform:rotateX(132deg);
+            
             border: 1px solid #000;
+            
+            /*transform:rotateX(132deg);*/
+           
+           transform:rotateY(45deg);
         }
 
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+		
+			.pk {
+				width: 310px;
+				height: 438px;
+				border: 1px solid black;
+				
+			}
+			
+			.pk:hover .pk1 {
+				transform: rotateY(0deg);
+			}
+			
+			.pk:hover .pk2 {
+				transform: rotateY(180deg);
+			}
+			
+			.pk1, .pk2 {
+				
+				/* 设置背面不可见 */
+				backface-visibility: hidden;
+				
+				
+				transition: all 5s; 
+				position: absolute;
+				width: 310px;
+				height: 438px;
+			}
+			
+			.pk1 {
+				background: url(img/pk1.png);
+				transform: rotateY(180deg);
+			}
+			
+			.pk2 {
+				background: url(img/pk2.png);
+				transform: rotateY(0deg);
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="pk">
+			<div class="pk1"></div>
+			<div class="pk2"></div>
+		</div>
+		
+	</body>
+</html>
