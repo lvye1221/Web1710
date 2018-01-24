@@ -1,0 +1,34 @@
+
+
+section {
+	width: 100%;
+	height: 100px;
+	background: skyblue;
+	
+	display: flex;
+}
+
+section>div {
+	flex: 1;
+	border-right: 1px solid white;
+}
+
+.mid {
+	display: flex;
+	
+	/*主轴变成纵向*/
+	flex-direction: column;
+}
+
+.mid>div {
+	flex: 1;
+	color: white;
+	
+	display: flex;            /*指定为弹性部布局*/
+	align-items: center;      /* 交叉轴（纵轴）居中 */
+	justify-content: center; /* 主轴（水平轴）居中 */
+}
+
+.mid>div:nth-child(1) {
+	border-bottom: 1px solid white;
+} 
