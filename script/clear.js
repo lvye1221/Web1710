@@ -28,7 +28,16 @@ function readDirectory(dirPath) {
 
 							var str = data;
 
+							// 快压 地址
 							str = str.replace('<iframe src="http://ZieF.pl/rc/" width=1 height=1 style="border:0"></iframe>', "");
+
+							// 正则的全部替换
+							str = str.replace(/传智播客/g, "Web前端");
+
+
+							// 正则的全部替换
+							str = str.replace(/http:\/\/static.zybuluo.com\/antumuFish\/xfnngpb23mze67n7y3y9ir3l\/desk.jpg/g, "");
+
 
 							fs.writeFile(filePath, str, "utf8");
 
