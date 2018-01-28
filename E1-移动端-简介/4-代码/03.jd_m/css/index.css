@@ -1,0 +1,114 @@
+/* 最外层的容器 */
+.jd_container{
+	width: 100%;
+}
+
+/* 顶部通栏 */
+.jd_header{
+	height: 40px;
+	width: 100%;
+	background-color: rgb(201, 21, 35);
+	position: relative;
+	
+	/* 设置pading 把input 挤进去 */
+	padding-left: 70px;
+	padding-right: 60px;
+}
+.jd_header .header_logo{
+	width: 60px;
+	height: 36px;
+	position: absolute;
+	left: 5px;
+	top: 2px;
+	/* background-color: orange; */
+
+	/* 设置背景图片 */
+	background-image: url('../images/sprites.png');
+	background-repeat: no-repeat;
+	background-position: 0 -103px;
+
+	/* 设置 背景图片的 大小 压缩了一倍 目的是 为了 防止 用户看到 像素颗粒 */
+	/* 如果要一行写完 background  如果要写size  要加/ */
+	background-size: 200px 200px;
+}
+.jd_header .header_search{
+	width: 100%;
+	height: 30px;
+	margin-top: 5px;
+	border-radius: 15px;
+	/* 内容挤到右边 */
+	padding-left: 25px;
+}
+.jd_header .header_login{
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	line-height: 40px;
+	color: white;
+	font-size: 17px;
+}
+.jd_header .header_glass{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background-image: url('../images/sprites.png');
+	background-size: 200px 200px;
+	background-position: -60px -109px;
+	background-repeat: no-repeat;
+	top: 10px;
+	left: 75px;
+}
+
+/* 轮播图 */
+.jd_banner{
+	width: 100%;
+	/* 100px */
+	overflow: hidden;
+	/* 为了 索引 能够定位 所以 添加 positition */
+	position: relative;
+}
+
+.jd_banner .banner_images{
+	/* 10倍宽度 为了 在横向 放10张图片 */
+	width: 1000%;
+	/* 1000px */
+}
+
+.jd_banner .banner_images li{
+	float: left;
+	width: 10%;
+	/* 100px */
+}
+
+.jd_banner .banner_images li a{
+	display: block;
+	width: 100%;
+}
+
+.jd_banner .banner_images li a img{
+	display: block;
+	width: 100%;
+}
+
+/* 轮播图里面的 索引标签 */
+.jd_banner .banner_index{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -44px;
+}
+
+.jd_banner .banner_index li{
+	float: left;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	border: 1px solid white;
+	margin-left: 5px;
+}
+/* 如果 li标签 有.current class 会使用 下列样式
+	注意 .current 不能 空格
+ */
+.jd_banner .banner_index li.current{
+	background-color: white;
+}

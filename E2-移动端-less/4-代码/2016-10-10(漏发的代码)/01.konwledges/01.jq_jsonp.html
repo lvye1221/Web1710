@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>jqjsonP</h1>
+	<input type="button"  value="jsonp" id='jqJsonp'>
+
+</body>
+</html>
+<script type="text/javascript" src='../js/jquery.min.js'></script>
+<script type="text/javascript">
+	function myJsonpCallback(data) {
+		console.log(data);
+	}
+	$(function () {
+		// 不要漏写 id  class之前的 符号 jq 找不到元素 是不会报错的 讨厌
+		// 如果不写jsonpCallback 那么 jq 会自动帮我们生成一个 随机的函数名 发送	,如果想要自定义 函数 那么需要设置该属性
+		$("#jqJsonp").on('click',function(){
+			// 使用jq 发jsonp
+			$.ajax({
+				url:'xxx.php',
+				dataType:'jsonp',
+				success:function(data){
+					console.log(data);
+				},
+				jsonpCallback:"myJsonpCallback"
+			});
+		})
+	})
+</script>

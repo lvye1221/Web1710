@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/* first-child
+		nth-child 需要考虑 其他的 兄弟节点 如果 是多种 兄弟 混合排布
+		写的时候 就较为复杂
+	 */
+	 /* 
+		first-of-type: 找到 第一个 这种 类型的标签;
+		last-of-type: 找到 最后一个 这种 类型的标签;
+		nth-of-type(2) 找到 索引为 设置值得 某一类元素
+	  */
+		div h3:first-of-type{
+			background-color: darkorange;
+		}
+		div h3:last-of-type{
+			background-color: yellowgreen;
+		}
+
+		div p:nth-of-type(2){
+			background-color: darkgoldenrod;
+		}
+		/* 这种 会将 所有的 子节点 都算进去 */
+		div p:nth-child(2){
+			color: red;
+		}
+		div p:nth-child(3){
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>我是第一个p</p>
+		<h3>我是第一个h3</h3>
+		<p>我是第二个p</p>
+		<h3>我是第二个h3</h3>
+	</div>
+
+</body>
+</html>

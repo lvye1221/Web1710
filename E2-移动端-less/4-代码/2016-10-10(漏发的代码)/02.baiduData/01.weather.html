@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		td{
+			border: 1px solid #0094ff;
+		}
+	</style>
+</head>
+<body>
+	<input type="button"  value="查看当天的天气预报" id='getWeather'>
+
+</body>
+</html>
+<!-- 导入jq -->
+<script type="text/javascript" src='../js/jquery.min.js'></script>
+<!-- 导入模板引擎 -->
+<script type="text/javascript"  src='../js/template-native.js'></script>
+
+<!-- 定义模板 -->
+<script type="text/template" id='template'>
+<table>
+	<%for(var i=0;i<weather_data.length;i++){%>
+		<tr>
+			<td><%=weather_data[i].date%></td>
+			<td><img src="<%=weather_data[i].dayPictureUrl%>" alt=""></td>
+			<td><img src="<%=weather_data[i].nightPictureUrl%>" alt=""></td>
+			<td><%=weather_data[i].temperature%></td>
+			<td><%=weather_data[i].weather%></td>
+			<td><%=weather_data[i].wind%></td>
+		</tr>
+	<%}%>
+</table>
+</script>
+
+<script type="text/javascript">
+/*
+	秘钥 需要使用 自己申请
+		需要身份验证 为了 避免不必要的资源浪费
+*/
+	$(function () {
+		$("#getWeather").click(function(){
+			$.ajax({
+				url:'http://api.map.baidu.com/telematics/v3/weather?location=保定&output=json&ak=tq0Kt0NFYheTCj5mszast0drkIqqVTNn',
+				dataType:'jsonp',
+				success:function(data){
+					// 如果 不写 jsonpCallback 那么默认调用的是 success方法
+					console.log(data);
+
+					// 为了 一会模板引擎 使用方便 直接 取出 要的数据
+					var weatherData  = data.results[0];
+
+					// console.log(weatherData);
+
+					// 调用模板
+					var resultStr = template('template',weatherData);
+					// console.log(resultStr);
+
+					// 添加到页面
+					$('body').append(resultStr);
+				}
+			})
+		})
+	})
+</script>
