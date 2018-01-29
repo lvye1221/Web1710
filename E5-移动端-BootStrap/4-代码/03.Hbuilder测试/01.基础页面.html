@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul{
+				transform: translateX(300px);
+				list-style: none;
+			}
+			li{
+				color:yellowgreen;
+			}
+			a{
+				color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<!--ul>li*10>a[href='#']{感觉自己萌萌哒$}-->
+		<ul>
+			<li><a href="#">感觉自己萌萌哒1</a></li>
+			<li><a href="#">感觉自己萌萌哒2</a></li>
+			<li><a href="#">感觉自己萌萌哒3</a></li>
+			<li><a href="#">感觉自己萌萌哒4</a></li>
+			<li><a href="#">感觉自己萌萌哒5</a></li>
+			<li><a href="#">感觉自己萌萌哒6</a></li>
+			<li><a href="#">感觉自己萌萌哒7</a></li>
+			<li><a href="#">感觉自己萌萌哒8</a></li>
+			<li><a href="#">感觉自己萌萌哒9</a></li>
+			<li><a href="#">感觉自己萌萌哒10</a></li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	var ajax = new XMLHttpRequest();
+	
+	ajax.open('get','xx.php');
+	ajax.send();
+	ajax.onreadystatechange = function (){
+		if(ajax.readyState ==4&& ajax.status==200){
+			console.log(ajax.responseText);
+		}
+	}
+	
+	
+	// 文件读取对象 文件读取对象
+	var reader = new FileReader();
+	
+</script>

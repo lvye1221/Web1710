@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		html,body{
+			height: 100%;
+		}
+		body{
+			/* 醒目 晚上 不要穿黑衣服 ^_^ */
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body  data-index='1'>
+	
+</body>
+</html>
+<script type="text/javascript">
+	// 绑定touch事件
+	/*
+		计算 start 跟 end的 时间差
+			如果时间差 很长 也失效  if(time>200)
+		如果move触发了 就失效
+
+	*/
+
+	// 1. 定义一些必须的变量
+	// 开始的时间
+	var startTime = 0;
+
+	// 标示 是否触发了 move事件
+	var isMove =false;
+
+	// 定义 最大的 延迟时间
+	var maxTime = 250;
+
+	document.body.addEventListener('touchstart',function (e) {
+		// 记录开始时间
+		startTime = Date.now();
+
+		// 修正 我们标示变量的值
+		isMove = false;
+	})
+	document.body.addEventListener('touchmove',function (e) {
+		// 修改标示变量
+		isMove = true;
+	})
+	document.body.addEventListener('touchend',function (e) {
+		if (isMove == true) {
+			// console.log('失效');
+			return;
+		}
+		// 判断 延迟延迟的时间
+		if ((Date.now()-startTime)>maxTime) {
+			// console.log('太长了,都属于长按了');
+			return;
+		}
+
+		// 如果能够到这里
+		console.log('成功');
+	})
+
+</script>

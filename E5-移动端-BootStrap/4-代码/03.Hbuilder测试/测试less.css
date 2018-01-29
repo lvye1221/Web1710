@@ -1,0 +1,9 @@
+body {
+  width: 100%;
+}
+body h1 {
+  color: red;
+}
+body span {
+  line-height: 40px;
+}

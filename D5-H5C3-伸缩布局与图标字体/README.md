@@ -1,53 +1,53 @@
 ```
-1¡¢
-    ÉìËõ²¼¾Ö£º
+1ã€
+    ä¼¸ç¼©å¸ƒå±€ï¼š
     display:flex;
 
-    Ö÷Öá £¬²àÖá£¨´¹Ö±ÓÚÖ÷ÖáµÄ·½Ïò£©
+    ä¸»è½´ ï¼Œä¾§è½´ï¼ˆåž‚ç›´äºŽä¸»è½´çš„æ–¹å‘ï¼‰
 
-    Ö÷Öá·½Ïò£ºflex-direction:
+    ä¸»è½´æ–¹å‘ï¼šflex-direction:
         row  row-reverse
         column column-reverse
 
-    Ö÷Öá·½ÏòÉÏµÄ¶ÔÆë·½Ê½£ºjustify-content
-        flex-start: Ö÷Öá¿ªÊ¼
-        flex-end: Ö÷Öá½áÊø
-        center: ¾ÓÖÐ
-        space-around:Æ½·Ö
-        sapce-between£ºÁ½¶Ë¶ÔÆë ÖÐ¼äÆ½¾ù
+    ä¸»è½´æ–¹å‘ä¸Šçš„å¯¹é½æ–¹å¼ï¼šjustify-content
+        flex-start: ä¸»è½´å¼€å§‹
+        flex-end: ä¸»è½´ç»“æŸ
+        center: å±…ä¸­
+        space-around:å¹³åˆ†
+        sapce-betweenï¼šä¸¤ç«¯å¯¹é½ ä¸­é—´å¹³å‡
 
 
-    ²àÖá¶ÔÆë·½Ê½£º
-          flex-start: ²àÖá¿ªÊ¼
-          flex-end: ²àÖá½áÊø
-          center: ¾ÓÖÐ
-          baseline:»ùÏß¶ÔÆë
-          streth:À­Éì
+    ä¾§è½´å¯¹é½æ–¹å¼ï¼š
+          flex-start: ä¾§è½´å¼€å§‹
+          flex-end: ä¾§è½´ç»“æŸ
+          center: å±…ä¸­
+          baseline:åŸºçº¿å¯¹é½
+          streth:æ‹‰ä¼¸
 
-    ×ÓºÐ×ÓÉìËõ±ÈÀý£º
+    å­ç›’å­ä¼¸ç¼©æ¯”ä¾‹ï¼š
         flex: 1;
-        Èç¹ûÄ³ºÐ×Ó²»²ÎÓë»®·Ö±ÈÀï£¬ ²»Ð´flexÊôÐÔ¼´¿É
+        å¦‚æžœæŸç›’å­ä¸å‚ä¸Žåˆ’åˆ†æ¯”é‡Œï¼Œ ä¸å†™flexå±žæ€§å³å¯
 
 
-    2¡¢Í¼±ê×ÖÌå
-        ÓÅµã£º
-        1¡¢½«ËùÓÐÍ¼±ê´ò°ü³É×ÖÌå¿â£¬¼õÉÙÇëÇó£»
-        2¡¢¾ßÓÐÊ¸Á¿ÐÔ£¬¿É±£Ö¤ÇåÎú¶È£»
-        3¡¢Ê¹ÓÃÁé»î£¬±ãÓÚÎ¬»¤£»
+    2ã€å›¾æ ‡å­—ä½“
+        ä¼˜ç‚¹ï¼š
+        1ã€å°†æ‰€æœ‰å›¾æ ‡æ‰“åŒ…æˆå­—ä½“åº“ï¼Œå‡å°‘è¯·æ±‚ï¼›
+        2ã€å…·æœ‰çŸ¢é‡æ€§ï¼Œå¯ä¿è¯æ¸…æ™°åº¦ï¼›
+        3ã€ä½¿ç”¨çµæ´»ï¼Œä¾¿äºŽç»´æŠ¤ï¼›
 
-        Ê¹ÓÃ²½Öè£º
-               1¡¢ÒýÈë×ÖÌå°ü
-               2¡¢ÉêÃ÷×ÖÌå£º¸æËßä¯ÀÀÆ÷È¥ÄÄÕÒ×ÖÌå
-               3¡¢¶¨ÒåÀàÃû
-               4¡¢ÔÚ½á¹¹ÖÐÐ´ Í¼±êµÄ±àÂë£¬¸ø±êÇ©Ìí¼ÓÀàÃû
+        ä½¿ç”¨æ­¥éª¤ï¼š
+               1ã€å¼•å…¥å­—ä½“åŒ…
+               2ã€ç”³æ˜Žå­—ä½“ï¼šå‘Šè¯‰æµè§ˆå™¨åŽ»å“ªæ‰¾å­—ä½“
+               3ã€å®šä¹‰ç±»å
+               4ã€åœ¨ç»“æž„ä¸­å†™ å›¾æ ‡çš„ç¼–ç ï¼Œç»™æ ‡ç­¾æ·»åŠ ç±»å
 
 
-         Î±ÔªËØÖÐ£º
+         ä¼ªå…ƒç´ ä¸­ï¼š
             &#xe628;  ----> content:"\e628";
 
-        3-360È«ÆÁ¹ö¶¯°¸Àý
+        3-360å…¨å±æ»šåŠ¨æ¡ˆä¾‹
 
-        Êó±ê¹öÂÖÊÂ¼þ£º
+        é¼ æ ‡æ»šè½®äº‹ä»¶ï¼š
             onmousewheel=function(){}
 
 ```

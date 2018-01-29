@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>wjs文件夹中使用的模板页</title>
+
+    <!-- Bootstrap -->
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- hack -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 导入 自己的css -->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+
+    <!-- 导入 index.css -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <a href="#" class='price_ticket wjs_font wjs_E915'>
+        <!--  浏览器 从上往下 先处理浮动 右边 宽度固定  -->
+        <div class="ticket_right">
+            <p>8%</p>
+            <p>年利率</p>
+        </div>
+        <!--  接着 由于 之前有一个浮动的元素,已经 使用了 一部分宽度 那么这里 就是使用剩余的 那部分宽度 进行 自适应布局 -->
+        <div class="ticket_left">
+        <h3>新手体验标1002期</h3>
+            <div class="col-xs-6">
+                <p>起投金额</p>
+                <p>0.01万</p>
+            </div>
+            <div class="col-xs-6">
+                <p>起投金额</p>
+                <p>0.01万</p>
+            </div>
+            <div class="col-xs-6">
+                <p>起投金额</p>
+                <p>0.01万</p>
+            </div>
+            <div class="col-xs-6">
+                <p>起投金额</p>
+                <p>0.01万</p>
+            </div>
+        </div>
+
+    </a>
+</body>
+
+</html>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/js/bootstrap.min.js"></script>

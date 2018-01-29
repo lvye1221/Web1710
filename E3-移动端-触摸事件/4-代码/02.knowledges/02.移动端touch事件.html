@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 移动端视口属性 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		html,body{
+			height: 100%;
+
+		}
+		body{
+			background-color:hotpink;
+		}
+		div{
+			width: 20px;
+			height: 20px;
+			border: 1px solid #0094ff;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+
+</body>
+</html>
+<script type="text/javascript" >
+	window.onload  = function () {
+		// 元素的 事件 绑定时 如果写了 形参 会接受到一个 实参,
+		// 触摸 开始的时候 被触发
+
+		// 定义 变量 保存 开始的 坐标值
+		var startX = 0;
+
+		// 定义变量 保存 移动的距离
+		var moveX = 0;
+
+		// 定义变量 用来 记录 小div 结束的时候 移动的距离
+		var distanceX = 0;
+
+
+		// 定义 一堆 记录y方向 移动的 值
+		var startY = 0;
+		var moveY = 0;
+		var distanceY =0;
+
+		document.body.addEventListener('touchstart',function (event) {
+			console.log('touchstart');
+			// console.log(event);
+			// 获取 起始的 坐标值
+			startX = event.touches[0].clientX;
+			startY = event.touches[0].clientY;
+			console.log('startX:'+startX);
+		})
+
+		// 手指开始移动时会 一直触发
+		document.body.addEventListener('touchmove',function (event) {
+			console.log('touchmove');
+			// console.log(event);
+			// 这样 就能够获取到 我在X方向移动的距离了
+			moveX = event.touches[0].clientX -startX;
+			console.log('moveX:'+moveX);
+
+			moveY = event.touches[0].clientY -startY;
+			// 直接 修改 div的 transform
+			// 由于两边 是 字符串拼接 中间是 计算 一定要 加上括号 否则会当 字符串凭借
+			// document.querySelector("div").style.transform = 'translateX('+(moveX+distanceX)+'px)';
+			document.querySelector("div").style.transform = 'translate('+(distanceX+moveX)+'px,'+(distanceY+moveY)+'px)';
+		})
+
+		// 手指 抬起来的时候 会触发
+		document.body.addEventListener('touchend',function (event) {
+			console.log('touchend');
+			// console.log(event);
+
+			// 移动 结束的时候 记录 移动的距离
+			// distanceX = moveX +distanceX;
+			distanceX+=moveX;
+			
+			distanceY+=moveY;
+		})
+	}
+</script>
