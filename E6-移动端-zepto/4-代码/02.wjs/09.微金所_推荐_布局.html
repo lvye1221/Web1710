@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>wjs文件夹中使用的模板页</title>
+
+	<!-- Bootstrap -->
+	<link href="lib/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!-- hack -->
+	<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!-- 导入 自己的css -->
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+
+	<!-- 导入 index.css -->
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+	<div class="tuijian">
+		<!-- Nav tabs -->
+		<ul class="nav wjs-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">特别推荐</a></li>
+			<li role="presentation"><a href="#profile" role="tab" data-toggle="tab">微投资</a></li>
+			<li role="presentation"><a href="#messages" role="tab" data-toggle="tab">微投资</a></li>
+			<li role="presentation"><a href="#settings" role="tab" data-toggle="tab">微投资</a></li>
+			<li role="presentation"><a href="#last" role="tab" data-toggle="tab">微投资</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="home">
+				<!-- 使用 栅格系统 进行布局 -->
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-4 col-md-4  col-sm-6 ">1</div>
+						<div class="col-lg-4 col-md-4  col-sm-6">2</div>
+						<div class="col-lg-4 col-md-4  col-sm-6">3</div>
+						<div class="col-lg-4 col-md-4  col-sm-6">4</div>
+					</div>
+				</div>
+
+			</div>
+			<div role="tabpanel" class="tab-pane" id="profile">2</div>
+			<div role="tabpanel" class="tab-pane" id="messages">..3.</div>
+			<div role="tabpanel" class="tab-pane" id="settings">..4.</div>
+			<div role="tabpanel" class="tab-pane" id="last">.5..</div>
+		</div>
+	</div>
+</body>
+
+</html>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/js/bootstrap.min.js"></script>

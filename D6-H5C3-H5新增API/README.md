@@ -32,6 +32,7 @@
 ```
 
 
+<<<<<<< HEAD
 ## 百度地图 API
 
 百度地图开放平台开发者注册
@@ -49,3 +50,5 @@ BmRBwz3aXO2f2iWcgOBy9MbaYxKktSkd
 ### 注册及使用文档
 http://lbsyun.baidu.com/index.php?title=jspopular/guide/getkey
 
+=======
+>>>>>>> 27e47362515e74e10ed8e8e8bd661c86b2c73b13

@@ -15,6 +15,7 @@
             position: relative;
         }
 
+<<<<<<< HEAD
    		.box>div {
    			position: absolute;
    			left: 0;
@@ -46,6 +47,27 @@
    		.box:hover .box2 {
    			transform: rotateY(0deg);
    		}
+=======
+        .box>div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /*border: 1px solid #000;*/
+            border-radius: 50%;
+            transition:all 2s;
+            
+            /* 设置背后的图片不可见 */
+            backface-visibility: hidden;
+        }
+
+
+        .box1{
+            background:url(images/bg.png) left 0 no-repeat;
+            transform:rotateY(-180deg);
+        }
+
+
+>>>>>>> 27e47362515e74e10ed8e8e8bd661c86b2c73b13
 
     </style>
 </head>

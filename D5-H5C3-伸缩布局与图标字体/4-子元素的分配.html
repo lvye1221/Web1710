@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+<style>
+section {
+	width: 800px;
+	height: 900px;
+	border: 1px solid black;
+	
+	/* 设置弹性布局 */
+	display: flex;
+
+	/* 改变主轴
+	 		column     主轴是 Y轴
+	 		row        主轴是 X轴;
+	 * */
+	flex-direction: column;
+	
+}	
+
+div {
+	background: pink;
+}
+
+div:nth-child(1) {
+	/* 指定当前子元素 占用空间的 比例大小*/
+	flex: 1;
+}
+div:nth-child(2) {
+	flex: 2;
+	background: red;
+}
+div:nth-child(3) {
+	flex: 3;
+	background: mediumpurple;
+}
+
+</style>
+
+	</head>
+	<body>
+		
+		<section>  
+			<div>左边</div> 
+			<div>中间</div> 
+			<div>右边</div>
+		</section>
+		
+	</body>
+</html>

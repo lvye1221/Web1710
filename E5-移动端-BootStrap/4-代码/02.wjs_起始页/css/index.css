@@ -1,0 +1,14 @@
+.header .row > div {
+  height: 40px;
+  border: 1px solid gray;
+  text-align: center;
+  line-height: 40px;
+}
+.header .row > div > a {
+  color: gray;
+  text-decoration: none;
+  font-size: 13px;
+}
+.header .row > div:nth-child(n+3) a {
+  margin-left: 10px;
+}

@@ -1,0 +1,826 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>HTTP服务搭建 | 简介</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.5.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../第一天/PHP基础.html" />
+    
+    
+    <link rel="prev" href="../第一天/web开发概述.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.3" data-chapter-title="HTTP服务搭建" data-filepath="第一天/HTTP服务搭建.md" data-basepath=".." data-revision="Wed Oct 12 2016 00:52:11 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="第一天/Ajax01第一天单词表.html">
+            
+                
+                    <a href="../第一天/Ajax01第一天单词表.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第一天\(服务器\)
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="第一天/CS,BS架构.html">
+            
+                
+                    <a href="../第一天/CS,BS架构.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        CS\/BS架构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="第一天/web开发概述.html">
+            
+                
+                    <a href="../第一天/web开发概述.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        web开发概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="第一天/HTTP服务搭建.html">
+            
+                
+                    <a href="../第一天/HTTP服务搭建.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        HTTP服务搭建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="第一天/PHP基础.html">
+            
+                
+                    <a href="../第一天/PHP基础.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        PHP基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="第一天/php中header.html">
+            
+                
+                    <a href="../第一天/php中header.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        PHP中的header
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="第一天/PHP表单.html">
+            
+                
+                    <a href="../第一天/PHP表单.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        PHP表单
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="第二天/Ajax02第二天单词表.html">
+            
+                
+                    <a href="../第二天/Ajax02第二天单词表.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第二天\(ajax\)
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="第二天/网络传输协议.html">
+            
+                
+                    <a href="../第二天/网络传输协议.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        网络传输协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="第二天/php保存上传文件.html">
+            
+                
+                    <a href="../第二天/php保存上传文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        php保存上传文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="第二天/php设置上传文件大小限制.html">
+            
+                
+                    <a href="../第二天/php设置上传文件大小限制.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        php设置上传文件大小
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="第二天/Ajax概念及基本使用.html">
+            
+                
+                    <a href="../第二天/Ajax概念及基本使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        ajax的基本概念及使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="第三天/Ajax03第三天单词表.html">
+            
+                
+                    <a href="../第三天/Ajax03第三天单词表.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第三天
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="第三天/Ajax数据传输_XML.html">
+            
+                
+                    <a href="../第三天/Ajax数据传输_XML.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        ajax传输XML
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="第三天/Ajax数据传输_JSON.html">
+            
+                
+                    <a href="../第三天/Ajax数据传输_JSON.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        ajax传输JSON
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="第三天/Ajax工具函数封装.html">
+            
+                
+                    <a href="../第三天/Ajax工具函数封装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        ajax工具函数封装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="第四天/Ajax04第四天单词表.html">
+            
+                
+                    <a href="../第四天/Ajax04第四天单词表.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第四天
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="第四天/JQuery中的Ajax.html">
+            
+                
+                    <a href="../第四天/JQuery中的Ajax.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        jquery中的ajax
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="第四天/模板引擎.html">
+            
+                
+                    <a href="../第四天/模板引擎.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        模板引擎
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="第五天/Ajax 第五天单词表.html">
+            
+                
+                    <a href="../第五天/Ajax 第五天单词表.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第五天
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="第五天/同源以及跨域.html">
+            
+                
+                    <a href="../第五天/同源以及跨域.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        同源以及跨域
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="第五天/瀑布流.html">
+            
+                
+                    <a href="../第五天/瀑布流.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        瀑布流
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="第六天/移动web第一天.html">
+            
+                
+                    <a href="../第六天/移动web第一天.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第六天
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="第六天/viewport.html">
+            
+                
+                    <a href="../第六天/viewport.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        viewport
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="第六天/移动web特殊细节样式.html">
+            
+                
+                    <a href="../第六天/移动web特殊细节样式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        移动web样式注意
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="附录/index.html">
+            
+                
+                    <a href="../附录/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        附录
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="附录/常用插件.html">
+            
+                
+                    <a href="../附录/常用插件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        sublime常用插件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="附录/自定义代码段.html">
+            
+                
+                    <a href="../附录/自定义代码段.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        sublime自定义代码段
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="附录/markdown简明语法.html">
+            
+                
+                    <a href="../附录/markdown简明语法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        markdown部分语法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="第七天/移动web第二天.html">
+            
+                
+                    <a href="../第七天/移动web第二天.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        第七天
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="第七天/touch事件.html">
+            
+                
+                    <a href="../第七天/touch事件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        touch事件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >简介</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p>&#xFEFF;# HTTP&#x670D;&#x52A1;&#x642D;&#x5EFA;</p>
+<p>&#x6807;&#x7B7E;&#xFF08;&#x7A7A;&#x683C;&#x5206;&#x9694;&#xFF09;&#xFF1A; &#x7F51;&#x7EDC;&#x5F00;&#x53D1;</p>
+<hr>
+<h2 id="amp">AMP</h2>
+<blockquote>
+<p>AMP:<strong>A:</strong><code>Apache</code>,<strong>M:</strong><code>MySQL</code>,<strong>P:</strong><code>PHP</code></p>
+<ul>
+<li><strong>Apache</strong>
+&#x4E16;&#x754C;&#x6392;&#x540D;&#x7B2C;&#x4E00;&#x7684;&#x670D;&#x52A1;&#x5668;&#x8F6F;&#x4EF6;,&#x7279;&#x70B9;&#x662F;<code>&#x7B80;&#x5355;</code>,<code>&#x901F;&#x5EA6;&#x5FEB;</code>,<code>&#x6027;&#x80FD;&#x7A33;&#x5B9A;</code></li>
+</ul>
+</blockquote>
+<ul>
+<li><p><strong>MySQL</strong>
+&#x5F97;&#x76CA;&#x4E8E;&#x4ED6;&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x901F;&#x5EA6;&#x5FEB;&#x3001;&#x4F7F;&#x7528;&#x6210;&#x672C;&#x4F4E;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x5F00;&#x6E90;&#x54E6;&#xFF0C;&#x6240;&#x4EE5;&#x5F88;&#x591A;&#x7F51;&#x7AD9;&#x90FD;&#x9009;&#x7528;<strong>MySql</strong>&#x4F5C;&#x4E3A;&#x4ED6;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x5E93;.</p>
+</li>
+<li><p><strong>PHP</strong>
+&#x5C55;&#x5F00;&#x540E;PHP: Hypertext Preprocessor&#xFF0C;&#x4E2D;&#x6587;&#x540D;&#xFF1A;<code>&#x8D85;&#x6587;&#x672C;&#x9884;&#x5904;&#x7406;&#x5668;</code>,&#x76F4;&#x63A5;&#x5C06;&#x4EE3;&#x7801;&#x5D4C;&#x5165;<code>HTML</code> &#x6587;&#x6863;&#x4E2D;&#x6267;&#x884C;,&#x7B80;&#x5355;&#x6613;&#x5B66;,&#x5BB9;&#x6613;&#x4E0A;&#x624B;.</p>
+</li>
+</ul>
+<h2 id="amp&#x96C6;&#x6210;&#x73AF;&#x5883;">AMP&#x96C6;&#x6210;&#x73AF;&#x5883;</h2>
+<blockquote>
+<p>&#x521A;&#x521A;&#x5DF2;&#x7ECF;&#x89E3;&#x91CA;&#x4E86;&#x8FD9;&#x51E0;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x610F;&#x601D;,&#x5176;&#x4E2D;<code>AMP</code>&#x662F;&#x4E09;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x8F6F;&#x4EF6;,&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x521D;&#x5B66;&#x8005;&#x800C;&#x8A00;&#x5206;&#x522B;&#x5B89;&#x88C5;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x9700;&#x8981;&#x638C;&#x63E1;&#x4E00;&#x5B9A;&#x7684;&#x8F6F;&#x4EF6;&#x77E5;&#x8BC6;,&#x6240;&#x4EE5;&#x5C31;&#x6709;&#x4E86;&#x5F88;&#x591A;<code>AMP</code>&#x96C6;&#x6210;&#x73AF;&#x5883;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x7B80;&#x5316;&#x5B89;&#x88C5;</p>
+</blockquote>
+<ul>
+<li><p><strong>WAMP:</strong>
+&#x5728;<code>windows</code>&#x5E73;&#x53F0;&#x4E0B;&#x5982;&#x679C;&#x60F3;&#x8981;&#x4E00;&#x6B65;&#x5230;&#x4F4D;&#x5B89;&#x88C5;&#x597D;&#x8FD9;&#x4E9B;&#x8F6F;&#x4EF6;,&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>wamp</code>,&#x5176;&#x4E2D;w&#x7684;&#x610F;&#x601D;&#x4E3A;<code>windows</code>&#x6307;&#x7684;&#x662F;windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;
+&#x8F6F;&#x4EF6;&#x7684;&#x5B98;&#x7F51;&#x4E3A;:<a href="http://www.wampserver.com/en/" target="_blank">wamp&#x5B98;&#x65B9;&#x7F51;&#x7AD9;</a></p>
+</li>
+<li><p><strong>XAMPP:</strong>
+&#x4E0D;&#x540C;&#x4E8E;<code>wamp</code>&#x9488;&#x5BF9;&#x4E8E;<code>windows</code>,<code>XAMPP</code>&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x5728;<code>Linux</code>,<code>Windows</code>,<code>MAC OS X</code>,<code>Solaris</code>&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x9762;</p>
+</li>
+</ul>
+<h2 id="wamp&#x5B89;&#x88C5;&#x914D;&#x7F6E;&#x6CE8;&#x610F;&#x70B9;">WAMP&#x5B89;&#x88C5;,&#x914D;&#x7F6E;,&#x6CE8;&#x610F;&#x70B9;</h2>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x9009;&#x7528;<code>wamp</code>&#x4F5C;&#x4E3A;&#x5B66;&#x4E60;&#x73AF;&#x5883;,&#x63A5;&#x4E0B;&#x6765;&#x6F14;&#x793A;&#x5982;&#x4F55;&#x5B89;&#x88C5;&#x5E76;&#x8BBE;&#x7F6E;wamp</p>
+</blockquote>
+<h3 id="wamp&#x5B89;&#x88C5;">WAMP&#x5B89;&#x88C5;</h3>
+<p><img src="http://static.zybuluo.com/antumuFish/ahc7r09bv82114dm0yf2qegy/wampSteps.gif" alt="wampSteps.gif-600.2kB"></p>
+<ol>
+<li>&#x53CC;&#x51FB;&#x63D0;&#x4F9B;&#x7684;&#x5B89;&#x88C5;&#x5305;</li>
+<li>&#x70B9;&#x51FB;<code>Next</code></li>
+<li>&#x9009;&#x62E9;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;,&#x6CE8;&#x610F;:<strong>&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x4E2D;&#x6587;&#x8DEF;&#x5F84;</strong>.&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x8DDF;&#x56FE;&#x7247;&#x4E00;&#x81F4;&#x7684;&#x8DEF;&#x5F84;</li>
+<li>&#x5982;&#x679C;&#x62C5;&#x5FC3;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x627E;&#x4E0D;&#x5230;<code>wamp</code>&#x53EF;&#x4EE5;&#x5C06;&#x4E24;&#x4E2A;&#x65B9;&#x6846;&#x5168;&#x90E8;&#x52FE;&#x9009;,&#x70B9;&#x51FB;<code>next</code>&#x7EE7;&#x7EED;&#x5B89;&#x88C5;</li>
+<li>&#x70B9;&#x51FB;<code>install</code>&#x5F00;&#x59CB;&#x5B89;&#x88C5;</li>
+<li>&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#x4EE5;&#x540E;&#x70B9;&#x51FB;<code>finish</code>&#x5373;&#x53EF;&#x542F;&#x52A8;<code>wamp</code></li>
+<li>&#x542F;&#x52A8;&#x5B8C;&#x6210;&#x80FD;&#x591F;&#x5728;&#x4EFB;&#x52A1;&#x680F;&#x7684;&#x53F3;&#x4E0B;&#x89D2;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x56FE;&#x6807;&#x5373;&#x8868;&#x793A;&#x5B89;&#x88C5;&#x6210;&#x529F;<img src="http://static.zybuluo.com/antumuFish/y2vhy4kaazhtwdbmek359ldm/image_1alref1o416psincp5dqr1e9c4c.png" alt="image_1alref1o416psincp5dqr1e9c4c.png-1.5kB"></li>
+</ol>
+<h3 id="&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;">&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;</h3>
+<blockquote>
+<p>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<code>127.0.0.1</code>&#x67E5;&#x770B;&#x663E;&#x793A;&#x7684;&#x5185;&#x5BB9;,&#x5982;&#x679C;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x5B89;&#x88C5;,&#x9ED8;&#x8BA4;&#x663E;&#x793A;&#x7684;&#x5E94;&#x8BE5;&#x662F;&#x5982;&#x4E0B;&#x56FE;&#x7247;</p>
+</blockquote>
+<ul>
+<li><strong>127.0.0.1&#x542B;&#x4E49;:</strong>
+<code>127.0.0.1</code>&#x662F;&#x56DE;&#x9001;&#x5730;&#x5740;&#xFF0C;&#x6307;&#x672C;&#x5730;&#x673A;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;,&#x5982;&#x679C;&#x60F3;&#x8981;&#x8BA9;&#x5176;&#x4ED6;&#x7535;&#x8111;&#x4E5F;&#x80FD;&#x591F;&#x8BBF;&#x95EE;,&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;,&#x8BE6;&#x89C1;&#x4E0B;&#x6587;.</li>
+</ul>
+<p><img src="http://static.zybuluo.com/antumuFish/ll4988qkaignddg2okjhutjx/wamp08.png" alt="wamp08.png-174.3kB"></p>
+<h3 id="wamp&#x56FE;&#x6807;&#x6A59;&#x8272;&#x89E3;&#x51B3;&#x65B9;&#x6848;">WAMP&#x56FE;&#x6807;&#x6A59;&#x8272;&#x89E3;&#x51B3;&#x65B9;&#x6848;</h3>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x8FC7;&#x81EA;&#x5DF1;&#x7684;&#x7535;&#x8111;&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#x90A3;&#x4E48;<code>WAMP</code>&#x9ED8;&#x8BA4;&#x5E94;&#x8BE5;&#x4E3A;&#x7EFF;&#x8272;&#x7684;&#x56FE;&#x6807;,&#x90A3;&#x4E48;&#x5982;&#x679C;WAMP&#x542F;&#x52A8;,&#x663E;&#x793A;&#x7684;&#x662F;&#x6A59;&#x8272;&#x56FE;&#x6807;&#x600E;&#x4E48;&#x529E;&#x5462;?<img src="http://static.zybuluo.com/antumuFish/gwx0rgj5je8094xd2zc4lgmj/wamp07.png" alt="wamp07.png-1.2kB"></p>
+</blockquote>
+<p>1.&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;&#x670D;&#x52A1;:&#x4FDD;&#x8BC1;<code>Apache</code>,<code>MySQL</code>&#x7684;&#x670D;&#x52A1;&#x90FD;&#x662F;&#x542F;&#x52A8;&#x72B6;&#x6001;&#x5373;&#x53EF;
+<img src="http://static.zybuluo.com/antumuFish/gvs0tmp0i0563jq7otypeigj/wamptest.gif" alt="wamptest.gif-708.2kB"></p>
+<p>2.&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;&#x5FAE;&#x8F6F;&#x81EA;&#x5E26;&#x7684;<code>IIS&#x670D;&#x52A1;</code>:&#x9996;&#x5148;&#x6253;&#x5F00;&#x63A7;&#x5236;&#x9762;&#x677F;,&#x4FDD;&#x8BC1;&#x52A8;&#x6001;&#x56FE;&#x6700;&#x540E;&#x9009;&#x4E2D;&#x7684;<code>Internet Information Services</code>&#x6CA1;&#x6709;&#x88AB;&#x52FE;&#x9009;&#x5373;&#x53EF;
+<img src="http://static.zybuluo.com/antumuFish/yjkqhvbqyanx3b52881kn7lg/closeIIS.gif" alt="closeIIS.gif-663.6kB"></p>
+<p>3.&#x4FEE;&#x6539;&#x7AEF;&#x53E3;&#x53F7;:&#x5728;<code>httpd.conf</code>&#x4E2D;&#x641C;&#x7D22; listen,&#x5927;&#x6982;&#x5728;46&#x884C;&#x7684;&#x4F4D;&#x7F6E;</p>
+<pre><code>    Listen 80
+    &#x6539;&#x4E3A; listen 8080
+    &#x6CE8;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x6539;&#x4E3A;&#x4EFB;&#x610F;&#x7684;&#x7AEF;&#x53E3;,&#x4FEE;&#x6539;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;, &#x4FDD;&#x5B58;&#x5E76;&#x91CD;&#x542F;wamp
+    &#x8BBF;&#x95EE;&#x65F6;&#x5728;ip&#x5730;&#x5740;&#x4E4B;&#x540E;&#x6DFB;&#x52A0;:8080 &#x7AEF;&#x53E3;&#x53F7;&#x5373;&#x53EF;
+    &#x5982; 192.168.18.125:8080
+</code></pre><p>4.&#x7EC8;&#x6781;&#x89E3;&#x51B3;:&#x5378;&#x8F7D;-&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5939;(wamp&#x5B89;&#x88C5;&#x7684;&#x6587;&#x4EF6;&#x5939;)-&#x91CD;&#x88C5;</p>
+<h3 id="&#x914D;&#x7F6E;&#x5C40;&#x57DF;&#x7F51;&#x8BBF;&#x95EE;">&#x914D;&#x7F6E;&#x5C40;&#x57DF;&#x7F51;&#x8BBF;&#x95EE;</h3>
+<blockquote>
+<p>&#x5B89;&#x88C5;&#x597D;&#x4E86;<code>WAMP</code>&#x4E4B;&#x540E;&#x5C31;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x81EA;&#x5DF1;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<code>127.0.0.1</code>,&#x5982;&#x679C;&#x60F3;&#x8981;&#x8BA9;&#x540C;&#x4E00;&#x5C40;&#x57DF;&#x7F51;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x7535;&#x8111;&#x4E5F;&#x80FD;&#x591F;&#x8BBF;&#x95EE;,&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x914D;&#x7F6E;</p>
+</blockquote>
+<ul>
+<li><strong>&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;:</strong>&#x9996;&#x5148;&#x6253;&#x5F00;<code>&#x63A7;&#x5236;&#x9762;&#x677F;</code></li>
+</ul>
+<p><img src="http://static.zybuluo.com/antumuFish/i1xss4v50jel8v3w0ta8wvz4/closeDef.gif" alt="closeDef.gif-579.1kB"></p>
+<ul>
+<li><strong>&#x4FEE;&#x6539;<code>httpd.conf&#x6587;&#x4EF6;</code></strong>
+&#x56E0;&#x4E3A;<code>Apache</code>&#x7684;&#x914D;&#x7F6E;&#x9ED8;&#x8BA4;&#x4E0D;&#x5141;&#x8BB8;&#x5916;&#x90E8;&#x8BBF;&#x95EE;,&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x914D;&#x7F6E;
+&#x627E;&#x5230;<code>D:\wamp\bin\apache\Apache2.2.21\conf</code>&#x6587;&#x4EF6;
+&#x4F7F;&#x7528;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5DE5;&#x5177;&#x6253;&#x5F00;,&#x901A;&#x8FC7;&#x641C;&#x7D22;&#x529F;&#x80FD;&#x627E;&#x5230;<code>onlineoffline tag - don&apos;t remove</code>&#x8FD9;&#x53E5;&#x8BDD;
+```
+&#x5C06;&#x5728;234&#x884C;&#x9644;&#x8FD1;&#x7684; 
+Allow from 127.0.0.1
+&#x66FF;&#x6362;&#x4E3A;
+Allow from all </li>
+</ul>
+<p><code>``
+&#x4FDD;&#x5B58;,&#x7136;&#x540E;&#x91CD;&#x542F;</code>wamp`&#x7684;&#x6240;&#x6709;&#x670D;&#x52A1;&#x5373;&#x53EF;</p>
+<ul>
+<li><p><strong>&#x83B7;&#x53D6;&#x672C;&#x673A;IP&#x5730;&#x5740;:</strong></p>
+<ul>
+<li><strong>&#x65B9;&#x6CD5;1:</strong> <ul>
+<li>&#x6253;&#x5F00;<code>&#x63A7;&#x5236;&#x9762;&#x677F;-&gt;&#x7F51;&#x7EDC;&#x548C;Internet-&gt;&#x7F51;&#x7EDC;&#x548C;&#x5171;&#x4EAB;&#x4E2D;&#x5FC3;-&gt;&#x66F4;&#x6539;&#x9002;&#x914D;&#x5668;&#x8BBE;&#x7F6E;</code></li>
+<li>&#x627E;&#x5230;&#x6B63;&#x5728;&#x8FDE;&#x63A5;&#x7684;&#x7F51;&#x7EDC;,<code>&#x53CC;&#x51FB;</code>
+<img src="http://static.zybuluo.com/antumuFish/c1z38r6wb2hsm6j1ernga3fl/getIp01.gif" alt="getIp01.gif-877.2kB"></li>
+</ul>
+</li>
+<li><strong>&#x65B9;&#x6CD5;2:</strong><ul>
+<li>&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</li>
+<li>&#x8F93;&#x5165;<code>ipconfig</code>
+<img src="http://static.zybuluo.com/antumuFish/k9b8jdj3e7n2idyeamgu8z8g/getIp02.gif" alt="getIp02.gif-544.3kB"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x5C40;&#x57DF;&#x7F51;&#x5185;&#x8BBF;&#x95EE;:</strong>
+&#x4F7F;&#x7528;&#x4E00;&#x53F0;&#x76F8;&#x540C;&#x5C40;&#x57DF;&#x7F51;&#x5185;&#x7684;<code>&#x62E5;&#x6709;&#x6D4F;&#x89C8;&#x5668;</code>&#x7684;&#x8BBE;&#x5907;&#x5373;&#x53EF;&#x901A;&#x8FC7;&#x521A;&#x521A;&#x83B7;&#x53D6;&#x7684;<code>IP&#x5730;&#x5740;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;</code></p>
+</li>
+<li><p><strong>&#x5E38;&#x89C1;&#x7684;&#x901A;&#x5C40;&#x57DF;&#x7F51;&#x8BA1;&#x7B97;&#x673A;:</strong></p>
+<blockquote>
+<p>&#x5C40;&#x57DF;&#x7F51;&#x7684;&#x6982;&#x5FF5;&#x8FD9;&#x91CC;&#x4E0D;&#x505A;&#x62D3;&#x5C55;,&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x6D4B;&#x8BD5;&#x5F53;&#x6EE1;&#x8DB3;&#x4E0B;&#x5217;&#x60C5;&#x51B5;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x8BBF;&#x95EE;</p>
+</blockquote>
+<ul>
+<li>&#x8FDE;&#x63A5;&#x540C;&#x4E00;&#x4E2A;<code>wifi</code>&#x7684;&#x8BA1;&#x7B97;&#x673A;(&#x624B;&#x673A;&#x4E5F;&#x53EF;&#x4EE5;&#x6D4B;&#x8BD5;)</li>
+<li>&#x8FDE;&#x63A5;&#x540C;&#x4E00;&#x4E2A;<code>&#x4EA4;&#x6362;&#x673A;</code>&#x7684;&#x8BA1;&#x7B97;&#x673A;<ul>
+<li>&#x540C;&#x6559;&#x5BA4;&#x7684;&#x7535;&#x8111;</li>
+<li>&#x540C;&#x516C;&#x53F8;&#x7684;&#x7535;&#x8111;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x914D;&#x7F6E;&#x7F51;&#x7AD9;&#x6839;&#x76EE;&#x5F55;">&#x914D;&#x7F6E;&#x7F51;&#x7AD9;&#x6839;&#x76EE;&#x5F55;</h3>
+<blockquote>
+<p>(<strong>&#x6CE8;:</strong> <em>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x8DEF;&#x5F84;&#x4E3A;&#x4E0A;&#x8FF0;&#x5B89;&#x88C5;&#x65F6;&#x7684;&#x8DEF;&#x5F84;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x5728;D&#x76D8;,&#x90A3;&#x4E48;&#x9700;&#x8981;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x5F84;</em>)</p>
+</blockquote>
+<ul>
+<li><p><strong>&#x627E;&#x5230;<code>WAMP</code>&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;:</strong><code>D:\wamp</code></p>
+</li>
+<li><p><strong>&#x627E;&#x5230;<code>Apache</code>&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</strong>
+<code>D:\wamp\bin\apache\Apache2.2.21\conf</code></p>
+</li>
+<li><p><strong>&#x4FEE;&#x6539;<code>http.conf</code>&#x6587;&#x4EF6;</strong>
+&#x4F7F;&#x7528;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5DE5;&#x5177;&#x6253;&#x5F00;<code>httpd.conf</code>&#x6587;&#x4EF6;,&#x641C;&#x7D22;<code>documentRoot</code>
+&#x5982;&#x679C;&#x662F;&#x521D;&#x6B21;&#x5B89;&#x88C5;,&#x5E94;&#x8BE5;&#x5206;&#x522B;&#x5728;<code>178</code>&#x884C;,<code>205</code>&#x884C;
+&#x4FEE;&#x6539;&#x5B8C;&#x6BD5;&#x4EE5;&#x540E;&#x8BB0;&#x5F97;&#x4FDD;&#x5B58;<code>ctrl+s</code></p>
+</li>
+</ul>
+<p><img src="http://static.zybuluo.com/antumuFish/fybojfaavamtu3rapwu0dvqr/documentRoot.gif" alt="documentRoot.gif-2245.2kB"></p>
+<ul>
+<li><p><strong>&#x91CD;&#x542F;<code>WAMP</code>&#x670D;&#x52A1;</strong>
+&#x5DE6;&#x952E;&#x70B9;&#x51FB;<code>wamp</code>&#x56FE;&#x6807;,&#x9009;&#x62E9;<code>&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x6240;&#x6709;&#x670D;&#x52A1;</code>
+<img src="http://static.zybuluo.com/antumuFish/pcfudtnuh7s0pt226f96kal5/restWamp.gif" alt="restWamp.gif-166kB"></p>
+</li>
+<li><p><strong>&#x5EFA;&#x7ACB;&#x6587;&#x4EF6;&#x5939;,&#x5C1D;&#x8BD5;&#x8BBF;&#x95EE;</strong>
+&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x8BBF;&#x95EE;&#x65F6;&#x786E;&#x5B9E;&#x6709;&#x5185;&#x5BB9;,&#x5728;<code>E:</code>&#x76D8;&#x4E0B;&#x5EFA;&#x7ACB;<code>www</code>&#x6587;&#x4EF6;&#x5939;,&#x5E76;&#x4E14;&#x5728;&#x6539;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x653E;&#x5165;&#x6587;&#x4EF6;,&#x518D;&#x6B21;&#x5C1D;&#x8BD5;&#x901A;&#x8FC7;<code>127.0.0.1</code>&#x8FDB;&#x884C;&#x8BBF;&#x95EE;
+<img src="http://static.zybuluo.com/antumuFish/eko70jme9shij0zs2418gmiq/visitWWW.gif" alt="visitWWW.gif-760.4kB"></p>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../第一天/web开发概述.html" class="navigation navigation-prev " aria-label="Previous page: web开发概述"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../第一天/PHP基础.html" class="navigation navigation-next " aria-label="Next page: PHP基础"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    
+</body>
+    
+</html>

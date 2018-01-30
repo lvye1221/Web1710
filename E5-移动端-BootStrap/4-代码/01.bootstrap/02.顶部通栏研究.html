@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>感觉自己挺好的</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- hack -->
+  <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+  .fox_navBar {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+.fox_navBar .navbar-brand {
+  color: #777;
+  line-height: 50px;
+  height: 80px;
+}
+.fox_navBar .navbar-brand:hover,
+.fox_navBar .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.fox_navBar .navbar-text {
+  color: #777;
+}
+.fox_navBar .navbar-nav > li{
+  /* line-height: 80px; */
+}
+.fox_navBar .navbar-nav > li > a {
+  color: #777;
+  height: 80px;
+  /* 80-15-15 */
+  line-height: 50px;
+}
+.fox_navBar .navbar-nav > li > a:hover,
+.fox_navBar .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+  border-bottom: 3px solid red;
+}
+.fox_navBar .navbar-nav > .active > a,
+.fox_navBar .navbar-nav > .active > a:hover,
+.fox_navBar .navbar-nav > .active > a:focus {
+  color: #555;
+  /* background-color: orange; */
+}
+.fox_navBar .navbar-nav > .disabled > a,
+.fox_navBar .navbar-nav > .disabled > a:hover,
+.fox_navBar .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.fox_navBar .navbar-toggle {
+  border-color: #ddd;
+}
+.fox_navBar .navbar-toggle:hover,
+.fox_navBar .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.fox_navBar .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.fox_navBar .navbar-collapse,
+.fox_navBar .navbar-form {
+  border-color: #e7e7e7;
+}
+.fox_navBar .navbar-nav > .open > a,
+.fox_navBar .navbar-nav > .open > a:hover,
+.fox_navBar .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .fox_navBar .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .fox_navBar .navbar-nav .open .dropdown-menu > li > a:hover,
+  .fox_navBar .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .fox_navBar .navbar-nav .open .dropdown-menu > .active > a,
+  .fox_navBar .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .fox_navBar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .fox_navBar .navbar-nav .open .dropdown-menu > .disabled > a,
+  .fox_navBar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .fox_navBar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.fox_navBar .navbar-link {
+  color: #777;
+}
+.fox_navBar .navbar-link:hover {
+  color: #333;
+}
+.fox_navBar .btn-link {
+  color: #777;
+}
+.fox_navBar .btn-link:hover,
+.fox_navBar .btn-link:focus {
+  color: #333;
+}
+.fox_navBar .btn-link[disabled]:hover,
+fieldset[disabled] .fox_navBar .btn-link:hover,
+.fox_navBar .btn-link[disabled]:focus,
+fieldset[disabled] .fox_navBar .btn-link:focus {
+  color: #ccc;
+}
+</style>
+
+</head>
+
+<body>
+  <nav class="navbar fox_navBar" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">我是logo</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right  hidden-sm hidden-xs">
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+</body>
+
+</html>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>

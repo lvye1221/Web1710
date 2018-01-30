@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin:100px ;
+            background-color: green;
+
+			/* animation 代表使用动画 
+			 		move 就是使用自己定义动画的名字 
+			 		infinite 无限执行动画
+			 * */            
+            animation: move 3s infinite steps(10);
+        }
+        
+        /* 定义动画 move */
+        @keyframes move{
+        	0% {}                   /*从哪里开始*/
+        	50% {
+        		transform: translateX(800px);  /*从哪里结束*/
+        		background: red;
+        	}
+        	100% {
+        		transform: translateX(0px);  /*从哪里结束*/
+        		background: green;
+        	}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+
+</body>
+</html>

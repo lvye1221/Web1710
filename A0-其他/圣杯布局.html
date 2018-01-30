@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>圣杯布局</title>
+  <style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	#box{
+		padding:0 150px 0 200px;
+		min-width:600px;
+		/*最小宽度*/
+	}
+	div{
+		height:200px;
+		
+	}
+	.commom{
+		float:left;
+		position:relative;
+	}
+	.right{
+	    width:200px;
+		background:blue;
+		right:-200px;
+		margin-left:-200px;
+	}
+	.left{
+		width:200px;
+		background:yellow;
+		
+		left:-200px;
+		margin-left:-100%;
+	}
+	.center{
+		width:100%;
+		background:red;
+	
+	}
+  </style>
+ </head>
+ <body>
+	<div id="box">
+		<div class="center commom">center center center center center center center center center center center center centercenter center center center center center center center center center center center center centercenter center center center center center center center center center center center center centercenter center center center center center center center center center center center center centercenter</div>
+		<div class="left commom">left</div>
+		<div class="right commom">right</div>
+	</div>
+ </body>
+</html>
