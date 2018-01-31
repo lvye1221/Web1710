@@ -1,0 +1,20 @@
+.red {
+  background-color: blue;
+  border: 1px solid red;
+  color: red;
+}
+body {
+  background-color: blue;
+  border: 1px solid red;
+  color: red;
+}
+ul {
+  background-color: purple;
+  border: 1px solid purple;
+  color: purple;
+}
+div {
+  background-color: red;
+  border: 1px solid red;
+  color: red;
+}

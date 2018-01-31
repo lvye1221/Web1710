@@ -1,16 +1,7 @@
 .red{
-	background-color: red;
+	background-color: blue;
 	border:1px solid red;
 	color:red;
-}
-
-// 类似于 函数的 用法
-// 括号中 参数名: 参数的默认值
-// 如果使用 该class 进行混合是 如果不传递参数,会使用默认值
-.oneColor(@color:#0094ff){
-	background-color: @color;
-	border:1px solid @color;
-	color:@color;
 }
 
 body{
@@ -18,9 +9,22 @@ body{
 }
 
 ul{
-	.oneColor(yellow);
+	.qinfeng(purple);
 }
 
 div{
-	.oneColor();
+	.qinfeng();
 }
+
+
+
+// 类似于 函数的 用法
+// 括号中 参数名: 参数的默认值
+// 如果使用 该class 进行混合是 如果不传递参数,会使用默认值
+.qinfeng(@color:red){
+    background-color: @color;
+    border:1px solid @color;
+    color:@color;
+}
+
+
