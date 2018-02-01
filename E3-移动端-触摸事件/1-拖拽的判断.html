@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+				background: palegreen;
+			}
+			
+			.box {
+				width: 20px;
+				height: 20px;
+				background: red;
+				border-radius: 50%;
+				
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box"></div>
+	</body>
+</html>
+
+
+<script>
+	
+	//  			时间				距离
+	//  单击			短				短
+	//  拖拽			不限				长
+	
+(function() {	
+	var startTime = 0;						// 开始时间值
+	var endTime = 0;						// 结束时间值
+	
+	document.body.addEventListener("touchstart", function() {
+		startTime = new Date();			// 获取开始触摸的时间	
+	})
+	
+	document.body.addEventListener("touchend", function() {
+		endTime = new Date();			// 获取结束触摸的时间	
+		
+		var deta = endTime - startTime	// 毫秒差
+		
+		if (deta < 500) {				// 小于500
+			console.log("这是单击触摸")
+		}
+
+//		var y = deta;
+//
+//		console.log(y)
+//		
+//		document.getElementById("box").style.top = y + "px"
+	})
+})()
+</script>
+
