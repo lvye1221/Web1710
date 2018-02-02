@@ -1,0 +1,60 @@
+
+.wjs-media {
+  margin-top: 15px;
+}
+.wjs-media:first-child {
+  margin-top: 0;
+}
+.wjs-media,
+.wjs-media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.wjs-media-body {
+  width: 10000px;
+}
+.wjs-media-object {
+  display: block;
+}
+.wjs-media-object.img-thumbnail {
+  max-width: none;
+}
+.wjs-media-right,
+.wjs-media > .pull-right {
+  padding-left: 10px;
+}
+.wjs-media-left,
+.wjs-media > .pull-left {
+  padding-right: 10px;
+}
+.wjs-media-left,
+.wjs-media-right,
+.wjs-media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+.wjs-media-middle {
+  vertical-align: middle;
+}
+.wjs-media-bottom {
+  vertical-align: bottom;
+}
+.wjs-media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.wjs-media-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.wjs-media>a>div>span {
+	font-size: 40px;
+}
+.wjs-media>a {
+	color: #808080;
+}
+
+.wjs-media>a:hover {
+	color: red;
+}
