@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		
+		<!-- 引入库文件  -->
+		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- 如果要用到事件处理的话，需要引入事件处理的文件 -->
+		<script src="js/event.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- 如果需要用到触摸事件的话，引入此文件-->
+		<script src="js/touch.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+	</head>
+	<body>
+		
+		<div class="box">哈哈</div>
+		
+<style>
+.delete { display: none; }
+
+li {
+	border: 1px solid red;
+}
+
+</style>
+
+<ul id="items">
+  <li>列表 1 <span class=delete>删除</span></li>
+  <li>列表 2 <span class=delete>删除</span></li>
+</ul>
+
+
+	</body>
+</html>
+
+<script>
+//
+//$(document).ready(function() {
+//	
+//	document.addEventListener('touchmove', function (event) {
+//		// 阻止浏览器默认行为
+//      event.preventDefault();  
+//  }, false);  
+//  
+//  
+//	$("#items li").swipeLeft(function() {
+//		console.log("swipe")
+//	})
+//})
+//
+//
+//	
+//	
+//	
+////	$(".box").html("小明")
+//
+////  点击事件 
+////	$(".box").on("click", function() {
+////		alert();
+////	})
+//
+////  触摸事件
+//	
+//	
+//	// 触摸事件
+//	//  tap	 		触摸
+//	//  longTap	  	长按
+//	$(".box").on("longTap", function() {
+//		// $(".box").style.background = "red"
+//		this.style.background = "red"
+//	})
+//	
+
+
+
+
+var oBox = document.querySelector(".box")
+
+
+var startX = 0;		// 全局保存x值
+var x = 0;
+
+oBox.addEventListener("touchstart", function(e) {
+	startX = e.touches[0].clientX		// 保存起始点的x值
+})
+
+oBox.addEventListener("touchmove", function(e) {
+	x = e.touches[0].clientX		// 保存移动的x
+})
+
+oBox.addEventListener("touchend", function(e) {
+	if (x > startX) {
+		alert("向右滑动" )
+	} else {
+		alert("向左滑动" )
+		
+	}
+})
+
+
+
+	
+</script>

@@ -1,0 +1,12 @@
+
+.wjs-media {
+	
+}
+
+.wjs-media > a {
+	color: red;
+}
+
+.wjs-media > a > div > span {
+	font-size: 34px;
+}

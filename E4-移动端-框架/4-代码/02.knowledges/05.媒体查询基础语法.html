@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	
 	<title>Document</title>
+	
+	
 	<style type="text/css">
 	/* 媒体查询的基础语法 */
 	/*  设备的屏幕尺寸 大于 等于 480的时候 使用 括号内的样式
@@ -11,16 +16,39 @@
 			可以 修改 先后顺序
 	  */
 		
-		@media screen and (min-width: 480px) {
+		/* 屏幕宽度 大于等于 480px */
+		/*@media screen and (min-width: 480px) {
 			    body {
 			        background-color: lightgreen;
 			    }
+		}*/
+		
+		/* meta:vp TAB*/
+		
+		/* 媒体查询： 可以根据设备进行判断 */
+		/* 屏幕宽度 大于等于 100px */
+		@media screen and (min-width:100px) {
+			body {
+				background: skyblue;
+			}
+		}
+		
+		/* 屏幕宽度 大于等于 200px */
+		@media screen and (min-width:200px) {
+			body {
+				background: purple;
+			}
 		}
 
-		@media screen and (min-width: 300px) {
-			    body {
-			        background-color: skyblue;
-			    }
+		/* 屏幕宽度 大于等于 400px   小于 等于 500  */
+		@media screen and (min-width:400px)   and (max-width:500px)       {
+			body {
+				background: red;
+			}
+			
+			.a {
+				color: red;
+			}
 		}
 
 	</style>

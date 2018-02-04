@@ -5,6 +5,11 @@
 
 QQ群： 199290405
 
+## 上课录制视频的百度网盘地址
+
+https://pan.baidu.com/s/1kW9bCHp
+
+
 
 # 一级标题
 ## 二级标题
@@ -121,3 +126,17 @@ Vue
 写25分钟代码，一定要停下来，休息5分钟
 
 
+## 移动端开发
+Html5, CSS3, JS
+
+### 增加了
+视口			viewport	
+事件			touchstart, touchmove, touchend
+
+### BootStrap
+支持 PC 和 移动端    （1套程序 ==> 2边都可以用）
+
+
+### 移动端打包
+原生APP：  浏览器内核 + H5程序
+流应用： 
