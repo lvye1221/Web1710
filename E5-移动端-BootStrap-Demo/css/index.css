@@ -1,0 +1,106 @@
+
+
+/* 将 bootstrap nav-default 样式都拷贝过来==> 改成我们自己的 */
+
+
+.wjs-navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+.wjs-navbar-default .navbar-brand {
+  color: #777;
+}
+.wjs-navbar-default .navbar-brand:hover,
+.wjs-navbar-default .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.wjs-navbar-default .navbar-text {
+  color: #777;
+}
+.wjs-navbar-default .navbar-nav > li > a {
+  color: #777;
+  
+  padding-top: 0;
+  height: 100px;
+  line-height: 100px;
+}
+.wjs-navbar-default .navbar-nav > li > a:hover,
+.wjs-navbar-default .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+}
+.wjs-navbar-default .navbar-nav > .active > a,
+.wjs-navbar-default .navbar-nav > .active > a:hover,
+.wjs-navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+.wjs-navbar-default .navbar-nav > .disabled > a,
+.wjs-navbar-default .navbar-nav > .disabled > a:hover,
+.wjs-navbar-default .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.wjs-navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+.wjs-navbar-default .navbar-toggle:hover,
+.wjs-navbar-default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.wjs-navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.wjs-navbar-default .navbar-collapse,
+.wjs-navbar-default .navbar-form {
+  border-color: #e7e7e7;
+}
+.wjs-navbar-default .navbar-nav > .open > a,
+.wjs-navbar-default .navbar-nav > .open > a:hover,
+.wjs-navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .wjs-navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.wjs-navbar-default .navbar-link {
+  color: #777;
+}
+.wjs-navbar-default .navbar-link:hover {
+  color: #333;
+}
+.wjs-navbar-default .btn-link {
+  color: #777;
+}
+.wjs-navbar-default .btn-link:hover,
+.wjs-navbar-default .btn-link:focus {
+  color: #333;
+}
+.wjs-navbar-default .btn-link[disabled]:hover,
+fieldset[disabled] .wjs-navbar-default .btn-link:hover,
+.wjs-navbar-default .btn-link[disabled]:focus,
+fieldset[disabled] .wjs-navbar-default .btn-link:focus {
+  color: #ccc;
+}
+
