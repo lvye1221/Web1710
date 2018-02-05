@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="box">
+  <view class='title'>
+    	
+    	<!-- 数据可以是从逻辑层传递过来的 
+    		{{ }}
+    		是1个模板，用于显示数据
+    	{{title}}
+    	{{a}}
+    	{{b[0]}}
+    	{{   title[username]    }}
+    	
+    	{{  c.username }}
+    	{{  c["username"] }}	
+    	
+    	{{ data.data.password }}
+
+    	{{ data.res["token"] }}
+	
+    	{{ data.res.token }}
+    	
+    	{{ Page.data.res.token }}
+    		
+    	{{ res.token }}
+      	{{ count }}
+    	
+    	
+    	<button bindtap="add" >自增</button>
+    	
+    	  	
+    	-->
+    	
+
+
+    	
+    	
+  </view>
+</view>
+

@@ -1,0 +1,28 @@
+
+
+<!--  
+	index		数组元素的下标
+	item		数组元素的值
+			等价于 arr[index]
+-->
+<!--<view wx:for="{{arr}}">
+	{{ item }}
+</view>-->
+
+<!--<view wx:if="{{isLogin}} "> 
+	{{isLogin}}
+	
+	<button> 退出 </button>
+</view>
+<view wx:else> 
+	<button> 登陆 </button>
+</view>-->
+
+
+
+
+<button bindtouchmove="move">按钮</button>
+
+
+
+
