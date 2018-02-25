@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="cvs"></canvas>
+    <script>
+        var cvs = document.getElementById('cvs');
+        var ctx = cvs.getContext('2d');
+
+        ctx.setLineDash( [ 4, 2, 1 ] );
+
+        var i = 0, len = 255;
+        for ( ; i <= len; i++ ) {
+            // 为了防止重绘
+            ctx.beginPath();
+            ctx.moveTo( 10, 10 + i );
+            ctx.lineTo( 210, 10 + i );
+            // 红色通道值依次累加
+            ctx.strokeStyle = 'rgb(' + 0 + ', ' + i + ', ' + 255 + ' )';
+            ctx.stroke();
+        }
+    </script>
+</body>
+</html>
