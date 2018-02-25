@@ -12,7 +12,8 @@
 
         // 封装一个绘制矩形的函数
         function juXing( startX, startY, width, height, lineWidth, strokeStyle ) {
-
+			// 放了防止重绘之前的路径，所以先把之前的路径清除掉
+        	ctx.beginPath();
             ctx.moveTo( startX, startY );
             ctx.lineTo( startX + width, startY );
             ctx.lineTo( startX + width, startY + height );
@@ -27,8 +28,7 @@
 
         juXing( 10, 10, 60, 60, 4, 'deeppink' );
 
-        // 放了防止重绘之前的路径，所以先把之前的路径清除掉
-        ctx.beginPath();
+        
         juXing( 100, 10, 100, 100, 6, 'skyblue' );
 
         /*
