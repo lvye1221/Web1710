@@ -13,15 +13,25 @@
 
 <script>
 
-//// 地址
-//var url = "http://csit.top/api_cat.php"
-//
-//// 回调函数
-//// 用 GET 方式来获取数据
-//$.get(url, function(str) {
-//	// 返回的数据
-//	console.log(str)
-//})
+// 地址
+var url = "http://csit.top/api_cat.php"
+
+// 回调函数
+// 用 GET 方式来获取数据
+$.get(url, function(str) {
+	// 返回的数据
+	console.log(str)
+	
+	var obj = JSON.parse(str)
+	var arr = obj.data;
+	
+	for (var i = 0; i < arr.length; i++) {
+		var cat = arr[i];
+		
+		console.log( "<div class='xm'>" + cat.cat_name + "</div>")
+	}
+	
+})
 
 //// 传递数据给服务器的方式
 //var url = "http://csit.top/api_goods.php"
@@ -37,15 +47,15 @@
 
 
 
-// 传递数据给服务器的方式 POST
-var url = "http://csit.top/api_goods.php"
-$.post(url, {
-	cat_id: 45,  // 分类： 45， 62
-	page: 2,
-	pagesize: 20
-}, function(str) {
-	console.log(str)
-})
+//// 传递数据给服务器的方式 POST
+//var url = "http://csit.top/api_goods.php"
+//$.post(url, {
+//	cat_id: 45,  // 分类： 45， 62
+//	page: 2,
+//	pagesize: 20
+//}, function(str) {
+//	console.log(str)
+//})
 
 	
 </script>

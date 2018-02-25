@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/page2/page2",
+    "pages/page1/page1",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarTitleText": "土豪",
+    "navigationBarTextStyle":"#0000ff"
+  }
+}

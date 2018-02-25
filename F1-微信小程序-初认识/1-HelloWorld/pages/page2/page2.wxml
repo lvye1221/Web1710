@@ -1,0 +1,19 @@
+<!--pages/page2/page2.wxml-->
+
+
+
+<!-- wx:for 遍历
+		cats  数组数据名
+-->
+<view wx:for="{{cats}}">
+	<!-- item 表示数组中的内容 -->
+	{{item.cat_name}}
+	
+	
+	<view wx:for="{{item.goods}}" class="goods">
+		{{item.goods_name}}
+	</view>
+	
+</view>
+
+

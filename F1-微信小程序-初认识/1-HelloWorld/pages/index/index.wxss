@@ -1,0 +1,11 @@
+
+.box {
+  /* rpx  根据屏幕尺寸调整 */
+  padding-top: 58rpx; 
+  text-align: center;
+  border: 1px solid red;
+}
+
+.title {
+  font-weight: bold;
+}
