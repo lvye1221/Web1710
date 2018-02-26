@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+</html>
+
+<script>
+
+
+// 创建1个canvas
+var canvas = document.createElement("canvas");
+
+canvas.width = 500;
+canvas.height = 500;
+
+// 添加到页面
+document.body.appendChild(canvas)
+
+
+// 2. 得到画笔
+var p = canvas.getContext("2d")
+
+
+//p.lineWidth = 10
+//
+//// 3. 画
+//p.moveTo(100, 100)     // 移动到 (100, 100)    (x坐标，y坐标)
+//p.lineTo(200, 100)     // 画线
+//p.lineTo(200, 200)     // 画线
+//p.lineTo(100, 200)     // 画线
+//p.lineTo(100, 100)     // 画线
+//
+////p.closePath()          // 关闭、闭合路径
+//
+//p.fillStyle = "#FF0000"
+//
+//// 4. 填充
+//p.fill()
+
+
+// 封装函数
+//        x坐标，y坐标， 矩形宽， 矩形高, 颜色
+function juXing(x, y, w, h, color) {
+	
+	p.beginPath();			// 开始路径
+	
+	p.fillStyle = color  	// 填充颜色
+	
+	p.moveTo(x, y)
+	
+	p.lineTo(x+w, y)		// 上边
+	p.lineTo(x+w, y+h)		// 右边
+	p.lineTo(x, y+h)		// 下边
+	p.lineTo(x, y)			// 左边
+	
+	p.closePath()			// 结束路径
+	
+	p.fill()
+}
+
+
+
+juXing(100, 100, 100, 100, "black")		// 大矩形
+juXing(125, 125, 50, 50, "red")			// 小矩形
+
+
+</script>

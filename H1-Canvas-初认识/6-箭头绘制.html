@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+</html>
+
+<script>
+
+
+// 创建1个canvas
+var canvas = document.createElement("canvas");
+
+canvas.width = 500;
+canvas.height = 500;
+
+// 添加到页面
+document.body.appendChild(canvas)
+
+
+// 2. 得到画笔
+var p = canvas.getContext("2d")
+
+
+
+// 封装函数
+//        x坐标，y坐标， 矩形宽， 矩形高, 颜色
+function juXing(x, y, w, h, color) {
+	
+	p.beginPath();			// 开始路径
+	
+	p.fillStyle = color  	// 填充颜色
+	
+	p.moveTo(x, y)
+	
+	p.lineTo(x+w, y)		// 上边
+	p.lineTo(x+w, y+h)		// 右边
+	p.lineTo(x, y+h)		// 下边
+	p.lineTo(x, y)			// 左边
+	
+	p.closePath()			// 结束路径
+	
+	p.fill()
+}
+
+
+
+juXing(100, 50, 300, 300, "black")			// 大矩形
+juXing(200, 200, 100, 70, "white")			// 小矩形
+
+
+
+// 画三角形
+p.beginPath()
+
+p.moveTo(150, 200)
+p.lineTo(350, 200)
+p.lineTo(250, 100)
+
+p.closePath()
+
+p.fill()
+
+
+
+</script>

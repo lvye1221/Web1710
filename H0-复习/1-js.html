@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+
+<script>
+
+//function func() {
+//	return "嘻嘻"
+//}
+//
+//console.log(  func()  )
+
+
+//
+//// 字符串，里面是 JSON字符串，存储的是JSON对象
+////var json = "{a: 100}"
+//var json = '{"a": 100}'
+//
+//// 在JS对象中  属性名双引号 是可以不写的
+//// 在JSON字符串中 ，在标准写法中，一定要写双引号
+//
+//// undefined           因为json是string类型，
+//                     // 里面不存在a属性 ==> undefined
+//
+//var obj = JSON.parse(json)
+//
+//console.log( obj.a )
+
+
+
+
+
+
+// 定义对象a
+var a = {
+	name: "zhangsan"
+}
+
+// 【知识点】  为什么b没有复制a的所有空间
+//     对于 重量级空间 是不会复制的，因为需要节约内存
+//           对象，数组
+var b = a;
+
+// zhangsan     
+//console.log(b.name);
+
+
+b.name = "李四"
+// 李四                  改变b就是改变a
+//console.log(a.name);
+
+
+
+
+
+
+	
+</script>
