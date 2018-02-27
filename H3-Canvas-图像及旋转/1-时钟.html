@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="clock" width="500" height="500" style="width: 500px; display: block; margin: 0 auto; background: yellow;"></canvas>
+	</body>
+</html>
+
+<script>
+	
+	var oCanvas = document.getElementById("clock")
+	
+	var p = oCanvas.getContext("2d")
+	
+	p.arc(250, 250, 200, 0, 2*Math.PI);
+	p.stroke()
+	p.closePath();  //结束画布
+	
+	// 时钟
+	
+	
+	for (var i = 0; i < 12; i++) {
+		p.save()
+		
+		p.lineWidth = 7;
+		p.translate(250, 250);
+		p.rotate( 30 * i * Math.PI / 180)
+		
+		p.beginPath()
+		p.moveTo(0, -170)
+		p.lineTo(0, -190)
+		
+		p.stroke()
+		p.closePath()
+		
+		p.restore()
+	}
+	
+	
+	for (var i = 0; i < 60; i++) {
+		p.save()
+		
+		p.lineWidth = 3;
+		p.translate(250, 250);
+		p.rotate( 6 * i * Math.PI / 180)
+		
+		p.beginPath()
+		p.moveTo(0, -170)
+		p.lineTo(0, -190)
+		
+		p.stroke()
+		p.closePath()
+		
+		p.restore()
+	}
+	
+	
+//分针
+p.save();
+//分针样式
+p.lineWidth = 5;
+p.strokeStyle="#000";
+p.translate(250,250);
+p.rotate(6*Math.PI/180);
+p.beginPath();
+p.moveTo(0,-160);
+p.lineTo(0,15);
+p.stroke();
+p.restore();	
+
+</script>
