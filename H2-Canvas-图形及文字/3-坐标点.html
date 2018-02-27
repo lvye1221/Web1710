@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>		
+		<canvas id="canvas" width="600" height="300" style="border: 1px solid black;"></canvas>
+
+	</body>
+</html>
+<script>
+
+var canvas = document.getElementById("canvas");
+
+var p = canvas.getContext("2d")
+
+
+// 画矩形
+//  strokeRect  画布提供的接口 api，系统提供的，本质上是1个函数
+//          x, y,    宽度，   高度
+//p.strokeRect(10, 10, 250, 50)
+
+p.fillRect(10, 10, 250, 50)
+
+
+
+
+</script>

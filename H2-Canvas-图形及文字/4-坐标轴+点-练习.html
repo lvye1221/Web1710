@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="600" height="300" style="border: 1px solid black;"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas");
+
+
+
+var p = canvas.getContext("2d")
+
+// 思路：
+//    1. 画x，y轴；    注意有间隙
+//    2. 画箭头
+
+
+//   保存左下边的间隙
+//var leftPadding = 10
+//var bottomPadding = 10
+
+// 定义对象  padding 分别保存了坐标轴之间的间隙
+var padding = {
+	left: 10,
+	right: 10,
+	top: 10,
+	bottom: 10
+}
+
+// 箭头的宽度和高度
+var arrow = {
+	width: 10,
+	height: 10
+}
+
+
+
+
+
+
+
+//画y轴
+p.moveTo(padding.left, padding.top)    // y轴顶点
+p.lineTo(padding.left, canvas.height - padding.bottom)    // y轴底点
+
+//画x轴
+p.moveTo(padding.left, canvas.height - padding.bottom)    // 
+p.lineTo(canvas.width- padding.right, canvas.height - padding.bottom)    // 
+
+
+//画y轴箭头的左边
+p.moveTo(padding.left, padding.top)     // y轴顶部
+p.lineTo(padding.left - arrow.width/2, padding.top + arrow.height)   
+//
+//画y轴箭头的右边
+p.moveTo(padding.left, padding.top)     // y轴顶部
+p.lineTo(padding.left + arrow.width/2, padding.top + arrow.height)    						// 
+
+
+//画x轴箭头的上边
+p.moveTo(canvas.width- padding.right, canvas.height - padding.bottom)     // x轴顶部
+p.lineTo(canvas.width- padding.right - arrow.height, canvas.height - padding.bottom - arrow.width/2)   
+
+//画x轴箭头的下边
+p.moveTo(canvas.width- padding.right, canvas.height - padding.bottom)     // x轴顶部
+p.lineTo(canvas.width- padding.right - arrow.height, canvas.height - padding.bottom + arrow.width/2)   
+
+
+//
+p.stroke()
+
+
+</script>
+

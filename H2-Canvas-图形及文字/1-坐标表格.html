@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas");
+
+var p = canvas.getContext("2d")
+
+//// 第1条线
+//p.moveTo(0, 10)
+//p.lineTo(500, 10)
+//
+//// 第2条线
+//p.moveTo(0, 20)			
+//p.lineTo(500, 20)
+//
+//// 第3条线
+//p.moveTo(0, 30)			
+//p.lineTo(500, 30)
+
+// 0,10,20,30,40, ... 500
+// 0,1,2,3,4, ... 50
+for (var i = 0; i <= 50; i++) {
+
+	// 水平线
+	p.moveTo(0, 10*i)    
+	p.lineTo(500, 10*i)
+
+	// 垂直线
+	p.moveTo(10*i, 0)    
+	p.lineTo(10*i, 500)
+
+}
+p.closePath()
+p.stroke()  // 画线
+
+p.beginPath()
+// 第1条线
+p.lineWidth = 3
+p.moveTo(0, 10)
+p.lineTo(500, 10)
+
+p.stroke()  // 画线
+
+</script>
+

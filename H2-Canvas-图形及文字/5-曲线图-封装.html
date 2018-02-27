@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="600" height="300" style="border: 1px solid black;"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas");
+
+
+
+var p = canvas.getContext("2d")
+
+
+var a = [  
+	{x:100,y:100}, 
+	{x:300,y:20},  
+	{x:2,y:2}    
+];
+
+
+drawLine(a)
+
+
+// drawLine 画曲线图
+// 参数：
+//     data  【数组】     存储很多数据（点）
+//            中的元素   【对象】 是 坐标点（x,y）
+
+// 例如：data为
+//     [  {x:1,y:1},  {x:2,y:2},    ]
+function drawLine(data) {
+
+
+
+
+
+// 思路：
+//    1. 画x，y轴；    注意有间隙
+//    2. 画箭头
+
+
+//   保存左下边的间隙
+//var leftPadding = 10
+//var bottomPadding = 10
+
+// 定义对象  padding 分别保存了坐标轴之间的间隙
+var padding = {
+	left: 10,
+	right: 10,
+	top: 10,
+	bottom: 10
+}
+
+// 箭头的宽度和高度
+var arrow = {
+	width: 10,
+	height: 10
+}
+
+
+
+
+
+
+
+//画y轴
+p.moveTo(padding.left, padding.top)    // y轴顶点
+p.lineTo(padding.left, canvas.height - padding.bottom)    // y轴底点
+
+//画x轴
+p.moveTo(padding.left, canvas.height - padding.bottom)    // 
+p.lineTo(canvas.width- padding.right, canvas.height - padding.bottom)    // 
+
+
+//画y轴箭头的左边
+p.moveTo(padding.left, padding.top)     // y轴顶部
+p.lineTo(padding.left - arrow.width/2, padding.top + arrow.height)   
+//
+//画y轴箭头的右边
+p.moveTo(padding.left, padding.top)     // y轴顶部
+p.lineTo(padding.left + arrow.width/2, padding.top + arrow.height)    						// 
+
+
+//画x轴箭头的上边
+p.moveTo(canvas.width- padding.right, canvas.height - padding.bottom)     // x轴顶部
+p.lineTo(canvas.width- padding.right - arrow.height, canvas.height - padding.bottom - arrow.width/2)   
+
+//画x轴箭头的下边
+p.moveTo(canvas.width- padding.right, canvas.height - padding.bottom)     // x轴顶部
+p.lineTo(canvas.width- padding.right - arrow.height, canvas.height - padding.bottom + arrow.width/2)   
+
+
+//
+p.stroke()
+
+
+// 求出原点的坐标
+var o = {
+	x: padding.left, 	// 左边的间隙
+	y: canvas.height - padding.bottom	// 画布高 - 底部的间隙
+}
+
+
+
+
+// 画一个点 (x,y)
+
+//   需要将点的坐标转换成 坐标系中的坐标
+
+for (var i = 0; i < data.length; i++) {
+
+	// 取出数据中1个点
+	var x = data[i].x	//x坐标
+	var y = data[i].y   //y坐标
+
+	//        原点x + 坐标x
+	p.fillRect(o.x + x - 5, o.y - y - 5, 10, 10)
+
+	if (i == 0) {	// 第0个元素
+		p.moveTo(o.x + x, o.y - y)
+	} else {
+		p.lineTo(o.x + x, o.y - y)
+		p.stroke()
+	}
+}
+
+
+}
+
+
+</script>
+
