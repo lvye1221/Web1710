@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas");
+
+var p = canvas.getContext("2d")
+
+var x = 0;
+var y = 0;
+
+setInterval(function() {
+	
+	// 清除画布
+	p.clearRect(0, 0, canvas.width, canvas.height)
+	
+	p.strokeRect(x, y, 100, 50)
+	
+	x += 10
+	y += 10
+	
+}, 1000)
+
+
+
+</script>
+

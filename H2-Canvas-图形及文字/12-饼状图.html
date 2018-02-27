@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+function d(a) {
+	return a/180*Math.PI
+}
+
+
+
+var canvas = document.getElementById("canvas");
+
+var p = canvas.getContext("2d")
+
+
+p.moveTo(200, 200)			// 移动到圆心
+p.arc(200, 200, 100, d(-90), d(30))
+p.closePath()
+
+p.fill()
+
+
+p.beginPath()
+p.moveTo(200, 200)			// 移动到圆心
+// 360 / 3  ==> 120  每一份都占用120度
+p.arc(200, 200, 100, d(30), d(150))
+p.closePath()
+
+p.fillStyle = "red"
+p.fill()
+
+
+
+p.beginPath()
+p.moveTo(200, 200)			// 移动到圆心
+// 360 / 3  ==> 120  每一份都占用120度
+p.arc(200, 200, 100, d(150), d(270))
+p.closePath()
+
+p.fillStyle = "green"
+p.fill()
+</script>

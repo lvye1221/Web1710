@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas");
+
+var p = canvas.getContext("2d")
+
+
+p.moveTo(200, 200)			// 移动到圆心
+p.arc(200, 200, 100, -Math.PI/4, Math.PI/4)
+p.closePath()
+
+p.fill()
+
+</script>

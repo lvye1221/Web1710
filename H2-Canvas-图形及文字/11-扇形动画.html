@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas");
+
+var p = canvas.getContext("2d")
+
+var start = -Math.PI/2 		// 圆弧开始角度
+var end = -Math.PI/2		// 圆弧结束角度
+
+var timer = setInterval(function() { 	// 创建定时器
+	p.moveTo(200, 200)		// 移动到圆心
+	p.arc(200, 200, 100, start, end) 	// 圆弧
+	p.closePath()			// 闭合路径
+	
+	p.fill()	
+	
+	end += Math.PI / 180	// 每次增加1度
+
+	if (end > Math.PI / 2) { //终止条件
+		clearInterval(timer)
+	}
+}, 100)
+
+
+
+</script>

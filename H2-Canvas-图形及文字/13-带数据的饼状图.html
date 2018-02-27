@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+function d(a) {
+	return a/180*Math.PI
+}
+
+
+
+var canvas = document.getElementById("canvas");
+
+var p = canvas.getContext("2d")
+
+
+
+var color = ["red", "yellow", "blue", "purple", "green"]
+var data = [50, 60, 100, 250, 300]
+
+// 求出总数
+var sum = 0;
+data.forEach(function(item) {
+	sum += item
+})
+
+var start = d(-90);  	 // 起始角度
+var end = d(-90);  	 	 // 结束角度
+
+data.forEach(function(item, i) {
+	
+	p.beginPath()        // 开启路径
+	
+	p.moveTo(200, 200)   // 移动到圆心
+	
+	// item/sum 代表占用比例
+	end = start + d(item/sum * 360)
+	
+	p.arc(200, 200, 100, start, end)
+	
+	p.fillStyle = color[i] // 填充颜色
+	
+	p.fill()
+	
+	start = end				// 下一个扇形图形从end开始画
+})
+
+
+</script>

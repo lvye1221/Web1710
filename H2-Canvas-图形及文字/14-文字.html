@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+
+var canvas = document.getElementById("canvas");
+
+var ctx = canvas.getContext("2d")
+
+ctx.font = '50px 黑体 ';    // 【注意】设置字体是 至少要设两个属性的
+ctx.strokeStyle = "red"
+ctx.strokeRect( 100, 100, 200, 50 );
+ctx.strokeText( 'Hello JK', 100, 100 );
+
+ctx.strokeRect( 100, 200, 200, 50 );
+ctx.fillText( 'Hello JK', 100, 200 );
+
+
+</script>

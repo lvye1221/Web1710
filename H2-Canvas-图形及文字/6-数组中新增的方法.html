@@ -9,8 +9,8 @@
 </html>
 
 <script>
-	
-var arr = [100, 2, 3]
+//	
+//var arr = [100, 2, 3]
 
 
 // forEach 是数组中新增的方法，是系统提供的，供我们遍历数组时使用
@@ -18,14 +18,54 @@ var arr = [100, 2, 3]
 //      要求传递1个变量，变量是 函数。 回调函数
 
 //               数组中的元素， 数组元素的下标
-arr.forEach(function(item, i) {
-	console.log(item, i)
+//arr.forEach(function(item, i) {
+//	console.log(item, i)
+//})
+
+
+//var arr = [100, 2, 3]
+//// 计算数组中元素的个数
+//var count = 0;
+//arr.forEach(function() {
+//	count++;
+//})
+//
+//// 3
+//console.log(count)
+
+
+
+
+
+
+
+
+
+
+
+//var a = [  
+//	{x:100,y:100}, 
+//	{x:300,y:20},  
+//	{x:2,y:2}    
+//];
+
+
+// [100, 200, 300]       
+// 转换成如下的形式：
+//[  
+//	{x:0,y:100}, 
+//	{x:1,y:200},  
+//	{x:2,y:300}    
+//];
+var data = [100, 200, 300]
+
+// map遍历数组元素，将其中的元素用 return 后面的值替代
+var newData = data.map(function(item, i) {
+	return {x:i, y:item}
 })
 
-console.loadRegisteredTestCases(sdfdf)
+console.log(newData)
 
 
-
-	
 </script>
 

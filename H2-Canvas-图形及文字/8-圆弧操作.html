@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas");
+
+var p = canvas.getContext("2d")
+
+//   0,360,180度                     角度制
+//   0, 2π, π             弧度制
+
+// 【注意】 Math.PI 表示数学中的常量 π
+//     圆心坐标， 半径，  开始角度，结束角度
+//p.arc(200, 200, 100, 0, 1*Math.PI/4)
+//
+//p.fill()
+
+
+
+// 熟悉的是角度制
+//    角度 ==> 弧度
+//    180 === 1*PI
+//    360 === 2*PI
+//     90 === 1/2 * PI
+//    角度 === 角度/180 * PI   
+//    270 === 3/2 * PI
+
+
+// 传入角度值，返回弧度值
+function d(a) {
+	return a/180 * Math.PI;
+}
+
+
+//p.arc(200, 200, 100, -Math.PI/2, 0)
+
+p.arc(200, 200, 100, d(270), d(0))
+
+p.stroke()
+
+</script>
