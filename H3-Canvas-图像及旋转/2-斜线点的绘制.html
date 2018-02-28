@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas")
+var p = canvas.getContext("2d")
+
+
+var r = 100;
+var x0 = 250;
+var y0 = 250;
+
+p.beginPath()
+p.arc(x0, y0, r, 0, 2*Math.PI);
+p.stroke()
+
+/*
+ 假设已知圆心 (x0, y0)
+ 求出线的另外一点 (x1, y1)
+ 
+ x1 = x0 + w
+ y1 = y0 - h
+ 
+ 【存在问题】 如何求出 w 和 h 呢?
+ 
+ w = r * cos(角度)
+ h = r * sin(角度)
+ * */
+
+r += 50; 	// 半径变大
+
+for (var a = 0; a < 360; a += 45) {
+// 假如角度为 45度
+//var a = 67
+var w = r * Math.cos(a/180*Math.PI)
+var h = r * Math.sin(a/180*Math.PI)
+	
+// 求（x1,y1）	
+	
+var x1 = x0 + w
+var y1 = y0 - h
+ 
+
+// (x0, y0)    (x1, y1)
+p.moveTo(x0, y0)          	// 将笔移动到点 (x0, y0)
+p.lineTo(x1, y1)			// 画线到 (x1, y1)
+
+p.stroke()					// 画线
+} 
+ 
+</script>

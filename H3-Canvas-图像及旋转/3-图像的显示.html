@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--<img src="img/me.png" id="me"/>-->
+		
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+//var oImg = document.getElementById("me")
+
+var oImg = new Image()     // 创建图片对象
+oImg.src = "https://www.baidu.com/img/bd_logo1.png"
+
+
+var canvas = document.getElementById("canvas")
+var p = canvas.getContext("2d")
+
+// 注意： 必须等图片加载完成之后，才能画到画布
+
+var newHeight = 100;
+
+
+oImg.onload = function() {
+	
+	
+	console.log(oImg.width, oImg.height)
+	
+	var newWidth = oImg.width / oImg.height * newHeight;
+	
+	console.log(newWidth, newHeight)
+	
+	// 						宽度 高度
+	p.drawImage(oImg, 0, 0, newWidth, newHeight)
+}
+
+</script>
