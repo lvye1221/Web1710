@@ -25,9 +25,26 @@ http://127.0.0.1:3000
 http://192.168.109.9:3000
 
 
+## 命令行代码
+
+cls 清屏
+
+
 ## 创建项目管理配置文件
 
 npm init
 
 npm 来自于安装的nodejs程序，称为 包管理器
+
+## 使用淘宝镜像
+你可以使用我们定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:
+
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+【目的】 可以使用 cnpm 命令， 它会从淘宝服务器来下载模块
+    比从国外下载模块快很多！
+
+## 通过淘宝镜像来安装模块
+
+cnpm install axios
 
