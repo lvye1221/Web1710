@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--<img src="img/me.png" id="me"/>-->
+		
+		<canvas id="canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas")
+//var p = canvas.getContext("2d")
+
+// 绘图思路：
+//  1. 获取到鼠标在画布中按下的事件，从而获取 坐标
+//  2. 添加在整个画布 鼠标移动的事件
+
+
+// DOM1级事件绑定
+//canvas.onmousedown = function(e) {
+//	
+//	e = e || window.event    // 解决IE的兼容问题
+//
+//	//
+//	alert("鼠标按下了" + e.offsetX + " " + e.offsetY)
+//}
+
+
+canvas.addEventListener("mousedown", function(e) {
+	alert("鼠标按下了" + e.offsetX + " " + e.offsetY)
+})
+
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas")
+var p = canvas.getContext("2d")
+
+
+p.strokeStyle = "red" 	// 线型颜色 红色
+
+//             坐标          宽度   高度
+p.strokeRect(100, 100, 50, 50); 	// 矩形
+
+
+p.save();				// 保存状态，颜色是【红色】
+
+
+
+p.strokeStyle = "black" 	// 线型颜色 红色
+
+p.strokeRect(200, 200, 50, 50); 	// 矩形
+
+
+p.restore();           // 恢复状态
+
+p.strokeRect(300, 300, 50, 50); 	// 矩形
+
+</script>

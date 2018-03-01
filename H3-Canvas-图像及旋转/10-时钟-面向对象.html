@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			.clock {
+				background: yellow;
+				margin: 0 auto;
+				display: block;    /* 转换为块状元素*/
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<canvas id="canvas" class="clock" width="500" height="500" style="border: 1px solid black;"></canvas>
+
+	</body>
+</html>
+
+<script>
+	
+	
+
+var canvas = document.getElementById("canvas")
+var p = canvas.getContext("2d")
+
+
+
+// 面向对象编程
+//   对象                   属性             方法
+//    时钟      时、分、秒            初始化，滴答， 跑
+
+// 构造函数
+function Clock() {
+	this.hour = 0;   // 自己的属性
+	this.min = 0;
+	this.sec = 0;
+}
+
+// 初始化
+Clock.prototype.init = function() {
+	p.clearRect(0, 0, canvas.width, canvas.height)
+
+	p.save()
+	
+	
+	p.lineWidth = 5
+	p.strokeStyle = "blue"
+	p.beginPath()
+	// 圆        坐标         半径   开始角度   结束角度
+	p.arc(250, 250, 200, 0, 2*Math.PI)
+	p.closePath()
+	p.stroke()
+	
+	
+	// 画布坐标轴 平移到 圆心
+	p.translate(250, 250)
+	
+	
+	p.strokeStyle = "black"
+	
+	// 保存坐标轴
+	p.save()  
+	
+	// 分钟刻度的实现
+	for (var i = 0; i < 12; i++) {
+		
+		// 将图形旋转角度
+		p.rotate( 30/180*Math.PI )
+		
+		p.beginPath()
+		p.lineWidth = 10
+		
+		p.moveTo(0, -190)
+		p.lineTo(0, -170)
+		p.stroke()
+	}
+	
+	
+	// 秒钟刻度实现
+	for (var i = 0; i < 60; i++) {
+		
+		// 将图形旋转角度
+		p.rotate( 6/180*Math.PI )
+		
+		p.beginPath()
+		p.lineWidth = 3
+		
+		p.moveTo(0, -190)
+		p.lineTo(0, -180)
+		p.stroke()
+	}
+	
+	
+	// 恢复坐标轴
+	p.restore()  
+	
+		
+	//  时针
+	p.save()  
+	p.rotate( this.hour * 30/180*Math.PI )
+	p.beginPath()
+	p.lineWidth = 7
+	p.moveTo(0, 20)
+	p.lineTo(0, -150)
+	p.stroke()
+	p.restore()  
+	
+	
+	//  分针
+	p.save()  
+	p.rotate( this.min * 6/180*Math.PI )
+	p.beginPath()
+	p.lineWidth = 5
+	p.moveTo(0, 20)
+	p.lineTo(0, -160)
+	p.stroke()
+	p.restore()  
+	
+	
+	//  秒针
+	p.save()  
+	p.rotate( this.sec * 6 /180*Math.PI )
+	p.beginPath()
+	p.strokeStyle = "red"
+	p.lineWidth = 3
+	p.moveTo(0, 20)
+	p.lineTo(0, -160)
+	p.stroke()
+	p.restore()  
+	
+		
+	//  秒针 圆圈
+	p.save()  
+	p.beginPath()
+	p.strokeStyle = "red"
+	p.fillStyle = "white"
+	p.arc(0, 0, 5, 0, 2*Math.PI)
+	p.stroke()
+	p.fill()
+	p.restore() 
+	
+	
+	p.restore() 
+}
+
+// 滴答 方法
+Clock.prototype.tick = function() {
+	this.sec++;
+	
+	if (this.sec >= 60) {
+		this.min++;  // 分钟加1
+		this.sec = 0;
+	}
+	
+	if (this.min >= 60) {
+		this.hour++;  // 小时加1
+		this.min = 0;
+	}
+	
+	if (this.hour >= 12) {
+		this.hour = 0;
+	}
+	
+	this.init();      // 重画
+}
+
+// 开始走
+Clock.prototype.run = function() {
+	var self = this
+	setInterval(function() {
+		self.tick()
+	}, 1000)
+}
+
+
+new Clock().run()
+
+</script>
+
+

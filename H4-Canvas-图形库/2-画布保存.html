@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<img id="img"/>
+		
+		<canvas id="canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas")
+var p = canvas.getContext( '2d' );
+
+p.fillStyle = 'pink';
+p.fillRect( 0, 0, 100, 100 );
+
+//                           图片类型，         压缩
+var data = canvas.toDataURL( 'image/png', 1 );
+
+var oImg = document.getElementById("img")
+oImg.src = data;
+
+
+</script>

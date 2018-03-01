@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+		
+	</body>
+</html>
+
+<script>
+
+var canvas = document.getElementById("canvas")
+var p = canvas.getContext("2d")
+
+
+// 平移
+p.translate(100, 100)
+// 旋转
+p.rotate( 30/180*Math.PI)
+//缩放
+p.scale(2, 2)
+
+
+
+p.lineWidth = 50
+p.moveTo(100, 100)
+p.lineTo(110, 100)
+
+p.stroke()
+
+</script>

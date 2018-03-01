@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			.clock {
+				background: yellow;
+				margin: 0 auto;
+				display: block;    /* 转换为块状元素*/
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<canvas id="canvas" class="clock" width="500" height="500" style="border: 1px solid black;"></canvas>
+
+	</body>
+</html>
+
+<script>
+	
+	
+
+var canvas = document.getElementById("canvas")
+var p = canvas.getContext("2d")
+
+
+
+
+
+// 圆        坐标         半径   开始角度   结束角度
+p.arc(250, 250, 200, 0, 2*Math.PI)
+
+p.stroke()
+
+
+
+// 画布坐标轴 平移到 圆心
+p.translate(250, 250)
+
+p.lineWidth = 10
+p.beginPath()
+p.moveTo(0, -190)
+p.lineTo(0, -170)
+p.stroke()
+	
+
+// 旋转30度
+p.rotate( 30/180*Math.PI )
+
+p.moveTo(0, -190)
+p.lineTo(0, -170)
+p.stroke()
+	
+
+// 旋转30度
+p.rotate( 30/180*Math.PI )
+
+p.moveTo(0, -190)
+p.lineTo(0, -170)
+p.stroke()
+	
+</script>
+
+

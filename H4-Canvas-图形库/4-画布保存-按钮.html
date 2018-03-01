@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+		
+		
+		<button id="btn">保存</button>
+		
+		
+	</body>
+</html>
+
+<script>
+
+var oBtn = document.getElementById("btn")
+oBtn.onclick = function() {
+
+	var oA = document.createElement("a")
+	
+	// 服务器图片的地址，word，pdf，zip 都可以设置
+	//  由浏览器决定 打开的方式： 标签，下载框打开
+	oA.href = "https://www.baidu.com/img/bd_logo1.png"
+	
+	oA.click();
+}
+
+
+
+
+
+var canvas = document.getElementById("canvas")
+var p = canvas.getContext( '2d' );
+
+p.fillStyle = 'pink';
+p.fillRect( 0, 0, 100, 100 );
+
+//                           图片类型，         压缩
+var data = canvas.toDataURL( 'image/png', 1 );
+
+
+
+</script>
