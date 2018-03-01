@@ -22,7 +22,13 @@ var myChart = echarts.init(document.getElementById('main'));
 var option = {
 	interval: 500,
     title: {
-        text: '企业数/月份'
+    	right: 0,
+    	show: true,
+        text: '主标题文本',
+        subtext: "副标题",
+        textStyle: {
+        	color: "#ff0000"
+        }
     },
     tooltip: {
         trigger: 'axis'
