@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 引入 jQuery 文件 -->
+
+    <!--  / 代表服务器的根目录 -->
+    <script src="/js/jquery-1.11.1.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    首页！
+
+<div class="container">
+    <div class="row" id="list">
+     
+        <!-- 这是一个文件夹 -->
+        <!-- <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="img/wjj.jpg" alt="...">
+          </a>
+          <div style="text-align: center">
+              文件夹名
+          </div>
+        </div> -->
+        
+      </div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+    // ajax
+    // jQuery
+
+    $.ajax({
+        // url: "http://127.0.0.1:3000/list",                // API 接口：获取服务器中的相册
+        url: "/list",                // API 接口：获取服务器中的相册
+        success: function(data) {
+            // console.log(data)
+            var arr = data;           // 数组
+
+            var h = ""                // 定义1个空字符串
+            for (var i = 0; i < arr.length; i++) { // 遍历数组
+
+                // 数字1左边的那个键，反引键： 字符串中间可以插入 换行符
+                var str = `
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="img/wjj.jpg" alt="...">
+                        </a>
+                        <div style="text-align: center">
+                    `        
+                    +       arr[i]   +
+                    `
+                        </div>
+                    </div>
+                `
+
+                h += str
+            }
+
+            // 设置 h 到 div中
+            $("#list").html(h)
+        }
+    })
+
+</script>
+
