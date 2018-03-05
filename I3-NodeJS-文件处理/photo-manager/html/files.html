@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 引入 jQuery 文件 -->
+
+    <!--  / 代表服务器的根目录 -->
+    <script src="/js/jquery-1.11.1.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">小小相册</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+                <li><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="files.html">上传</a></li>
+        </ul>
+        
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+    <!-- container 是BootStrap提供的样式，用于设定一个固定宽度的容器
+        container-fluid 是BootStrap提供的样式,用于设定一个铺满的容器
+        栅格系统 必须放在 这两个容器中的！
+    -->
+    <div class="container">
+        
+        <h3>请选择文件夹</h3>
+
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                文件夹名
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="listFolder">
+                <!-- <li><a href="#">文件夹1</a></li>
+                <li><a href="#">文件夹2</a></li> -->
+            </ul>
+        </div>
+
+        <h3>请选择图片</h3>
+        <div>图片大小必须小于2M</div>
+
+        <!--  action="" 代表提交给后端的地址
+            method      提交给后台的方式
+            enctype="multipart/form-data" 说明采用二进制形式传输数据
+        -->
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            
+            <input type="text" name="folder" />
+
+
+            <!-- name 后台会根据name来读数据 -->
+            <!-- <input type="text" value="01" name="name"> -->
+
+            <div class="form-group">
+                <input type="file" id="exampleInputFile" name="tp">
+            </div>
+
+            <button class="btn btn-default" type="submit">上传</button>
+        </form>
+
+
+    </div>
+
+
+</body>
+</html>
+
+
+<script>
+
+// 请求出文件夹列表
+$.ajax({
+    url: "/list",
+    success: function(data) {
+        var arr = data;         // 数组，例如： [1,2,3]
+        //                                     data
+        var h = ""
+        for (var i = 0; i < arr.length; i++) {
+            h += `<li><a href="#">`+arr[i]+`</a></li>`
+        }
+        $("#listFolder").html(h)
+
+
+
+        // 给所有的li添加onclick事件处理函数
+        $("#listFolder li").click(function() {
+            
+            // this  当前元素对象 DOM对象
+            // $(this) 转换为 jQuery 对象
+            // .find("a") 获取 jQuery对象 下面的 标签名为 a 的所有子元素
+            // .html() 内容
+            var text = $(this).find("a").html();
+
+            $("#dropdownMenu1").html(text + `<span class="caret"></span>`)
+        })
+    }
+})
+
+</script>
+
+
+

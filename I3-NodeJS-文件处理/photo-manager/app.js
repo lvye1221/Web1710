@@ -34,6 +34,82 @@ app.get('/list', function (req, res) {
 });
 
 
+// 定义接口，列举所有图片
+app.get('/photolist', function (req, res) {
+
+    console.log(req)
+
+    // req 获取前台传递过来的数据
+    // name  是前台传递回来的数据
+    var name = req.query.name;          // 文件夹名
+
+    // 读取当前文件夹下 的所有图片的列表
+    fs.readdir("./images/" + name, function(err, files) {
+        res.json(files)
+    })
+});
+
+
+// 引入表单格式化的模块
+var formidable = require('formidable');
+var path = require('path')
+
+// 定义1个post接口
+app.post('/upload', function (req, res) {
+    
+    // 格式化1个表单
+    var form = new formidable.IncomingForm();
+
+    // 设置文件的上传路径 
+    //    __dirname  当前文件所在路径
+    form.uploadDir = path.normalize(__dirname + "/tempup/");
+
+    form.parse(req, function(err, fields, files, next) {
+
+        console.log(fields.folder);
+
+
+        // 输出图片路径, 上传到服务器的路径
+        var filePath = files.tp.path;
+
+        // 将图片移动到对应的图片文件夹中
+        // 将图片移动到01图片文件夹中
+
+        var newpath = path.normalize("./images/01/1.png");
+
+        // rename 文件改名
+        fs.rename(filePath, newpath, function(err) {
+            if (err) {
+                res.json({result: "失败"})
+                return ;
+            }
+            res.json({result: "成功"})
+        })
+
+        
+        // var newpath = path.normalize("./images/01/1.png");
+
+        // // 1. 读出上传的图片内容
+        // fs.readFile(filePath, 'utf8', function(err, str) {
+
+
+        //     // 2. 图片内容写入到文件夹中
+        //     fs.writeFile(newpath, str, function(err, str) {
+        //         res.json({result: "成功！"})
+        //     })
+        // })
+    });
+
+})
+
+
+
+
+
+
+
+
+
 
 // 设置 html目录  为静态资源 的目录
 //     其中的 index.html 就是默认打开的文件
@@ -42,6 +118,7 @@ app.get('/list', function (req, res) {
 //             IP:3000
 //             域名:3000
 app.use(express.static('html'));
+app.use(express.static('images'));
 
 
 //           app.listen   启动服务器

@@ -26,7 +26,32 @@
 
 </head>
 <body>
-    首页！
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">小小相册</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
+            <li><a href="files.html">上传</a></li>
+            
+        </ul>
+        
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
 
 <div class="container">
     <div class="row" id="list">
@@ -41,6 +66,13 @@
           </div>
         </div> -->
         
+        <!-- 插入图片 -->
+        <!-- <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="/01/me_die1.png" alt="...">
+            </a>
+        </div> -->
+
       </div>
 </div>
 
@@ -52,6 +84,11 @@
     // ajax
     // jQuery
 
+    // 显示所有文件夹
+listFolder()
+
+
+function listFolder() {    
     $.ajax({
         // url: "http://127.0.0.1:3000/list",                // API 接口：获取服务器中的相册
         url: "/list",                // API 接口：获取服务器中的相册
@@ -63,8 +100,25 @@
             for (var i = 0; i < arr.length; i++) { // 遍历数组
 
                 // 数字1左边的那个键，反引键： 字符串中间可以插入 换行符
+
+                //  clickFolder 点击文件夹
+                // onclick="clickFolder()" 点击时 执行函数 clickFolder
+
+
+                // onclick="clickFolder()"
+                // onclick="clickFolder(01)"
+                // onclick="clickFolder(02)"
+                // onclick="clickFolder(zhoupeng)"
+
+                // clickFolder(zhoupeng)
+
                 var str = `
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-6 col-md-3" onclick="clickFolder('`
+                    +
+                    arr[i]
+                    +
+
+                    `')">
                         <a href="#" class="thumbnail">
                             <img src="img/wjj.jpg" alt="...">
                         </a>
@@ -83,6 +137,43 @@
             $("#list").html(h)
         }
     })
+}
+
+    // 点击图片文件夹的处理
+    //  name: 文件夹的名字
+    function clickFolder(name) {
+        // alert(name)
+
+        // 利用jQuery  ajax将文件夹名发送给后端接口
+
+        $.ajax({
+            url: "/photolist",        // 后台接口
+            data: {                   // 发送给后台数据
+                name: name
+            },
+            success: function(data) {
+                // alert(data)
+                // 数据是 JSON，保存的是 图片列表
+                
+                var arr = data;
+
+                var h = ''
+                for (var i = 0; i < arr.length; i++) {
+                    h += `
+   
+       <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail">
+                <img src="/`+name+`/`+arr[i]+`" alt="...">
+            </a>
+        </div> 
+                    `
+                }
+                
+                // 设置 h 到 div中
+                $("#list").html(h)
+            }
+        })
+    }
 
 </script>
 
