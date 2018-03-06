@@ -64,5 +64,36 @@ Error: Cannot find module 'mongodb'
 
 
 
+## express 生成器
+
+express myapp             // 创建应用 myapp, 名字可以改
+cnpm install              // 在 myapp 目录，安装对应依赖模块
+node bin\www              // 启动服务器 (npm start)
 
 
+### 增加1个接口
+/routes/index.js
+
+```
+// 新增1个接口
+router.get("/list", function(req, res) {
+  res.json({})
+})
+```
+
+### 连接数据库
+
+1. 新建 db.js 文件(加入连接数据库的代码)
+
+2. 新建 models 文件夹，用于存储数据库中所有集合
+        user.js    用户模型
+3. 在 routes/user.js 文件中，添加接口 /list
+        通过用户模型的 user.js 文件，
+        利用查询数据库的方式，获取到数据库中所有信息
+
+
+
+### MVC
+M： Model 数据模型
+V： View  视图（显示的页面）
+C： Controller 控制器（在这里对应的是路由）
