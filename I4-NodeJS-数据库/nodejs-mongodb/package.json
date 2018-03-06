@@ -1,5 +1,5 @@
 {
-  "name": "photo-manager",
+  "name": "nodejs-mongodb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "formidable": "^1.1.1",
-    "xiaoming": "^1.0.0"
+    "mongodb": "^3.0.4",
+    "mongoose": "^5.0.9",
+    "mongoskin": "^2.1.0"
   }
 }

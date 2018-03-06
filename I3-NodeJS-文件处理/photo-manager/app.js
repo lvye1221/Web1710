@@ -62,6 +62,9 @@ app.post('/upload', function (req, res) {
 
     // 设置文件的上传路径 
     //    __dirname  当前文件所在路径
+    // path.normalize 将文件路径格式化
+    //           windows路径： C:\Web1710\Web1710\I3-NodeJS-文件处理\photo-manager
+    //           linux路径： /Web1710/Web1710
     form.uploadDir = path.normalize(__dirname + "/tempup/");
 
     form.parse(req, function(err, fields, files, next) {
@@ -83,7 +86,11 @@ app.post('/upload', function (req, res) {
                 res.json({result: "失败"})
                 return ;
             }
-            res.json({result: "成功"})
+            // res.json({result: "成功"})
+            res.send("的")
+            // 模板
+            //  jade 
+            //  EJS
         })
 
         
@@ -103,6 +110,27 @@ app.post('/upload', function (req, res) {
 })
 
 
+
+// /photolist
+// /aaa/01
+
+// 路径： /aaa/:f
+//   匹配到  /aaa/01
+//   匹配到  /aaa/02
+//   匹配到  /aaa/03
+//   ....
+
+
+// 路径： /:abc
+//   匹配到  /01
+//   匹配到  /02
+//   匹配到  /photolist
+//    
+app.get("/:abc", function(req, res) {
+    console.log(req.params.abc)
+
+    res.json({})
+})
 
 
 
