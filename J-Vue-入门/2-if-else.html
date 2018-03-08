@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+    <div id="app">
+            <!-- age:18 的时候   age >= 25 为false, 相当于 h1根本没写 -->
+        <!-- age:30 的时候   age >= 25 为true, 相当于写了这个东西在这里 -->
+        <!-- <h1 v-if="age >= 25">Age: {{ age }}</h1>
+        <h1 v-else> 上面的条件为假 </h1>
+     -->
+
+        <!-- <h1 v-if="isLogin">Admin 退出</h1>
+        <h1 v-else> 登陆 </h1> -->
+
+        <h1 v-show="isLogin">Admin 退出</h1>
+        <h1 v-show="!isLogin">登陆</h1>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            isLogin: false
+        }
+    })
+</script>

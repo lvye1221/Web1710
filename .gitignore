@@ -7,3 +7,6 @@
 /G1-nodejs-后台/server/node_modules
 /I3-NodeJS-文件处理/photo-manager/node_modules
 /I2-NodeJS-初认识/3-ModuleManager/node_modules
+/I4-NodeJS-数据库/express-gj/myapp/node_modules
+/I4-NodeJS-数据库/nodejs-mongodb/node_modules
+/I5-NodeJS-后台接口/manager/node_modules
