@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <input type="text">
+        <input type="text">
+        <input v-aaa>
+        <input type="text">
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    // directive  指令
+    // Vue.directive  定义1个全局 的自定义指令
+    Vue.directive("aaa", {
+        inserted: function(el) {
+            console.log("执行了", el)
+            el.focus()     // 让元素聚焦
+        }
+    })
+
+
+    // 创建1个Vue的实例
+    var vm = new Vue({
+        el: '#app'
+    })
+
+   
+
+
+
+</script>

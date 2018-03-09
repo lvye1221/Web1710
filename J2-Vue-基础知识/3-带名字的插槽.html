@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+    <div id="app">
+        <app-layout>
+            <h1 slot="header">文章标题</h1>
+            <p>这里是段落1</p>
+            <p>这里是段落2</p>
+        </app-layout>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    Vue.component("app-layout", {
+        template: `
+            <div class="container">
+                <div class="header">
+                    <slot name="header"></slot>
+                </div>
+
+                <div class="main">
+                    <slot></slot>
+                </div>
+            </div>
+        `
+    })
+
+
+    // 创建1个Vue的实例
+    new Vue({
+        el: '#app'
+    })
+
+   
+
+</script>

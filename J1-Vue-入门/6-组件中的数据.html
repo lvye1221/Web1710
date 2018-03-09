@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+    <div id="app">
+        <!-- 这里是使用组件 -->
+        <!-- <xiaoming></xiaoming>
+        <xiaoming></xiaoming>
+        <xiaoming></xiaoming> -->
+
+        <aaa></aaa>
+        <bbb></bbb>
+        <aaa></aaa>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+
+    // 定义数据对象 data
+    // var data = {
+    //     counter: 0
+    // }
+
+    // // 定义了组件 aaa
+    // Vue.component('aaa', {
+    //     template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+    //     // 技术上 data 的确是一个函数了，因此 Vue 不会警告，
+    //     // 但是我们却给每个组件实例返回了同一个对象的引用
+    //     data: function() {
+    //         // return data;
+    //         // 相当于每个组件都有自己的数据，不会共用1个
+    //         //  就不会互相修改了
+    //         return {counter: 0}
+    //     }
+    // })
+
+
+    // 定义了组件 aaa. 全局组件
+    Vue.component('aaa', {
+        template: '<button v-on:click="func">{{ counter }}</button>',
+        // 技术上 data 的确是一个函数了，因此 Vue 不会警告，
+        // 但是我们却给每个组件实例返回了同一个对象的引用
+        data: function() {
+            // return data;
+            // 相当于每个组件都有自己的数据，不会共用1个
+            //  就不会互相修改了
+            return {counter: 0}
+        },
+        methods: {  // 定义组件中所有的方法
+            func: function() {
+                this.counter++;           // 自己的 counter ++ 
+            }
+        }
+
+    })
+    // 定义了组件 bbb
+    Vue.component('bbb', {
+        template: '<button v-on:click="func">{{ counter }}</button>',
+        // 技术上 data 的确是一个函数了，因此 Vue 不会警告，
+        // 但是我们却给每个组件实例返回了同一个对象的引用
+        data: function() {
+            // return data;
+            // 相当于每个组件都有自己的数据，不会共用1个
+            //  就不会互相修改了
+            return {counter: 0}
+        },
+        methods: {  // 定义组件中所有的方法
+            func: function() {
+                this.counter--;           // 自己的 counter ++ 
+            }
+        }
+
+    })
+
+
+ 
+    // 通过Vue.component定义1个全局的组件
+    //    my-component 组件名, 可以自定义 xiaoming
+    Vue.component("xiaoming", {
+        // template 是Vue规定的的，代表替换组件的内容
+        template: `<div> {{msg}} </div>`,
+        data: function() {     // data
+            return { msg: "哈哈" }
+        }
+    })
+    // 创建1个Vue的实例
+    new Vue({
+        el: '#app'
+    })
+
+    // 创建1个Vue的实例
+    new Vue({
+        el: '#app2'
+    })
+   
+
+</script>

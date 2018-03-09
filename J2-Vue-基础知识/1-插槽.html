@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+    <div id="app">
+
+        <xiaoming>
+            内容
+        </xiaoming>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+//  aaa, msg  可以
+//  isAdd     不可以     
+//    ==> 猜测： 其中有大写字母的不行， 驼峰命名法的
+    Vue.component("xiaoming", {
+        template: `<div>
+            这是插槽外的内容
+                <slot>
+                    新加的内容
+                </slot>
+        </div>`
+    })
+
+
+    // 创建1个Vue的实例
+    new Vue({
+        el: '#app'
+    })
+
+   
+
+</script>

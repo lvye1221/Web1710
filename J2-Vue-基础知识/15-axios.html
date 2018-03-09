@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+
+        <ul>
+            <li v-for="obj in cats.data">
+                {{obj.cat_name}}
+            </li>
+        </ul>
+
+    </div>
+    
+
+
+</body>
+</html>
+
+<script>
+   
+
+//     //          URL地址                    传递给服务器的数据
+// axios.get('http://csit.top/api_goods.php', {
+//     params: {                    // 传递的参数
+//       cat_id: 45,
+//       page: 1,
+//       pageSize: 10
+//     }
+// })
+// .then(function (aaa) {   // 数据正常的就会执行这里
+//     // 返回的数据是在 data 属性中
+//     console.log(aaa.data);
+// })
+// .catch(function (error) {      // 出现错误的时候，执行这里的代码
+//     console.log(error);
+// });
+
+
+
+
+// axios 提供的请求数据的变量
+//  get  代表是采用GET方式获取数据
+//      
+// axios.get('http://csit.top/api_cat.php')
+//     .then(function (aaa) {   // 数据正常的就会执行这里
+//         // 返回的数据是在 data 属性中
+//         console.log(aaa.data);
+//     })
+//     .catch(function (error) {      // 出现错误的时候，执行这里的代码
+//         console.log(error);
+//     });
+
+
+
+new Vue({
+    el: "#app",
+    data: {
+        // goods: null      // 代表存储所有的商品数据
+        cats: []          // 存储所有栏目数据
+        //   {data: [{cat_name: "123"}]}
+    },
+    mounted: function() { // 挂载后请求数据
+        
+        var self = this;
+
+        axios.get('http://csit.top/api_cat.php')
+            .then(function (aaa) {   // 数据正常的就会执行这里
+               
+                console.log("测试： ", aaa)
+                // 将数据保存到自己的数据
+                self.cats = aaa.data;
+            })
+    }
+})
+
+
+
+</script>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+    <div id="app">
+            {{aaa}}
+            <br>
+            {{bbb}}
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    // 创建1个Vue的实例
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            aaa: "xiaoming",
+            bbb: "xiaohei"
+        },
+        watch: {   // 监视数据的改变
+            aaa: function() {       // 只要 aaa发生改变时做事情
+                console.log(" aaa 的数据发生改变 ")
+            }
+        }
+    })
+
+    document.onclick = function() {
+        // vm.aaa = 100   // 修改aaa的值
+        vm.bbb = 200   // 
+    }
+
+   
+
+</script>

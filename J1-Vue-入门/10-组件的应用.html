@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+    <div id="app">
+        <!-- 首页，子页面用 -->
+        <my-nav v-bind:lm="plm"></my-nav>
+
+        <button v-on:click="change">改变栏目</button>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    // 定义1个导航条组件
+    Vue.component("my-nav", {
+        props: ['lm'],       // 这个是来自于父组件，当前的栏目
+        template: `<div>首页 > {{lm}}<div>`
+    })
+
+    // 创建1个Vue的实例
+    new Vue({
+        el: '#app',
+        data: {
+            plm: "新闻"
+        },
+        methods: {
+            change: function() {
+                // 修改自己的 plm 数据
+                this.plm = "娱乐"
+            }
+        }
+    })
+
+   
+
+</script>

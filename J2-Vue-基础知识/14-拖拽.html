@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <style>
+        h3 {
+            width: 100px;
+            height: 100px;
+            background: red;
+
+        }
+
+        * {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="app">
+
+        <div v-me v-yangjie v-you v-you-pig>我是div</div>
+
+        <!-- v-drag 添加1个自定义的指令，代表此物体可以拖拽的 -->
+        <!-- <h3 v-drag>1</h3> -->
+<!-- 
+        <img src="https://cn.vuejs.org/images/logo.png" v-drag />
+
+        <p v-drag>我是段落</p> -->
+
+    </div>
+    
+    <div id="box">
+
+        <!-- vue中的指令只能在实例中使用  -->
+        <!-- <header v-drag>我是头部</header> -->
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    Vue.directive("you", function(el) {
+        el.style.color = "green"
+    })
+
+    Vue.directive("you-pig", function(el) {
+        el.style.color = "yellow"
+    })
+    
+    Vue.directive("me", function(el) {
+        el.style.background = "red"
+    })
+
+    Vue.directive("yangjie", function(el) {
+        // 1. 给元素绑定鼠标按下的事件
+        el.onmousedown = function(e) {
+
+            e.preventDefault()          // 阻止浏览器默认行为
+
+            var offsetX = e.offsetX;     // offsetX 在元素中点击的位置
+            var offsetY = e.offsetY;
+
+            document.onmousemove = function(e) {
+                
+                e.preventDefault()          // 阻止浏览器默认行为
+
+                var x = e.clientX - offsetX;   // clientX 在浏览器页面中的位置
+                var y = e.clientY - offsetY;
+
+                el.style.left = x + "px"
+                el.style.top = y + "px"
+            }
+
+            document.onmouseup = function() {
+                document.onmousemove = null;
+            }
+        }
+    })
+
+
+    // 创建1个Vue的实例
+    var vm = new Vue({
+        el: '#app'
+    })
+
+
+    // 创建1个Vue的实例
+    var vm2 = new Vue({
+        el: '#box'
+    })
+   
+
+</script>

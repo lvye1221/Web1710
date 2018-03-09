@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+    <div id="app">
+
+        字符串： {{str}}
+        <br>
+        逆转的字符串:  {{str2}}
+        <br>
+        逆转的字符串:  {{str2()}}
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    // 创建1个Vue的实例
+    new Vue({
+        el: '#app',
+        data: {
+            str: "xiaoming"
+        },
+        computed: {
+            str2: function() {
+                return this.str.split("").reverse().join("")
+            }
+        }
+    })
+
+   
+
+</script>

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- 引入jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        {{ a }}
+
+        <button id="btn">按钮</button>
+    </div>
+
+
+    <button onclick="destroy()">销毁</button>
+
+</body>
+</html>
+
+<script>
+
+
+
+    function destroy() {
+        vm.$destroy();
+    }
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            a: '哈哈!'
+        },
+        beforeMount: function() {
+            console.log("挂载前")
+
+            $("#btn").click(function() {
+                alert("点击了按钮！");
+            })
+        },
+        mounted: function() {
+            console.log("挂载后")
+
+            // $("#btn").click(function() {
+            //     alert("点击了按钮！");
+            // })
+        },
+        beforeDestroy: function() {
+            console.log("销毁前")
+        },
+        destroyed: function() {
+            console.log("销毁后")
+        },
+        beforeCreate: function() {
+            console.log("创建前")
+        },
+        created: function() {
+            console.log("创建后")
+        },
+    })
+</script>

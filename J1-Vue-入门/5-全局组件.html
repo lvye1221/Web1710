@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+    
+
+    <div id="app">
+        <!-- 这里是使用组件 -->
+        <xiaoming></xiaoming>
+        <xiaoming></xiaoming>
+        <xiaoming></xiaoming>
+    </div>
+
+</body>
+</html>
+
+<script>
+ 
+    // 通过Vue.component定义1个全局的组件
+    //    my-component 组件名, 可以自定义 xiaoming
+    Vue.component("xiaoming", {
+        // template 是Vue规定的的，代表替换组件的内容
+        template: `
+            <div>
+                <h3> 标题 </h3>
+                <div> 内容 </div>
+            </div>
+        `     
+    })
+
+    // 创建1个Vue的实例
+    new Vue({
+        el: '#app'
+    })
+
+   
+
+</script>

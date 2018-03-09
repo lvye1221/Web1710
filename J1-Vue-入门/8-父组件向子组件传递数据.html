@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+
+    <div id="app">
+        <!-- 驼峰命名法的 要转换 单词-单词-.. 的形式 -->
+        <!-- <xiaoming is-add="哈哈"></xiaoming>
+        <xiaoming is-add="嘿嘿"></xiaoming> -->
+
+        <!-- <counter msg="true"> </counter>
+        <counter msg="false"> </counter> -->
+
+        <counter is-add="true"> </counter>
+        <counter is-add="false"> </counter>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+//  aaa, msg  可以
+//  isAdd     不可以     
+//    ==> 猜测： 其中有大写字母的不行， 驼峰命名法的
+    Vue.component("xiaoming", {
+        props: ['isAdd'],       // 这个msg是来自于父组件
+        template: `<div> {{isAdd}} </div>`
+    })
+
+    Vue.component("counter", {
+        props: ['isAdd'],   // 从父组件传递过来的，代表是否是增加
+        // props: ['msg'],   // 从父组件传递过来的，代表是否是增加
+        template: "<button v-on:click='func' > {{counter}}</button>", 
+        data: function() {
+            return {
+                counter: 0
+            }
+        },
+        methods: {
+            func: function() {
+                // console.log("this.msg: " + this.msg);  // undefined
+                // console.log("this.props.isAdd: " + this.props.isAdd);  // undefined
+                if (this.isAdd == "true") {
+                    this.counter++
+                } else {
+                    this.counter--
+                }
+            }
+        }
+    })
+
+    // 创建1个Vue的实例
+    new Vue({
+        el: '#app'
+    })
+
+   
+
+</script>
